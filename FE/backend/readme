@@ -7,7 +7,7 @@ Nhiệm vụ:
 
 Lưu ý:
 - Khi user register nếu không đúng điều kiện hay không nhập (6 < username length < 24) sẽ hiện ngay trên ô đó lỗi đkien
-- Khi user register nếu trùng username và password sẽ hiện ngay trên ô username/password lỗi trùng lặp
+- Khi user register nếu trùng username sẽ hiện ngay trên ô username lỗi trùng lặp
 - Khi user login nếu ko đúng username/password sẽ sẽ hiện ngay trên nút Login lỗi "Invalid username/password, please try again"
 
 Nộp File lẻ vào thư mục backend.
