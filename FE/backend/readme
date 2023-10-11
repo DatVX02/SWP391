@@ -1,1 +1,7 @@
+Sử dụng IDE NetBeans và JDK 8
 
+Nhiệm vụ:
+- Anh Khanh làm Registation Sevlet (name: RegistrationController) - Đặt tại Source Packages > Controller
+- Lân làm RegisterDAO phần checkLogin (name: RegistrationDAO - function: checkLogin) - Đặt tại Source Packages > Registration
+
+Nộp File lẻ vào thư mục backend.
