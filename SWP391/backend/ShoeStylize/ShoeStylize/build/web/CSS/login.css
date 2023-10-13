@@ -1,0 +1,48 @@
+body {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #979797;
+    width: 100%;
+    height: auto;
+}
+
+.header img {
+    max-width: 100px;
+    margin: 2px 20px;
+}
+
+.form h1 {
+    text-align: center;
+}
+
+.form form {
+    margin-left: 520px;
+}
+
+
+
+.form input:nth-of-type(1) {
+    width: 400px;
+}
+
+.form input:nth-of-type(2) {
+    width: 400px;
+}
+
+Button {
+    margin-left: 720px;
+    background-color: #FF9900;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+
+/* button:hover {
+    background-color: orange;
+} */
+

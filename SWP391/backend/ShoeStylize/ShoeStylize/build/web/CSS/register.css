@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #979797;
+    width: 100%;
+    height: auto;
+}
+
+.header img {
+    max-width: 100px;
+    margin: 2px 20px;
+}
+
+.title h1{
+    text-align: center;
+}
+
+.form {
+    margin-left: 480px;
+}
+
+.form input{
+    width: 520px;
+}
