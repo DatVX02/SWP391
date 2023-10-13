@@ -9,6 +9,7 @@ public class RegistrationDTO {
     private String email;
     private String password;
     private String phone;
+    private String userName;
     private String birthDate;
     private String roleID;
     private String image;
@@ -16,10 +17,11 @@ public class RegistrationDTO {
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String userID, String email, String password, String phone, String birthDate, String roleID, String image) {
+    public RegistrationDTO(String userID, String email, String password, String userName,  String phone, String birthDate, String roleID, String image) {
         this.userID = userID;
         this.email = email;
         this.password = password;
+        this.userName = userName;
         this.phone = phone;
         this.birthDate = birthDate;
         this.roleID = roleID;
@@ -49,6 +51,14 @@ public class RegistrationDTO {
     public void setPassword(String password) {
         this.password = password;
     }
+
+          public String getUserName() {
+                    return userName;
+          }
+
+          public void setUserName(String userName) {
+                    this.userName = userName;
+          }
 
     public String getPhone() {
         return phone;

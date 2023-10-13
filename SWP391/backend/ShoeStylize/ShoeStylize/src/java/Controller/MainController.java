@@ -31,6 +31,7 @@ public class MainController extends HttpServlet {
                 case "Login": url=LOGINCONTROLLER;
                               break;
                 case "Register": url =  REGISTRATIONCONTROLLER;
+                              break;
                 default: break;
             }
         } catch(Exception e){

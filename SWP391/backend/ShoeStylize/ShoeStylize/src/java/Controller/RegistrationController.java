@@ -9,6 +9,7 @@ import Registration.RegistrationDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -24,25 +25,27 @@ public class RegistrationController extends HttpServlet {
           
           
           private final String REGISTERPAGE = "register.jsp";
-          private final String SIGNUPSUCCESS = "register_successful.jsp";
+          private final String HOMEPAGE = "home.jsp";
           protected void processRequest(HttpServletRequest request, HttpServletResponse response)
                   throws ServletException, IOException, SQLException {
                     response.setContentType("text/html;charset=UTF-8");
                     String url = REGISTERPAGE;
                     try {
-                              String userID = request.getParameter("txtUserID");
+                              Random rdn = new Random();
+                              String userID = String.valueOf(rdn.nextInt());
                               String email = request.getParameter("txtEmail");
                               String password = request.getParameter("txtPassword");
+                              String userName = request.getParameter("txtUsername");
                               String phone = request.getParameter("txtPhone");
                               String birthDate = request.getParameter("txtBirthDate");
                               String roleID = "USER";
                               String image = request.getParameter("txtImage");
                     
                               RegistrationDAO dao = new RegistrationDAO();
-                               boolean result = dao.checkRegister(userID, email, password, phone, birthDate, roleID, image);  
+                               boolean result = dao.checkRegister(userID, email, password, userName, phone, birthDate, roleID, image);  
                                
                                if(result) {
-                                         url = SIGNUPSUCCESS;
+                                         url = HOMEPAGE;
                                }
                     } catch(SQLException ex) {
                               ex.printStackTrace();
