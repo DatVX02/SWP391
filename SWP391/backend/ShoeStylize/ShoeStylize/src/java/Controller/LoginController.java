@@ -12,23 +12,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class LoginController extends HttpServlet {
-    private final String HOMEPAGE= "home.jsp";
-    private final String INVALIDPAGE= "invalid.jsp";
+
+    private final String HOMEPAGE = "home.jsp";
+    private final String INVALIDPAGE = "invalid.jsp";
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         String url = INVALIDPAGE;
         try {
-            String email= request.getParameter("txtEmail");
-            String password= request.getParameter("txtPassword");
+            String email = request.getParameter("txtEmail");
+            String password = request.getParameter("txtPassword");
             RegistrationDAO dao = new RegistrationDAO();
             boolean result = dao.checkLogin(email, password);
-            if(result){
+            if (result) {
                 url = HOMEPAGE;
             }
-        } catch(SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
-        } finally{
+        } finally {
             response.sendRedirect(url);
         }
     }
