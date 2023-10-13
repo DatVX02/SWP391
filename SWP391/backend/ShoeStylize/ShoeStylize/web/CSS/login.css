@@ -20,7 +20,7 @@ body {
 }
 
 .form form {
-    margin-left: 520px;
+    margin-left: 550px;
 }
 
 
@@ -33,16 +33,22 @@ body {
     width: 400px;
 }
 
-Button {
-    margin-left: 720px;
-    background-color: #FF9900;
-    margin-top: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
+div.form_2 h4{
+    float: left;
+    margin-right: 165px;
+    margin-top: -10px;
+    text-decoration: none;
+    color: #6B3939;
+    font-style: italic;
 }
 
-/* button:hover {
-    background-color: orange;
-} */
-
+div.form input:nth-of-type(3){
+    text-align: center;
+    margin-left: -420px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 30px;
+    font-size: 20px;
+    background-color: #FF9900;
+    margin-top: 20px;
+}
