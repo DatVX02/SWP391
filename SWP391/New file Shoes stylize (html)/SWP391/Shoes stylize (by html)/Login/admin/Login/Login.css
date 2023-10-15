@@ -25,10 +25,11 @@ body {
 
 .form h1{
     text-align: center;
+    color:#FF0000;
 }
 .form_1 {
     margin-bottom: 15px;
-    transform: translateX(70px);
+    transform: translateX(69px);
 }
 
 input {
@@ -41,6 +42,12 @@ input {
     font-style: italic;
     margin-top: 10px;
     transform: translateX(70px);
+}
+
+.form_2 a {
+    text-decoration: none;
+    color: #6B3939;
+    
 }
 
 

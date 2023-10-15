@@ -3,26 +3,35 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+}
+.header{
+    background-color: #979797;
 }
 
 .header img {
-    max-width: 100%;
+    max-width: 100px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    padding: 5px 5px;
 }
+
 
 .title {
     max-width: 600px;
     margin: 0 auto;
-    background-color: white;
+    /* background-color: white; */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     margin-top: 20px;
+    
 }
 
+.title h1{
+    color: #FF0000;
+    text-align: center;
+}
 .form {
     margin-bottom: 15px;
 }
@@ -41,6 +50,7 @@ button {
     color: white;
     font-size: 15px;
     cursor: pointer;
+    transform: translateX(-450px);
 }
 
 @media screen and (max-width: 768px) {
