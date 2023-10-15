@@ -20,7 +20,7 @@ public class DBUtils implements Serializable{
        try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=ShoesStylize";
-            Connection con = DriverManager.getConnection(url,"sa","123453");
+            Connection con = DriverManager.getConnection(url,"sa","12345");
             return con;
        }catch(ClassNotFoundException ex){
            ex.printStackTrace();

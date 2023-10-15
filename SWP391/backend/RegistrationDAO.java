@@ -49,36 +49,3 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
 }
-
-public boolean insertRecord(String id, String email, String password, String username, String phonenumber, String role) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        try {
-            con = DBUtils.makeConnection();
-            // tra ra null or k.
-            if (con != null) {
-                String sql = "insert into Registration (UserID, Email, Password, UserName, PhoneNumber, RoleID) values (?, ?, ?, ?, ?, ?, ?)";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, id);
-                stm.setString(2, email);
-                stm.setString(3, password);
-                stm.setString(4, username);
-                stm.setString(5, phonenumber);
-                stm.setString(6, role);
-                int row = stm.executeUpdate();
-                if (row > 0) {
-                    return true;
-                }
-                // hoan chinh roi thi excutequery
-
-            }
-        } finally {
-            if (stm != null) {
-                stm.close();
-            }
-            if (con != null) {
-                con.close();
-            }
-        }
-        return false;
-    }

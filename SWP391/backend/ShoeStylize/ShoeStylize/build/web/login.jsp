@@ -34,7 +34,7 @@
                     <a href="#">
                         <h4> Forget password</h4>
                     </a>
-                    <a href="register.jsp">
+                    <a href="Register.jsp">
                         <h4 class="form_2_1"> Create new account</h4>
                     </a>
                 </div>
