@@ -1,18 +1,19 @@
 body {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.header {
+.header{
     background-color: #979797;
-    width: 100%;
-    height: auto;
 }
 
 .header img {
     max-width: 100px;
-    margin: 2px 20px;
+    height: auto;
+    display: block;
+    /* margin: 0 auto; */
+    padding: 5px 5px;
 }
 
 .information_left {

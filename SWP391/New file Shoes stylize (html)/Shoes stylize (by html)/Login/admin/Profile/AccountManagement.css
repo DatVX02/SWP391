@@ -1,20 +1,20 @@
 body {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.header {
+.header{
     background-color: #979797;
-    width: 100%;
-    height: auto;
 }
 
 .header img {
     max-width: 100px;
-    margin: 2px 20px;
+    height: auto;
+    display: block;
+    /* margin: 0 auto; */
+    padding: 5px 5px;
 }
-
 .information_left {
     margin: 50px 50px 0px 100px;
 
@@ -30,7 +30,7 @@ body {
     color: #000000;
 }
 
-.information_left_2 {
+.information_left_2:nth-child(2){
     background-color: #F8B2B2;
     border: 10px solid #F8B2B2;
     border-radius: 20px;
@@ -58,7 +58,7 @@ body {
     border: 2px solid #000000;
     width: 1000px;
     font-weight: bold;
-    /* padding: 5px 20px; */
+    padding: 5px 20px;
 }
 
 .information_left_6 ul li {
@@ -66,3 +66,5 @@ body {
     float: left;
     padding-right: 20px;
 }
+
+
