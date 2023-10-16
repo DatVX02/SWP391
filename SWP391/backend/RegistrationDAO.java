@@ -49,3 +49,37 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
 }
+public boolean updateRecord(String id, String password, String username, String phonenumber, Date birthday, String role, String image) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        try {
+            con = DBUtils.makeConnection();
+            // tra ra null or k.
+            if (con != null) {
+                String sql = "Update Registration set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
+                        + " Where UserID= ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, password);
+                stm.setString(2, username);
+                stm.setString(3, phonenumber);
+                stm.setDate(4, birthday);
+                stm.setString(5, role);
+                stm.setString(6, image);
+                stm.setString(7, id);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+                // hoan chinh roi thi excutequery
+
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
