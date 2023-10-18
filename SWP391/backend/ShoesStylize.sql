@@ -12,7 +12,7 @@ CREATE TABLE Users (
 	PhoneNumber varchar(50),
 	Birthdate date,
 	RoleID varchar(50),
-	Gender binary not null,
+	Gender varchar(50) not null,
 	Image varchar(50)	
 );
 
