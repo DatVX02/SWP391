@@ -12,7 +12,7 @@ CREATE TABLE Users (
 	PhoneNumber varchar(50),
 	Birthdate date,
 	RoleID varchar(50),
-	Gender varchar(50) not null,
+	Gender bit not null,
 	Image varchar(50)	
 );
 
@@ -75,7 +75,7 @@ CREATE TABLE Orders (
     UserID VARCHAR(50),
     OrderDate DATE,
     TotalAmount DECIMAL(10, 2),
-	Status BINARY,
+	Status bit,
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
@@ -84,7 +84,7 @@ CREATE TABLE OrderDetails (
     OrderID VARCHAR(50),
     ShoeID VARCHAR(50),
 	CusShoeID VARCHAR(50),
-	Status BINARY,
+	Status bit,
     Quantity INT,
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (ShoeID) REFERENCES Shoes(ShoeID),
