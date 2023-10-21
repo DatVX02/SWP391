@@ -12,13 +12,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="icon" href="image\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+        <link rel="icon" href="image\shoelogo.png">
         <link rel="stylesheet" href="CSS/login.css">
     </head>
 
     <body>
         <div class="header">
-            <img src="image\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+            <img src="image\shoelogo.png"
                  alt="Shoes stylize">
         </div>
         <div class="form">
@@ -34,7 +34,7 @@
                     <a href="#">
                         <h4> Forget password</h4>
                     </a>
-                    <a href="Register.jsp">
+                    <a href="register.jsp">
                         <h4 class="form_2_1"> Create new account</h4>
                     </a>
                 </div>

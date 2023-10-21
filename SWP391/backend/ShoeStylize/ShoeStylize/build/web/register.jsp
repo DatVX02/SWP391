@@ -30,7 +30,6 @@
             <p style="font-weight: bold">Birthday:</p> <input type="text" name="txtBirthDate" value="" style="margin-bottom: 20px"/>
             <br/>
             
-            <p style="font-weight: bold">Image:</p><input type="text" name="txtImage" value="" style="margin-bottom: 20px"/>
 <!--            <form action="/upload" method="POST" enctype="multipart/form-data">
                       <input name="photo" type="file">
             </form>

@@ -1,5 +1,7 @@
 package Registration;
 
+import java.sql.Date;
+
 /**
  *
  * @author Administrator
@@ -9,14 +11,14 @@ public class RegistrationDTO {
     private String email;
     private String password;
     private String phone;
-    private String birthDate;
+    private Date birthDate;
     private String roleID;
     private String image;
     
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String userID, String email, String password, String phone, String birthDate, String roleID, String image) {
+    public RegistrationDTO(String userID, String email, String password, String phone, Date birthDate, String roleID, String image) {
         this.userID = userID;
         this.email = email;
         this.password = password;
@@ -58,11 +60,11 @@ public class RegistrationDTO {
         this.phone = phone;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 

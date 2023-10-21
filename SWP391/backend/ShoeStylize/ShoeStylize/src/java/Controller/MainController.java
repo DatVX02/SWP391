@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MainController extends HttpServlet {
     private static final String LOGINCONTROLLER="LoginController";
+    private static final String REGISTERCONTROLLER="RegisterController";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,6 +30,12 @@ public class MainController extends HttpServlet {
             switch(button){
                 case "Login": url=LOGINCONTROLLER;
                               break;
+                
+                case "Register": url=REGISTERCONTROLLER;
+                                 break;
+                                 
+                
+                
                 default: break;
             }
         } catch(Exception e){

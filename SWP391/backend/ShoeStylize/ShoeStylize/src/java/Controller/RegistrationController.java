@@ -8,7 +8,10 @@ package Controller;
 import Registration.RegistrationDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,23 +29,27 @@ public class RegistrationController extends HttpServlet {
           
           private final String REGISTERPAGE = "register.jsp";
           private final String HOMEPAGE = "home.jsp";
+          DateFormat df = new SimpleDateFormat();
+          
           protected void processRequest(HttpServletRequest request, HttpServletResponse response)
                   throws ServletException, IOException, SQLException {
                     response.setContentType("text/html;charset=UTF-8");
                     String url = REGISTERPAGE;
                     try {
                               Random rdn = new Random();
+                              DateFormat df = new SimpleDateFormat(request.getParameter("txtBirthDate"));
+                              String dateToString = df.format(df);
                               String userID = String.valueOf(rdn.nextInt());
                               String email = request.getParameter("txtEmail");
                               String password = request.getParameter("txtPassword");
                               String userName = request.getParameter("txtUsername");
                               String phone = request.getParameter("txtPhone");
-                              String birthDate = request.getParameter("txtBirthDate");
+                              Date birthDate = dateToString;
                               String roleID = "USER";
                               String image = request.getParameter("txtImage");
                     
                               RegistrationDAO dao = new RegistrationDAO();
-                               boolean result = dao.checkRegister(userID, email, password, userName, phone, birthDate, roleID, image);  
+                              boolean result = dao.insertRecord(userID, email, password, userName, phone, birthDate, roleID, image);  
                                
                                if(result) {
                                          url = HOMEPAGE;
