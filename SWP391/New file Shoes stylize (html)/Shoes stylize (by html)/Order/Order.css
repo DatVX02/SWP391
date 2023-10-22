@@ -1,0 +1,16 @@
+table{
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+table tr{
+    background-color: #D9D9D9;
+}
+
+table tr td{
+    margin: 20px;
+    padding: 10px 100px;
+}
