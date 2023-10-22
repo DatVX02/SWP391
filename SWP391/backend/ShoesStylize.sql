@@ -12,8 +12,7 @@ CREATE TABLE Users (
 	PhoneNumber varchar(50),
 	Birthdate date,
 	RoleID varchar(50),
-	Gender bit not null,
-	Image varchar(50)	
+	Gender bit not null
 );
 
 CREATE TABLE Brand (
@@ -28,7 +27,7 @@ CREATE TABLE Shoes (
 	Description text,
     Size VARCHAR(10),
     Color VARCHAR(50),
-	Image varchar(50),
+	Image varchar(max),
 	Quantity INT,
 	Price DECIMAL(10, 2)
 	FOREIGN KEY (BrandID) REFERENCES Brand(BrandID)
