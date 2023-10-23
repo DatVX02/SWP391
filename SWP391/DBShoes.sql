@@ -192,7 +192,7 @@ CREATE TABLE [dbo].[Users](
 	[Email] [varchar](255) NOT NULL,
 	[Password] [varchar](255) NOT NULL,
 	[FullName] [varchar](50) NULL,
-	[PhoneNumber] [varchar](50) NULL,
+	[PhoneNumber] [varchar](50) NOT NULL,
 	[Birthdate] [date] NULL,
 	[RoleID] [varchar](50) NULL,
 	[Gender] [bit] NOT NULL,
