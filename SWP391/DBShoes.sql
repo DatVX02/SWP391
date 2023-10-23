@@ -1,4 +1,4 @@
-﻿USE [master]
+USE [master]
 GO
 
 /****** Object:  Database [ShoesStylize]    Script Date: 10/22/2023 11:44:02 PM ******/
@@ -17,11 +17,8 @@ CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
-	[Title] [varchar](100) NULL,
-	[Rating] [int] NULL,
 	[Content] [text] NULL,
-	[Timestamp] [timestamp] NOT NULL,
-	[Category] [varchar](100) NULL,
+	[PostDay] [date] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[PostID] ASC
@@ -68,7 +65,6 @@ CREATE TABLE [dbo].[Comment](
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
 	[Content] [text] NULL,
-	[Timestamp] [timestamp] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[CommentID] ASC
@@ -88,12 +84,12 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[ShoesName] [varchar](100) NULL,
 	[CustomizationDetails] [text] NULL,
 	[Image1] [varchar](max) NULL,
-	[Image2] [varchar](max) NULL, 
+	[Image2] [varchar](max) NULL,
 	[Image3] [varchar](max) NULL,
 	[Image4] [varchar](max) NULL,
 	[Image5] [varchar](max) NULL,
 	[Image6] [varchar](max) NULL,
-PRIMARY KEY CLUSTERED 
+PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -113,7 +109,6 @@ CREATE TABLE [dbo].[Feedback](
 	[Title] [varchar](100) NULL,
 	[Rating] [int] NULL,
 	[Content] [text] NULL,
-	[Timestamp] [timestamp] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[FeedbackID] ASC
@@ -192,7 +187,7 @@ CREATE TABLE [dbo].[Users](
 	[Email] [varchar](255) NOT NULL,
 	[Password] [varchar](255) NOT NULL,
 	[FullName] [varchar](50) NULL,
-	[PhoneNumber] [varchar](50) NOT NULL,
+	[PhoneNumber] [nvarchar](50) NOT NULL,
 	[Birthdate] [date] NULL,
 	[RoleID] [varchar](50) NULL,
 	[Gender] [bit] NOT NULL,
