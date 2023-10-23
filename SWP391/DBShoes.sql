@@ -53,7 +53,7 @@ CREATE TABLE [dbo].[SizeList](
 	[Size] [varchar](10) NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[BrandID] ASC
+	[SizeID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
@@ -173,6 +173,8 @@ CREATE TABLE [dbo].[Shoes](
 	[Image] [varchar](max) NULL,
 	[Quantity] [int] NULL,
 	[Price] [decimal](10, 2) NULL,
+	[SizeID] [int] NULL
+
 PRIMARY KEY CLUSTERED 
 (
 	[ShoeID] ASC
