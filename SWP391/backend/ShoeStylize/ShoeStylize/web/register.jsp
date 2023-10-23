@@ -27,7 +27,7 @@
             <p style="font-weight: bold">Phone:</p> <input type="text" name="txtPhone" value="" style="margin-bottom: 20px"/>
             <br/>
             
-            <p style="font-weight: bold">Birthday:</p> <input type="text" name="txtBirthDate" value="" style="margin-bottom: 20px"/>
+            <p style="font-weight: bold">Birthday:</p> <input type="date" name="txtBirthDate" value="" style="margin-bottom: 20px"/>
             <br/>
             
 <!--            <form action="/upload" method="POST" enctype="multipart/form-data">
