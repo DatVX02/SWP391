@@ -91,6 +91,8 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[Image2] [varchar](max) NULL, 
 	[Image3] [varchar](max) NULL,
 	[Image4] [varchar](max) NULL,
+	[Image5] [varchar](max) NULL,
+	[Image6] [varchar](max) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[CusShoeID] ASC
