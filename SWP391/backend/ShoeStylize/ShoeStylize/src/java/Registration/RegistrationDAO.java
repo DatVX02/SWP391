@@ -45,23 +45,23 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
     
-    public boolean insertRecord(String id, String email, String password, String username, String phonenumber,Date birthday, String role, String image) throws SQLException {
+    public boolean insertRecord(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         try {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "insert into Users (UserID, Email, Password, UserName, PhoneNumber,Birthdate, RoleID, Image) values (?, ?, ?, ?, ?, ?, ?, ?)";
+                String sql = "insert into Registration (UserID, Email, Password, FullName, PhoneNumber, Birthdate, RoleID, Gender) values (?, ?, ?, ?, ?, ?, ?, ?)";
                 stm = con.prepareStatement(sql);
-                stm.setString(1, id);
+                stm.setString(1, userID);
                 stm.setString(2, email);
                 stm.setString(3, password);
-                stm.setString(4, username);
-                stm.setString(5, phonenumber);
-                stm.setDate(6, birthday);
-                stm.setString(7, role);
-                stm.setString(8, image);
+                stm.setString(4, phone);
+                stm.setString(5, fullname);
+                stm.setString(6, birthDate);
+                stm.setString(7, roleID);
+                stm.setString(8, gender);
                 int row = stm.executeUpdate();
                 if (row > 0) {
                     return true;
@@ -80,14 +80,14 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
     
-    public boolean updateRecord(String id, String password, String username, String phonenumber, Date birthday, String role, String image) throws SQLException {
+    public boolean updateRecord(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         try {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "Update Users set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
+                String sql = "Update Registration set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
                         + " Where UserID= ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, password);

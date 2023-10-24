@@ -1,4 +1,4 @@
-USE [master]
+﻿USE [master]
 GO
 
 /****** Object:  Database [ShoesStylize]    Script Date: 10/22/2023 11:44:02 PM ******/

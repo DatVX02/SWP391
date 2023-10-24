@@ -20,10 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author User
- */
+
 public class RegistrationController extends HttpServlet {
           
           
@@ -37,14 +34,12 @@ public class RegistrationController extends HttpServlet {
                     String url = REGISTERPAGE;
                     try {
                               Random rdn = new Random();
-                              DateFormat df = new SimpleDateFormat(request.getParameter("txtBirthDate"));
-                              String dateToString = df.format(df);
                               String userID = String.valueOf(rdn.nextInt());
                               String email = request.getParameter("txtEmail");
                               String password = request.getParameter("txtPassword");
                               String userName = request.getParameter("txtUsername");
                               String phone = request.getParameter("txtPhone");
-                              Date birthDate = dateToString;
+                              
                               String roleID = "USER";
                               String image = request.getParameter("txtImage");
                     

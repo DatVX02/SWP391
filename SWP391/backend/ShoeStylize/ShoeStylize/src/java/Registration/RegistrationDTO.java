@@ -11,21 +11,22 @@ public class RegistrationDTO {
     private String email;
     private String password;
     private String phone;
-    private Date birthDate;
+    private String fullname;
+    private String birthDate;
     private String roleID;
-    private String image;
+    private String gender;
     
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String userID, String email, String password, String phone, Date birthDate, String roleID, String image) {
+    public RegistrationDTO(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) {
         this.userID = userID;
         this.email = email;
         this.password = password;
         this.phone = phone;
+        this.fullname = fullname;
         this.birthDate = birthDate;
         this.roleID = roleID;
-        this.image = image;
     }
 
     public String getUserID() {
@@ -60,11 +61,11 @@ public class RegistrationDTO {
         this.phone = phone;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -76,13 +77,19 @@ public class RegistrationDTO {
         this.roleID = roleID;
     }
 
-    public String getImage() {
-        return image;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
-    
-        
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
