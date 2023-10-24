@@ -80,23 +80,22 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
     
-    public boolean updateRecord(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) throws SQLException {
+    public boolean updateRecord(String userID, String fullname, String email, String phone, String birthDate, String gender) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         try {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "Update Users set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
+                String sql = "Update Users set UserName= ?, Email= ?, PhoneNumber= ?, Birthdate= ?, Gender= ? "
                         + " Where UserID= ?";
                 stm = con.prepareStatement(sql);
-                stm.setString(1, password);
-                stm.setString(2, username);
-                stm.setString(3, phonenumber);
-                stm.setDate(4, birthday);
-                stm.setString(5, role);
-                stm.setString(6, image);
-                stm.setString(7, id);
+                stm.setString(1, fullname);
+                stm.setString(2, email);
+                stm.setString(3, phone);
+                stm.setString(4, birthDate);
+                stm.setString(5, gender);
+                stm.setString(6, userID);
                 int row = stm.executeUpdate();
                 if (row > 0) {
                     return true;
