@@ -55,6 +55,21 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY]
 
 GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Image](
+	[ImageID] [int] IDENTITY(1,1) NOT NULL,
+	[CusShoeID] [int] NOT NULL,
+	[ImageLink] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ImageID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
 /****** Object:  Table [dbo].[Comment]    Script Date: 10/22/2023 11:39:51 PM ******/
 SET ANSI_NULLS ON
 GO
@@ -83,12 +98,6 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[UserID] [int] NULL,
 	[ShoesName] [varchar](100) NULL,
 	[CustomizationDetails] [text] NULL,
-	[Image1] [varchar](max) NULL,
-	[Image2] [varchar](max) NULL,
-	[Image3] [varchar](max) NULL,
-	[Image4] [varchar](max) NULL,
-	[Image5] [varchar](max) NULL,
-	[Image6] [varchar](max) NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
@@ -245,4 +254,7 @@ REFERENCES [dbo].[Brand] ([BrandID])
 GO
 ALTER TABLE [dbo].[Shoes]  WITH CHECK ADD FOREIGN KEY([SizeID])
 REFERENCES [dbo].[SizeList] ([SizeID])
+GO
+ALTER TABLE [dbo].[Image]  WITH CHECK ADD FOREIGN KEY([CusShoeID])
+REFERENCES [dbo].[CustomizeShoes] ([CusShoeID])
 GO
