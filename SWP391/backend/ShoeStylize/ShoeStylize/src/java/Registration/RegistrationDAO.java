@@ -52,7 +52,7 @@ public class RegistrationDAO implements Serializable {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "insert into Registration (UserID, Email, Password, UserName, PhoneNumber,Birthdate, RoleID, Image) values (?, ?, ?, ?, ?, ?, ?, ?)";
+                String sql = "insert into Users (UserID, Email, Password, UserName, PhoneNumber,Birthdate, RoleID, Image) values (?, ?, ?, ?, ?, ?, ?, ?)";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, id);
                 stm.setString(2, email);
@@ -87,7 +87,7 @@ public class RegistrationDAO implements Serializable {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "Update Registration set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
+                String sql = "Update Users set Password= ?, UserName= ?, PhoneNumber= ?, Birthdate= ?, RoleID= ?, Image= ? "
                         + " Where UserID= ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, password);
