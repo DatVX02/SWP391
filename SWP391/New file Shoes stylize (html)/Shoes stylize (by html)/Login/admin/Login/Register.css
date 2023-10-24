@@ -6,6 +6,9 @@ body {
 }
 .header{
     background-color: #979797;
+    position: sticky;
+    top: 0;
+    
 }
 
 .header img {
@@ -24,8 +27,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    margin-top: 20px;
-    
+    margin-top: -22px;
+    /* display: block; */
+    height: 0;
 }
 
 .title h1{
@@ -42,6 +46,9 @@ input {
     box-sizing: border-box;
 }
 
+.form .from1{
+    width: 10px;
+}
 button {
     width: 100%;
     padding: 10px;
