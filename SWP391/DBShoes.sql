@@ -199,7 +199,7 @@ CREATE TABLE [dbo].[Users](
 	[PhoneNumber] [nvarchar](50) NOT NULL,
 	[Birthdate] [date] NULL,
 	[RoleID] [varchar](50) NULL,
-	[Gender] [varchar](50) NOT NULL,
+	[Gender] [varchar](10) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC
