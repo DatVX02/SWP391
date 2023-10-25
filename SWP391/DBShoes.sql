@@ -15,7 +15,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
-	[UserID] [int] NULL,
+	[UserID] [nvarchar](50) NULL,
 	[ShoeID] [int] NULL,
 	[Content] [text] NULL,
 	[PostDay] [date] NULL,
@@ -77,7 +77,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Comment](
 	[CommentID] [int] IDENTITY(1,1) NOT NULL,
-	[UserID] [int] NULL,
+	[UserID] [nvarchar](50) NULL,
 	[ShoeID] [int] NULL,
 	[Content] [text] NULL,
 PRIMARY KEY CLUSTERED 
@@ -95,7 +95,7 @@ GO
 CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
-	[UserID] [int] NULL,
+	[UserID] [nvarchar](50) NULL,
 	[ShoesName] [varchar](100) NULL,
 	[CustomizationDetails] [text] NULL,
 PRIMARY KEY CLUSTERED
@@ -113,7 +113,7 @@ GO
 CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [int] IDENTITY(1,1) NOT NULL,
 	[FeedbackType] [varchar](50) NULL,
-	[UserID] [int] NULL,
+	[UserID] [nvarchar](50) NULL,
 	[ShoeID] [int] NULL,
 	[Title] [varchar](100) NULL,
 	[Rating] [int] NULL,
@@ -151,7 +151,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Orders](
 	[OrderID] [int] IDENTITY(1,1) NOT NULL,
-	[UserID] [int] NULL,
+	[UserID] [nvarchar](50) NULL,
 	[OrderDate] [date] NULL,
 	[TotalAmount] [decimal](10, 2) NULL,
 	[Status] [bit] NULL,
@@ -192,7 +192,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Users](
-	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [nvarchar](50) NOT NULL,
 	[Email] [varchar](255) NOT NULL,
 	[Password] [varchar](255) NOT NULL,
 	[FullName] [varchar](50) NULL,
