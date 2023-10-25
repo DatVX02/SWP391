@@ -192,14 +192,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Users](
-	[UserID] [int] IDENTITY(1,1) NULL,
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
 	[Email] [varchar](255) NOT NULL,
 	[Password] [varchar](255) NOT NULL,
 	[FullName] [varchar](50) NULL,
 	[PhoneNumber] [nvarchar](50) NOT NULL,
 	[Birthdate] [date] NULL,
 	[RoleID] [varchar](50) NULL,
-	[Gender] [bit] NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC
