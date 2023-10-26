@@ -45,72 +45,69 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
     
+ 
     public boolean insertRecord(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        try {
-            con = DBUtils.makeConnection();
-            // tra ra null or k.
-            if (con != null) {
-                String sql = "insert into Users (UserID, Email, Password, FullName, PhoneNumber, Birthdate, RoleID, Gender) values (?, ?, ?, ?, ?, ?, ?, ?)";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, userID);
-                stm.setString(2, email);
-                stm.setString(3, password);
-                stm.setString(4, phone);
-                stm.setString(5, fullname);
-                stm.setString(6, birthDate);
-                stm.setString(7, roleID);
-                stm.setString(8, gender);
-                int row = stm.executeUpdate();
-                if (row > 0) {
-                    return true;
-                }
-                // hoan chinh roi thi excutequery
-
-            }
-        } finally {
-            if (stm != null) {
-                stm.close();
-            }
-            if (con != null) {
-                con.close();
+    Connection con = null;
+    PreparedStatement stm = null;
+    try {
+        con = DBUtils.makeConnection();
+        // Check if the connection is not null
+        if (con != null) {
+            String sql = "insert into Users (UserID, Email, Password, PhoneNumber, FullName, Birthdate, RoleID, Gender) values (?, ?, ?, ?, ?, ?, ?, ?)";
+            stm = con.prepareStatement(sql);
+            stm.setString(1, userID);
+            stm.setString(2, email);
+            stm.setString(3, password);
+            stm.setString(4, phone);
+            stm.setString(5, fullname);
+            stm.setString(6, birthDate);
+            stm.setString(7, roleID);
+            stm.setString(8, gender);
+            int row = stm.executeUpdate();
+            if (row > 0) {
+                return true;
             }
         }
-        return false;
+    } finally {
+        if (stm != null) {
+            stm.close();
+        }
+        if (con != null) {
+            con.close();
+        }
     }
+    return false;
+}
+
     
     public boolean updateRecord(String userID, String fullname, String email, String phone, String birthDate, String gender) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        try {
-            con = DBUtils.makeConnection();
-            // tra ra null or k.
-            if (con != null) {
-                String sql = "Update Users set UserName= ?, Email= ?, PhoneNumber= ?, Birthdate= ?, Gender= ? "
-                        + " Where UserID= ?";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, fullname);
-                stm.setString(2, email);
-                stm.setString(3, phone);
-                stm.setString(4, birthDate);
-                stm.setString(5, gender);
-                stm.setString(6, userID);
-                int row = stm.executeUpdate();
-                if (row > 0) {
-                    return true;
-                }
-                // hoan chinh roi thi excutequery
-
-            }
-        } finally {
-            if (stm != null) {
-                stm.close();
-            }
-            if (con != null) {
-                con.close();
+    Connection con = null;
+    PreparedStatement stm = null;
+    try {
+        con = DBUtils.makeConnection();
+        // Check if the connection is not null
+        if (con != null) {
+            String sql = "UPDATE Users SET FullName = ?, Email = ?, PhoneNumber = ?, Birthdate = ?, Gender = ? WHERE UserID = ?";
+            stm = con.prepareStatement(sql);
+            stm.setString(1, fullname);
+            stm.setString(2, email);
+            stm.setString(3, phone);
+            stm.setString(4, birthDate);
+            stm.setString(5, gender);
+            stm.setString(6, userID);
+            int row = stm.executeUpdate();
+            if (row > 0) {
+                return true;
             }
         }
-        return false;
+    } finally {
+        if (stm != null) {
+            stm.close();
+        }
+        if (con != null) {
+            con.close();
+        }
     }
+    return false;
 }
+
