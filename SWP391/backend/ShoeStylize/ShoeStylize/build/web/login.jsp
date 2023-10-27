@@ -3,7 +3,7 @@
     Created on : Oct 11, 2023, 1:35:00 PM
     Author     : Administrator
 --%>
-
+<%@page import="Error.LoginInsertError"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,16 @@
         <div class="form">
             <h1>Login Page</h1>
             <form action="MainController">
+                <% 
+                  LoginInsertError error = (LoginInsertError) request.getAttribute("INSERTERROR");
+                  if (error != null) {
+                %>
+                <font color="red">
+                    <%= error.getInvalid()%>
+                </font>
+                <%
+                  }
+                %>
                 <p style="font-weight: bold">Email:</p> <input type="text" name="txtEmail" value="" style="margin-bottom: 20px"/>
                 <br/>
 
