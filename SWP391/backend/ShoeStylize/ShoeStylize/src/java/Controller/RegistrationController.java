@@ -25,7 +25,7 @@ public class RegistrationController extends HttpServlet {
           
           
           private final String REGISTERPAGE = "register.jsp";
-          private final String HOMEPAGE = "home.jsp";
+          private final String LOGINPAGE = "login.jsp";
           DateFormat df = new SimpleDateFormat();
           
           protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -33,22 +33,20 @@ public class RegistrationController extends HttpServlet {
                     response.setContentType("text/html;charset=UTF-8");
                     String url = REGISTERPAGE;
                     try {
-                              Random rdn = new Random();
-                              String userID = String.valueOf(rdn.nextInt());
-                              String email = request.getParameter("txtEmail");
-                              String password = request.getParameter("txtPassword");
-                              String userName = request.getParameter("txtUsername");
-                              String phone = request.getParameter("txtPhone");
-                              
-                              String roleID = "USER";
-                              String image = request.getParameter("txtImage");
-                    
-                              RegistrationDAO dao = new RegistrationDAO();
-                              boolean result = dao.insertRecord(userID, email, password, userName, phone, birthDate, roleID, image);  
+                            String email = request.getParameter("txtEmail");
+                            String password = request.getParameter("txtPassword");
+                            String fullName = request.getParameter("txtFullName");
+                            String phone = request.getParameter("txtPhone");
+                            String birthDate = request.getParameter("birthDate");
+                            String roleID = "USER";
+                            String gender = request.getParameter("gen");
+                            String confirm = request.getParameter("txtConfirmPassword");
+                            RegistrationDAO dao = new RegistrationDAO();
+                            boolean result = dao.insertRecord(email, password, fullName, phone, birthDate, roleID, gender);  
                                
-                               if(result) {
-                                         url = HOMEPAGE;
-                               }
+                            if(result) {
+                                url = LOGINPAGE;
+                            }
                     } catch(SQLException ex) {
                               ex.printStackTrace();
                     } finally {

@@ -6,36 +6,65 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register</title>
-    </head>
-    <body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\register.css">
+    <title>Register</title>
+    <link rel="icon"
+        href="image\shoelogo.png">
+</head>
+
+<body>
+    <div class="header">
+        <img src="image\shoelogo.png"
+            alt="Shoes stylize"></img>
+    </div>
+        <form action="MainController">
+            <div class="title">
+        <h1>Sign up</h1>
         <div class="form">
-        <h1>Login Page</h1>
-        <form action="MainController" method="post">           
-            <p style="font-weight: bold">Email:</p> <input type="email" name="txtEmail" value="" style="margin-bottom: 20px"/>
-            <br/>
-            
-            <p style="font-weight: bold">Password:</p> <input type="password" name="txtPassword" value="" style="margin-bottom: 20px"/>
-            <br/>
-            
-            <p style="font-weight: bold">Username</p> <input type="text" name="txtUsername" value="" style="margin-bottom: 20px"/>
-            <br/>
-            
-            <p style="font-weight: bold">Phone:</p> <input type="text" name="txtPhone" value="" style="margin-bottom: 20px"/>
-            <br/>
-            
-            <p style="font-weight: bold">Birthday:</p> <input type="date" name="txtBirthDate" value="" style="margin-bottom: 20px"/>
-            <br/>
-            
-<!--            <form action="/upload" method="POST" enctype="multipart/form-data">
-                      <input name="photo" type="file">
-            </form>
-            -->
-            <input type="submit" name="btAction" value="Register"/>
+            <h3>Email</h3>
+            <input type="email" name="txtEmail" value="" required="@gmail.com">
+        </div>
+
+        <div class="form">
+            <h3>Full Name</h3>
+            <input type="text" name="txtFullName" value="" required>
+        </div>
+
+        <div class="form">
+            <h3>Password</h3>
+            <input type="password" name="txtPassword" value="" required>
+        </div>
+
+        <div class="form">
+            <h3>Confirm password</h3>
+            <input type="password" name="txtConfirmPassword" value="" required style="width: 50%;">
+            <div style="margin-left: 350px; margin-top: -90px;">
+                <h3>Gender</h3>
+                <input type="radio" class="from1" id="male" name="gen" value="Male">Male
+                <input type="radio" class="from1" id="female" name="gen" value="Female">Female
+                <input type="radio" class="from1" id="other" name="gen" value="Other">Other
+            </div>
+
+        </div>
+
+        <div class="form" style="margin-top: 30px;">
+            <h3>Phone</h3>
+            <input type="tel" name="txtPhone" required style="width: 50%;">
+        </div>
+
+        <div style="margin-left: 350px; margin-top: -100px; ">
+            <h3>Birthday</h3>
+            <input type="date" name="birthDate" required>
+        </div>
+            <input type="submit"  name="btAction" value="Register"/>
         </form>
     </div>
-    </body>
+            
+</body>
+
 </html>

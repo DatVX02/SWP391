@@ -7,7 +7,6 @@ import java.sql.Date;
  * @author Administrator
  */
 public class RegistrationDTO {
-    private String userID;
     private String email;
     private String password;
     private String phone;
@@ -19,22 +18,13 @@ public class RegistrationDTO {
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) {
-        this.userID = userID;
+    public RegistrationDTO(String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) {
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.fullname = fullname;
         this.birthDate = birthDate;
         this.roleID = roleID;
-    }
-
-    public String getUserID() {
-        return userID;
-    }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
     }
 
     public String getEmail() {

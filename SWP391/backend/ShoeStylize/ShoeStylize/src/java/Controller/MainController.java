@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MainController extends HttpServlet {
     private static final String LOGINCONTROLLER="LoginController";
-    private static final String REGISTERCONTROLLER="RegisterController";
+    private static final String REGISTRATIONCONTROLLER="RegistrationController";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -31,7 +31,7 @@ public class MainController extends HttpServlet {
                 case "Login": url=LOGINCONTROLLER;
                               break;
                 
-                case "Register": url=REGISTERCONTROLLER;
+                case "Register": url=REGISTRATIONCONTROLLER;
                                  break;
                                  
                 

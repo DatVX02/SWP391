@@ -9,8 +9,8 @@
         <servlet-class>Controller.MainController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RegisterController</servlet-name>
-        <servlet-class>Controller.RegisterController</servlet-class>
+        <servlet-name>RegistrationController</servlet-name>
+        <servlet-class>Controller.RegistrationController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -21,8 +21,8 @@
         <url-pattern>/MainController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RegisterController</servlet-name>
-        <url-pattern>/RegisterController</url-pattern>
+        <servlet-name>RegistrationController</servlet-name>
+        <url-pattern>/RegistrationController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

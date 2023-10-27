@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <br>
-                <input type="submit"  name="btAction" value="Login"/>
+                <input type="submit" class="button"  name="btAction" value="Login"/>
             </form>
         </div>
     </body>
