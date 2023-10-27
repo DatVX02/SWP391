@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Home Page</h1>
-        <a href="information.jsp">Thông tin tài khoản</a>
+        <a href="information.jsp">Account Information</a>
+        <a href="login.jsp">Logout</a>
     </body>
 </html>

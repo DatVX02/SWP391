@@ -14,17 +14,27 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController extends HttpServlet {
     private final String HOMEPAGE= "home.jsp";
     private final String INVALIDPAGE= "invalid.jsp";
+    private final String ADMINPAGE = "adminpage.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         String url = INVALIDPAGE;
+        String roleID;
         try {
             String email= request.getParameter("txtEmail");
             String password= request.getParameter("txtPassword");
             RegistrationDAO dao = new RegistrationDAO();
             boolean result = dao.checkLogin(email, password);
             if(result){
-                url = HOMEPAGE;
+                roleID = dao.checkRoleID(email, password);
+                if (roleID != null) {
+                    if (roleID.equals("ADMIN")) {
+                        url = ADMINPAGE;
+                    } else if (roleID.equals("CUSTOMER")) {
+                        url = HOMEPAGE;
+                    }
+                }
+
             }
         } catch(SQLException ex){
             ex.printStackTrace();

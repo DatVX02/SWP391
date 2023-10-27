@@ -38,7 +38,7 @@ public class RegistrationController extends HttpServlet {
                             String fullName = request.getParameter("txtFullName");
                             String phone = request.getParameter("txtPhone");
                             String birthDate = request.getParameter("birthDate");
-                            String roleID = "USER";
+                            String roleID = "CUSTOMER";
                             String gender = request.getParameter("gen");
                             String confirm = request.getParameter("txtConfirmPassword");
                             RegistrationDAO dao = new RegistrationDAO();
