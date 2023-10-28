@@ -61,7 +61,8 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <img src=\"image\\shoelogo.png\"\r\n");
       out.write("            alt=\"Shoes stylize\"></img>\r\n");
       out.write("    </div>\r\n");
-      out.write("    <div class=\"title\">\r\n");
+      out.write("        <form action=\"MainController\">\r\n");
+      out.write("            <div class=\"title\">\r\n");
       out.write("        <h1>Sign up</h1>\r\n");
       out.write("        <div class=\"form\">\r\n");
       out.write("            <h3>Email</h3>\r\n");
@@ -69,7 +70,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("        <div class=\"form\">\r\n");
-      out.write("            <h3>FullName</h3>\r\n");
+      out.write("            <h3>Full Name</h3>\r\n");
       out.write("            <input type=\"text\" name=\"txtFullName\" value=\"\" required>\r\n");
       out.write("        </div>\r\n");
       out.write("\r\n");
@@ -83,7 +84,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <input type=\"password\" name=\"txtConfirmPassword\" value=\"\" required style=\"width: 50%;\">\r\n");
       out.write("            <div style=\"margin-left: 350px; margin-top: -90px;\">\r\n");
       out.write("                <h3>Gender</h3>\r\n");
-      out.write("                <input type=\"radio\" class=\"from1\" id=\"male\" name=\"gen\" value=\"Male\" >Male\r\n");
+      out.write("                <input type=\"radio\" class=\"from1\" id=\"male\" name=\"gen\" value=\"Male\">Male\r\n");
       out.write("                <input type=\"radio\" class=\"from1\" id=\"female\" name=\"gen\" value=\"Female\">Female\r\n");
       out.write("                <input type=\"radio\" class=\"from1\" id=\"other\" name=\"gen\" value=\"Other\">Other\r\n");
       out.write("            </div>\r\n");
@@ -99,8 +100,6 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <h3>Birthday</h3>\r\n");
       out.write("            <input type=\"date\" name=\"birthDate\" required>\r\n");
       out.write("        </div>\r\n");
-      out.write("\r\n");
-      out.write("        <form action=\"MainController\">\r\n");
       out.write("            <input type=\"submit\"  name=\"btAction\" value=\"Register\"/>\r\n");
       out.write("        </form>\r\n");
       out.write("    </div>\r\n");

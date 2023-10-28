@@ -54,7 +54,7 @@
 
         <div class="form" style="margin-top: 30px;">
             <h3>Phone</h3>
-            <input type="tel" name="txtPhone" required style="width: 50%;">
+            <input type="tel" name="txtPhone" value="" required style="width: 50%;">
         </div>
 
         <div style="margin-left: 350px; margin-top: -100px; ">
