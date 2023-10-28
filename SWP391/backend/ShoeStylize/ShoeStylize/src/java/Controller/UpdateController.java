@@ -40,7 +40,7 @@ public class UpdateController extends HttpServlet {
         
         try (PrintWriter out = response.getWriter()) {
             String url = INVALIDPAGE;
-            int userID = 0;
+            int userID = 1;
             String email = request.getParameter("txtEmail");
             String fullName = request.getParameter("txtFullName");
             String phone = request.getParameter("txtPhone");

@@ -27,33 +27,39 @@
         <div>
             <ul class="information_left_1">
                 <img src="image\user.png" style="width: 15px; transform: translateY(02px);">
-                <a href="information.jsp">Thông tin tài khoản </a>
+                <a href="information.jsp">Account information </a>
+            </ul>
+
+            <ul class="information_left_1">
+                <img src="image\padlock.png" style="width: 15px; transform: translateY(02px);">
+                <a href="ChangePassword.jsp">Change password</a>
             </ul>
 
             <ul class="information_left_2">
                 <img src="image\checklist.png" style="width: 15px; transform: translateY(02px);" />
                 <a href="accountManagement.jsp">
-                    Quản lí tài khoản
+                    Order management
                 </a>
             </ul>
 
             <ul class="information_left_3">
                 <img src="image\support.png" style="width: 15px; transform: translateY(02px);" />
                 <a href="support.jsp">
-                    Hỗ trợ
+                    Support
                 </a>
             </ul>
 
             <ul class="information_left_4">
                 <img src="image\feedback.png" style="width: 15px; transform: translateY(02px);" />
-                <a href="feedback.jsp">Góp ý - phản hồi </a>
+                <a href="feedback.jsp">Suggestions </a>
             </ul>
 
             <ul class="information_left_5">
                 <img src="image\logout.png" style="width: 15px;" />
-                <a href="login.jsp">Đăng xuất </a>
+                <a href="login.jsp">Log out </a>
             </ul>
         </div>
+    </div>
 
         <div class="information_right">
             <h2 style="color: #FF0000;">GÓP Ý VÀ PHẢN HỒI </h2>

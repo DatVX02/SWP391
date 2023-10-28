@@ -105,7 +105,7 @@ public final class information_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <form action=\"MainController\">\r\n");
       out.write("                <div>\r\n");
       out.write("                    <h3>Full Name</h3>\r\n");
-      out.write("                    <input type=\"text\" name=\"txtFullName\" value=\"\" style=\"width: 200px;\" required>\r\n");
+      out.write("                    <input type=\"text\" name=\"txtFullName\" value=\"sdsd\" style=\"width: 200px;\" required>\r\n");
       out.write("                </div>\r\n");
       out.write("                \r\n");
       out.write("                <div>\r\n");
