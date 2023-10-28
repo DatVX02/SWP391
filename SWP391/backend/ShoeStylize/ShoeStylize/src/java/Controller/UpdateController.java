@@ -5,8 +5,10 @@
  */
 package Controller;
 
+import Registration.RegistrationDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +21,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "UpdateController", urlPatterns = {"/UpdateController"})
 public class UpdateController extends HttpServlet {
-
+    private final String UPDATEPAGE = "information.jsp";
+    private final String INVALIDPAGE = "invalid.jsp";
+    private final String DONEPAGE = "complete.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,18 +35,29 @@ public class UpdateController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
+        
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UpdateController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UpdateController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            String url = INVALIDPAGE;
+            int userID = 0;
+            String email = request.getParameter("txtEmail");
+            String fullName = request.getParameter("txtFullName");
+            String phone = request.getParameter("txtPhone");
+            String birthDate = request.getParameter("birthDate");
+            String gender = request.getParameter("gen");
+            
+            try{
+                RegistrationDAO dao = new RegistrationDAO();
+                boolean result = dao.updateRecord(userID, email, fullName, phone, birthDate, gender);
+                if (result){
+                    url = DONEPAGE;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally{
+                response.sendRedirect(url);
+            }
         }
     }
 

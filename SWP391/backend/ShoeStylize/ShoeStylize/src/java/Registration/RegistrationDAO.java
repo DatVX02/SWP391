@@ -8,10 +8,6 @@ import java.sql.SQLException;
 import Database.DBUtils;
 import java.sql.Date;
 
-/**
- *
- * @author Admin
- */
 public class RegistrationDAO implements Serializable {
 
     public boolean checkLogin(String Email, String Password) throws SQLException {
@@ -76,6 +72,37 @@ public class RegistrationDAO implements Serializable {
         return null;
     }
     
+    public int checkUserID(String Email, String Password) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "Select UserID From Users"
+                        + " Where Email = ? and Password = ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, Email);
+                stm.setString(2, Password);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt("UserID");
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return -1;
+    }
+    
     public boolean insertRecord(String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -108,22 +135,22 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
     
-    public boolean updateRecord(String userID, String fullname, String email, String phone, String birthDate, String gender) throws SQLException {
+    public boolean updateRecord(int userID, String email, String fullName, String phone, String birthDate, String gender) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         try {
             con = DBUtils.makeConnection();
             // tra ra null or k.
             if (con != null) {
-                String sql = "Update Users set UserName= ?, Email= ?, PhoneNumber= ?, Birthdate= ?, Gender= ? "
-                        + " Where UserID= ?";
+                String sql = "UPDATE Users SET [Email] = ? ,[FullName] = ? ,[PhoneNumber] = ? ,[Birthdate] = ?  ,[Gender] = ?"
+                        + " WHERE UserID = ?";
                 stm = con.prepareStatement(sql);
-                stm.setString(1, fullname);
-                stm.setString(2, email);
+                stm.setString(1, email);
+                stm.setString(2, fullName);
                 stm.setString(3, phone);
                 stm.setString(4, birthDate);
                 stm.setString(5, gender);
-                stm.setString(6, userID);
+                stm.setInt(6, userID);
                 int row = stm.executeUpdate();
                 if (row > 0) {
                     return true;
