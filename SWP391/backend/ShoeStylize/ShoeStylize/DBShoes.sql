@@ -16,11 +16,9 @@ GO
 CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
-	[ShoeID] [int] NULL,
 	[Title] [nvarchar] (30) NULL,
 	[Content] [text] NULL,
 	[PostDay] [date] NULL,
-	[Image] [varbinary] (MAX) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[PostID] ASC
@@ -176,7 +174,7 @@ CREATE TABLE [dbo].[Shoes](
 	[Description] [text] NULL,
 	[Size] [varchar](10) NULL,
 	[Color] [varchar](50) NULL,
-	[Image] [varchar](max) NULL,
+	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
 	[Price] [decimal](10, 2) NULL,
 	[SizeID] [int] NULL

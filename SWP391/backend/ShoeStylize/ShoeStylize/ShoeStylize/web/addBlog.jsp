@@ -37,12 +37,11 @@
         </div>
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add Blog</h2>
-            <form action="MainController" method="post">
+            <form action="MainController">
                 <p>Title: <input type="text" name="txtTitle" /></p>
                 <p>Content: <input type="text" name="txtContent" /></p>
-                <p>Author: <input type="text" name="txtAuthor" /></p>
+                <p>User ID: <input type="text" name="userID" value="<%= userID%>"/></p>
                 <p>Date submitted: <input type="date" name="txtDate" /></p>
-                <p>Image: &nbsp<input type="file" id="img" name="img" accept="image/*"></p></br>
                 <input type="hidden" name="userID" value="<%= userID %>">
                 <input type="submit" name="btAction" value="Add Blog">
             </form>

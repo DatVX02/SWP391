@@ -77,42 +77,83 @@
         </div>
     </div>
 
-    
+    <%
+                    Connection con = null;
+                    PreparedStatement stm = null;
+                    ResultSet rs = null;
+                    int id = Integer.valueOf(userID);
+
+                    try {
+                        con = DBUtils.makeConnection();
+                        if (con != null) {
+                            String sql = "SELECT FullName, Email, PhoneNumber, Birthdate, Gender FROM Users WHERE UserID = ?";
+                            stm = con.prepareStatement(sql);
+                            stm.setInt(1, id);
+                            rs = stm.executeQuery();
+
+                            if (rs.next()) { // Check if there are results
+                                String name = rs.getString("FullName");
+                                String email = rs.getString("Email");
+                                String phone = rs.getString("PhoneNumber");
+                                String date = rs.getString("Birthdate");
+                                String gender = rs.getString("Gender");
+                                session.setAttribute("FullName", name);
+                                session.setAttribute("Email", email);
+                                session.setAttribute("PhoneNumber", phone);
+                                session.setAttribute("Birthdate", date);
+                                session.setAttribute("Gender", gender);
+                            }
+                        }
+                    } catch (SQLException e) {
+                        // Handle the SQLException, or at least log it
+                        e.printStackTrace();
+                        throw e; // Re-throw the exception if needed
+                    } finally {
+                        // Close resources in reverse order of acquisition, and check for null
+                        if (rs != null) {
+                            rs.close();
+                        }
+                        if (stm != null) {
+                            stm.close();
+                        }
+                        if (con != null) {
+                            con.close();
+                        }
+                    }
+                %>
     
         <div class="information_right">
             <h2>Account Information</h2>
             <form action="MainController">
                 <div>
                     <h3>Full Name</h3>
-                    <input type="text" name="txtFullName" value="" style="width: 200px;" required>
+                    <input type="text" name="txtFullName" value="<%= session.getAttribute("FullName")%>" style="width: 200px;" required>
                 </div>
-                
+
                 <div>
                     <h3>Email</h3>
-                    <input type="email" name="txtEmail" value="" required style="width: 200px;">
+                    <input type="email" name="txtEmail" value="<%= session.getAttribute("Email")%>" required style="width: 200px;">
                 </div>
-                
+
                 <div>
                     <h3>Phone</h3>
-                    <input type="tel" name="txtPhone" value="" required style="width: 200px;">
+                    <input type="tel" name="txtPhone" value="<%= session.getAttribute("PhoneNumber")%>" required style="width: 200px;">
                 </div>
 
                 <div>
                     <h3>Birth Date</h3>
-                    <input type="date" name="birthDate" style="width: 200px;">
+                    <input type="date" name="birthDate" style="width: 200px;" value="<%= session.getAttribute("Birthdate")%>">
+                </div>
+
+                <div>
+                    <h3>Gender</h3>
+                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Male
+                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Female
+                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(session.getAttribute("Gender"))) { %> checked <% }%>>Other
                 </div>
                 
                 <div>
-                    <h3>
-                        Gender
-                    </h3>
-                    <input type="radio" class="from1" id="male" name="gen" value="Male">Male
-                    <input type="radio" class="from1" id="female" name="gen" value="Female">Female
-                    <input type="radio" class="from1" id="other" name="gen" value="Other">Other
-                </div>
-                
-                <div>
-                    <input type="hidden" name="txtUserID" value="<%= userID %>"> 
+                    <input type="hidden" name="txtUserID" value="<%= userID%>"> 
                 </div>
 
                 <button name="btAction" value="Update" style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Submit </button>

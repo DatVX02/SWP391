@@ -69,7 +69,6 @@ public final class addBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <div class=\"header\">\n");
       out.write("        <img src=\"image\\shoelogo.png\"\n");
       out.write("            alt=\"Shoes stylize\"></img>\n");
-      out.write("        <button style=\"background: #FF0000; color: #fff;\">Manage Blog</button>\n");
       out.write("    </div>\n");
       out.write("\n");
       out.write("    <div class=\"manage\">\n");
@@ -80,9 +79,11 @@ public final class addBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div style=\"width: 79%; float:right\" class=\"addBLog\">\n");
       out.write("            <h2>Add Blog</h2>\n");
       out.write("            <form action=\"MainController\" method=\"post\">\n");
-      out.write("                <p>Title: <input type=\"text\" name=\"txtTieude\" /></p>\n");
-      out.write("                <p>Content: <input type=\"text\" name=\"txtTen\" /></p>\n");
-      out.write("                <p>Poster: <input type=\"text\" name=\"txtAccount\" /></p>\n");
+      out.write("                <p>Title: <input type=\"text\" name=\"txtTitle\" /></p>\n");
+      out.write("                <p>Content: <input type=\"text\" name=\"txtContent\" /></p>\n");
+      out.write("                <p>User ID: <input type=\"text\" name=\"userID\" value=\"");
+      out.print( userID);
+      out.write("\"/></p>\n");
       out.write("                <p>Date submitted: <input type=\"date\" name=\"txtDate\" /></p>\n");
       out.write("                <p>Image: &nbsp<input type=\"file\" id=\"img\" name=\"img\" accept=\"image/*\"></p></br>\n");
       out.write("                <input type=\"hidden\" name=\"userID\" value=\"");

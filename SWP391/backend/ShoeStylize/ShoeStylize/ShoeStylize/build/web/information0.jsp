@@ -123,29 +123,27 @@
             <form action="" method="">
             <div>
                     <h3>Full Name</h3>
-                    <input type="text" name="txtFullName" value="<%= session.getAttribute("FullName")%>" style="width: 200px;" required>
+                    <input type="text" name="txtFullName" value="<%= session.getAttribute("FullName")%>" style="width: 200px;" readonly>
                 </div>
 
                 <div>
                     <h3>Email</h3>
-                    <input type="email" name="txtEmail" value="<%= session.getAttribute("Email")%>" required style="width: 200px;">
+                    <input type="email" name="txtEmail" value="<%= session.getAttribute("Email")%>" readonly style="width: 200px;">
                 </div>
 
                 <div>
                     <h3>Phone</h3>
-                    <input type="tel" name="txtPhone" value="<%= session.getAttribute("PhoneNumber")%>" required style="width: 200px;">
+                    <input type="tel" name="txtPhone" value="<%= session.getAttribute("PhoneNumber")%>" readonly style="width: 200px;">
                 </div>
 
                 <div>
                     <h3>Birth Date</h3>
-                    <input type="date" name="birthDate" style="width: 200px;" value="<%= session.getAttribute("Birthdate")%>">
+                    <input type="date" name="birthDate" style="width: 200px;" value="<%= session.getAttribute("Birthdate")%>" readonly>
                 </div>
 
                 <div>
                     <h3>Gender</h3>
-                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Male
-                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Female
-                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(session.getAttribute("Gender"))) { %> checked <% }%>>Other
+                    <input type="text" name="gen" value="<%= session.getAttribute("Gender")%>" style="width: 200px;" readonly>
                 </div>
                 
                 <div>
@@ -153,6 +151,5 @@
                 </div>
         </form>
             <a href="information.jsp"><button style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Update</button></a>
-        
         </div>
 </html>

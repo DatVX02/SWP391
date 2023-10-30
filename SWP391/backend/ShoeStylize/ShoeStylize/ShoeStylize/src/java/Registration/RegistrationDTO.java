@@ -2,10 +2,6 @@ package Registration;
 
 import java.sql.Date;
 
-/**
- *
- * @author Administrator
- */
 public class RegistrationDTO {
     private String email;
     private String password;
@@ -27,6 +23,14 @@ public class RegistrationDTO {
         this.roleID = roleID;
     }
 
+    public RegistrationDTO(String email, String fullname, String phone, String birthDate, String gender) {
+        this.email = email;
+        this.fullname = fullname;
+        this.phone = phone;
+        this.birthDate = birthDate;
+        this.gender = gender;
+    }
+  
     public String getEmail() {
         return email;
     }

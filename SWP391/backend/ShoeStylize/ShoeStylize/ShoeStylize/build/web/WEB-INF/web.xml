@@ -20,6 +20,14 @@
         <servlet-name>AddBlogController</servlet-name>
         <servlet-class>Controller.AddBlogController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchBlogController</servlet-name>
+        <servlet-class>Controller.SearchBlogController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchController</servlet-name>
+        <servlet-class>Controller.SearchController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>AddBlogController</servlet-name>
         <url-pattern>/AddBlogController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchBlogController</servlet-name>
+        <url-pattern>/SearchBlogController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchController</servlet-name>
+        <url-pattern>/SearchController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
