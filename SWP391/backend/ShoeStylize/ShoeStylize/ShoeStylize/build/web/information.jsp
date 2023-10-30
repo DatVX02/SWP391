@@ -79,7 +79,6 @@
 
     
     
-    
         <div class="information_right">
             <h2>Account Information</h2>
             <form action="MainController">

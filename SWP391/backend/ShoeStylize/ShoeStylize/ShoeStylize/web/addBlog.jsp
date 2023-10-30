@@ -17,10 +17,17 @@
 
 <body>
 
+    <% 
+        String userID="";
+        Cookie[] cookie = request.getCookies();
+        if(cookie !=null){
+            userID = cookie[cookie.length-1].getName();
+        }
+    %>
+    
     <div class="header">
         <img src="image\shoelogo.png"
             alt="Shoes stylize"></img>
-        <button style="background: #FF0000; color: #fff;">Manage Blog</button>
     </div>
 
     <div class="manage">
@@ -31,13 +38,13 @@
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add Blog</h2>
             <form action="MainController" method="post">
-                <p>Title: <input type="text" name="txtTieude" /></p>
-                <p>Content: <input type="text" name="txtTen" /></p>
-                <p>Poster: <input type="text" name="txtAccount" /></p>
+                <p>Title: <input type="text" name="txtTitle" /></p>
+                <p>Content: <input type="text" name="txtContent" /></p>
+                <p>Author: <input type="text" name="txtAuthor" /></p>
                 <p>Date submitted: <input type="date" name="txtDate" /></p>
                 <p>Image: &nbsp<input type="file" id="img" name="img" accept="image/*"></p></br>
-                <input type="hidden" name="userID" value="123">
-                <input type="submit" name="btAction" value="AddBlog">
+                <input type="hidden" name="userID" value="<%= userID %>">
+                <input type="submit" name="btAction" value="Add Blog">
             </form>
         </div>
     </div>

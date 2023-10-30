@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "UpdateController", urlPatterns = {"/UpdateController"})
 public class UpdateController extends HttpServlet {
-    private final String UPDATEPAGE = "information.jsp";
+    private final String UPDATEPAGE = "information0.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
     private final String DONEPAGE = "complete.jsp";
     /**
@@ -52,7 +52,7 @@ public class UpdateController extends HttpServlet {
                 RegistrationDAO dao = new RegistrationDAO();
                 boolean result = dao.updateRecord(userID, email, fullName, phone, birthDate, gender);
                 if (result){
-                    url = DONEPAGE;
+                    url = UPDATEPAGE;
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

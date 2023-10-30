@@ -38,7 +38,7 @@ public class MainController extends HttpServlet {
                                  
                 case "Update": url=UPDATECONTROLLER;
                                break;
-                case "AddBlog": url=ADDBLOGCONTROLLER;
+                case "Add Blog": url=ADDBLOGCONTROLLER;
                                break;
                 default: break;
             }

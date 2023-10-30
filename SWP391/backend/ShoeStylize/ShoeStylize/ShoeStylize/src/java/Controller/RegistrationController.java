@@ -21,10 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class RegistrationController extends HttpServlet {
-          
-          
-          private final String REGISTERPAGE = "register.jsp";
-          private final String LOGINPAGE = "login.jsp";
+    private final String REGISTERPAGE = "register.jsp";
+    private final String LOGINPAGE = "login.jsp";
           DateFormat df = new SimpleDateFormat();
           
           protected void processRequest(HttpServletRequest request, HttpServletResponse response)

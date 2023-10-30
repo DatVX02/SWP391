@@ -56,6 +56,16 @@ public final class addBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<body>\n");
       out.write("\n");
+      out.write("    ");
+ 
+        String userID="";
+        Cookie[] cookie = request.getCookies();
+        if(cookie !=null){
+            userID = cookie[cookie.length-1].getName();
+        }
+    
+      out.write("\n");
+      out.write("    \n");
       out.write("    <div class=\"header\">\n");
       out.write("        <img src=\"image\\shoelogo.png\"\n");
       out.write("            alt=\"Shoes stylize\"></img>\n");
@@ -75,7 +85,10 @@ public final class addBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <p>Poster: <input type=\"text\" name=\"txtAccount\" /></p>\n");
       out.write("                <p>Date submitted: <input type=\"date\" name=\"txtDate\" /></p>\n");
       out.write("                <p>Image: &nbsp<input type=\"file\" id=\"img\" name=\"img\" accept=\"image/*\"></p></br>\n");
-      out.write("                <input type=\"submit\" name=\"btAction\" value=\"AddBlog\">\n");
+      out.write("                <input type=\"hidden\" name=\"userID\" value=\"");
+      out.print( userID );
+      out.write("\">\n");
+      out.write("                <input type=\"submit\" name=\"btAction\" value=\"Add Blog\">\n");
       out.write("            </form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");

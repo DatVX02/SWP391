@@ -168,4 +168,34 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
+    
+    public boolean addBlog(String userID, String shoeID, String content, String postDate, String imgData) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "INSERT INTO BlogPosts([UserID],[ShoeID],[Content],[PostDay],[Image])" 
+                        + " VALUES (?, ?, ?, ?, ?)";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, userID);
+                stm.setString(2, shoeID);
+                stm.setString(3, content);
+                stm.setString(4, postDate);
+                stm.setString(5, imgData);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
 }
