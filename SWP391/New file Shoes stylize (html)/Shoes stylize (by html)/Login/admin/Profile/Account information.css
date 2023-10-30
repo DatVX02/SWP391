@@ -4,8 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-.header {
+.header{
     background-color: #979797;
 }
 
@@ -19,11 +18,11 @@ body {
 
 .information_left {
     margin: 50px 50px 0px 100px;
-
+    
 }
 
 .information_left ul {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
 }
 
@@ -32,7 +31,7 @@ body {
     color: #000000;
 }
 
-.information_left_2:nth-child(2) {
+.information_left_1:nth-child(1) {
     background-color: #F8B2B2;
     border: 10px solid #F8B2B2;
     border-radius: 20px;
@@ -47,37 +46,16 @@ body {
     border-radius: 20px;
     border:  0.3px solid #000000;
     padding: 2px 30px;
-    transform: translate(300px, -340px) ;
+    transform: translate(300px, -300px) ;
     display: block;
     align-items: center;
     justify-content: center;
-    
+
 
 }
 
 button{
     margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #EBAA5D;
-    border-radius: 50px;
-    border: 0.5px solid #000000;
-    cursor: pointer;
+    margin-left: 320px;
     padding: 5px 20px;
-    text-align: center;
 }
-
-form {
-    text-align: center;
-}
-
-h4{
-    text-align: left;
-}
-
-input {
-    width: 100%;
-    margin: -10px 0 10px;
-    box-sizing: border-box;
-    text-align: left;
-}
-

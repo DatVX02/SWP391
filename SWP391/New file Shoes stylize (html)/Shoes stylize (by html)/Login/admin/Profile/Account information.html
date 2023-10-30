@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon"
-        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
-    <link rel="stylesheet" href="AccountManagement.css">
+        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+    <link rel="stylesheet" href="../Profile/Account information.css">
 </head>
 
 <body>
     <div class="header">
-        <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+        <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
             alt="Shoes stylize"></img>
     </div>
-
+    <!-- menu -->
     <div class="information_left">
         <div>
             <ul class="information_left_1">
                 <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\image\logo\user.png" style="width: 15px; transform: translateY(02px);">
-                <a href="Account information.html">Account information </a>
+                <a href="information.html">Account information </a>
             </ul>
 
             <ul class="information_left_1">
@@ -53,15 +53,46 @@
             </ul>
         </div>
 
+
         <div class="information_right">
-            <h2>Quản lí đơn hàng</h2>
-            <ul style="list-style-type: none; ">
-                <li>Tất cả</li>
-                <li>Đơn đang chờ duyệt</li>
-                <li>Hoàn thành</li>
-                <li>Hủy</li>
-            </ul>
+            <h2>Account information</h2>
+            <form action="" method="">
+            <div>
+                <h3>FullName</h3>
+                <input type="text" style="width: 200px;" required readonly>
+            </div>
+
+            <div>
+                <h3>Email</h3>
+                <input type="email" required style="width: 200px;" readonly>
+            </div>
+
+            <div>
+                <h3>Phone Number</h3>
+                <input type="tel" required style="width: 200px;" readonly>
+            </div>
+
+            <div>
+                <h3>Date of Birth</h3>
+                <input type="date" style="width: 200px;" readonly>
+            </div>
+
+            <div>
+                <h3>
+                    Gender
+                </h3>
+
+                <input type="radio" class="from1" id="male" name="gen" value="Male" readonly> Male
+                <input type="radio" class="from1" id="female" name="gen" value="Female" readonly>Female
+                <input type="radio" class="from1" id="other" name="gen" value="Other" readonly>Other
+
+            </div>
+        </form>
+            <a href="../Profile/Update information.html"><button style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Update</button></a>
+        
         </div>
+
+
 </body>
 
 </html>
