@@ -17,6 +17,7 @@ CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
+	[Title] [varchar](100) NULL,	 
 	[Content] [text] NULL,
 	[PostDay] [date] NULL,
 PRIMARY KEY CLUSTERED 
