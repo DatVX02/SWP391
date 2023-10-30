@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +25,8 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String url = LOGINPAGE;
         String roleID;
+        int userID;
+        String txtUserID;
         boolean bError = FALSE; 
         LoginInsertError error = new LoginInsertError();
         try {
@@ -36,8 +39,18 @@ public class LoginController extends HttpServlet {
                 if (roleID != null) {
                     if (roleID.equals("ADMIN")) {
                         url = ADMINPAGE;
+                        userID = dao.checkUserID(email, password);
+                        txtUserID = String.valueOf(userID);
+                        Cookie cookie = new Cookie(txtUserID, "Admin");
+                        cookie.setMaxAge(1*60);
+                        response.addCookie(cookie);
                     } else if (roleID.equals("CUSTOMER")) {
                         url = HOMEPAGE;
+                        userID = dao.checkUserID(email, password);
+                        txtUserID = String.valueOf(userID);
+                        Cookie cookie = new Cookie(txtUserID, "Customer");
+                        cookie.setMaxAge(1*60);
+                        response.addCookie(cookie);
                     }
                 }
             } else {

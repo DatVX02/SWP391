@@ -21,6 +21,15 @@
         <img src="image\shoelogo.png"
             alt="Shoes stylize"></img>
     </div>
+    
+    <% 
+        String userID="";
+        Cookie[] cookie = request.getCookies();
+        if(cookie !=null){
+            userID = cookie[cookie.length-1].getName();
+        }
+    %>
+    
     <!-- menu -->
     <div class="information_left">
         <div>
@@ -60,6 +69,8 @@
         </div>
     </div>
     
+    
+        
     <div class="information_right">
             <h2>Account information</h2>
             <form action="" method="">

@@ -4,6 +4,13 @@
     Author     : Administrator
 --%>
 
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="Database.DBUtils" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="Registration.RegistrationDAO" %>
+<%@ page import="Registration.RegistrationDTO" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +29,15 @@
         <img src="image\shoelogo.png"
             alt="Shoes stylize"></img>
     </div>
+    
+    <% 
+        String userID="";
+        Cookie[] cookie = request.getCookies();
+        if(cookie !=null){
+            userID = cookie[cookie.length-1].getName();
+        }
+    %>
+    
     <!-- menu -->
     <div class="information_left">
         <div>
@@ -61,6 +77,9 @@
         </div>
     </div>
 
+    
+    
+    
         <div class="information_right">
             <h2>Account Information</h2>
             <form action="MainController">
@@ -94,7 +113,7 @@
                 </div>
                 
                 <div>
-                    <input type="hidden" name="userID" value=""> 
+                    <input type="hidden" name="txtUserID" value="<%= userID %>"> 
                 </div>
 
                 <button name="btAction" value="Update" style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Submit </button>
