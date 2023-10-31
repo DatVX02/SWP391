@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon"
-        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+    <title>Shoes Page</title>
+    <link rel="icon" href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
     <link rel="stylesheet" href="../HomePage(no login)/HomePage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
@@ -16,134 +22,354 @@
     <!-- header -->
     <div class="header">
         <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
-            alt="Shoes stylize">
+            alt="shoes">
         <div class="header_info" style="color: white;">
             <a href="../../Login/Login.html"><img
                     src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\login.png"
                     alt="Login">Login</a>
-        
+
         </div>
     </div>
-    <!-- button create -->
-    <div class="information_left">
-        <a href="#"><button>Create New Shoes</button></a>
+
+    <div style="text-align: right; transform: translateX(20px); margin-top: 20px; ">
+        <a href="#">
+            <button style="background: #FF9900; font-weight: bold; padding: 5px 10px; border: 0.5px ">Create New Shoes</button>
+        </a>
     </div>
-    <!-- information left -->
-    <div class="information_left_1" style="width: 40%;">
-        <div class="information_left_1_1">
-            <h3>
-                Category</h3>
-            <ul style="list-style-type: none;">
-                <li>Sport</li>
-                <li>Party</li>
-            </ul>
-            <h3>
-                Brands
-            </h3>
-            <ul>
-                <input type="checkbox">Nike <br>
-                <input type="checkbox">Jordan<br>
-                <input type="checkbox">Adidas <br>
-                <input type="checkbox">Puma <br>
-                <input type="checkbox">Converse <br>
-            </ul>
-
-            <h3>Price Range
-                <img src="" alt="">
-            </h3>
-            <ul>
-                <form action="" method="">
-                    Min <br>
-                    <input type="number" style="border-radius: 5px; border: 0.5px solid #fff; padding: 10px;" min="0" max="9999999999"
-                        placeholder="0">
-                    <br>
-                    Max <br>
-                    <input type="number" style="border-radius: 5px; border: 0.5px solid #fff; padding: 10px;" min="0" max="9999999999"
-                        placeholder="9999999">
-                </form>
-            </ul>
-
-
-            <div>
-                <h3>Ratings</h3>
-                <ul>
-                    <!-- 5 start -->
-                    <input type="checkbox">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <br>
-                    <!-- 4 star -->
-                    <input type="checkbox">
-                    <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-
-                    <br>
-                    <!-- 3 star -->
-                    <input type="checkbox">
-                    <span class="fa fa-star  checked "></span>
-                    <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
 
 
 
-                    <br>
-                    <!-- 2 star -->
-                    <input type="checkbox">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
 
-                    <br>
-                    <!-- 1 star -->
-                    <input type="checkbox">
-                    <span class="fa fa-star checked "></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </ul>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header" style="font-weight: bold;">Category</div>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">Sport</a>
+                        <a href="#" class="list-group-item list-group-item-action ">Party</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body p-1">
+                        <div class="card border-0 b-3">
+                            <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample1"
+                                aria-expanded="false">
+                                <p class="m-0 h6">Brand</p>
+                            </div>
+                            <div class="card-body p-0 collapse show" id="collapseExample1">
+                                <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Nike</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">Jordan</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">Adidas</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4">Puma</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                            <label class="custom-control-label" for="customCheck5">Converse</label>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="card border-0 b-3">
+                            <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample4"
+                                aria-expanded="false">
+                                <p class="m-0 h6">Price</p>
+                            </div>
+                            <div class="card-body p collapse show" id="collapseExample4">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Min</label>
+                                        <input class="form-control" placeholder="$0" type="number" min="0"
+                                            max="99999999999">
+                                    </div>
+                                    <div class="form-group text-right col-md-6">
+                                        <label>Max</label>
+                                        <input class="form-control" placeholder="$1,0000" type="number" min="0"
+                                            max="9999999999">
+                                    </div>
+                                </div>
+
+                                <div class="card-header p-2 bg-white" data-toggle="collapse"
+                                    data-target="#collapseExample1" aria-expanded="false">
+                                    <p class="m-0 h6">Rating</p>
+                                </div>
+
+                                <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                            <label class="custom-control-label" for="customCheck6"
+                                                style="color: #FF9900;">
+                                                <i class="fa-xs far fa-star " style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star " style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star " style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                            <label class="custom-control-label" for="customCheck7">
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                            <label class="custom-control-label" for="customCheck8">
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                            <label class="custom-control-label" for="customCheck9">
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                            <label class="custom-control-label" for="customCheck10">
+                                                <i class="fa-xs far fa-star" style="color: #FF9900;"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                                <i class="fa-xs far fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-block btn-primary">Apply</button>
+                    </div>
+                </div>
             </div>
-            <form action="" method="">
-                <input type="button" name="" value="Apply" />
-            </form>
-        </div>
-    </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
 
-    <div class="information_right" style="width: 60%;">
-        <div class="information_right_1">
-            <div>
-                <img src="*" alt="image">
-                <p></p>
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
+
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
+
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
+
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
+
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                <div class="card-body">
+                                    <p class="h5 m-0">
+                                        <!-- Giá sản phẩm -->
+                                    </p>
+                                    <p class="h6">
+                                        <!-- Tên sản phẩm  -->
+                                    </p>
+
+                                </div>
+                                <div class="card-footer p-0" style="text-align: center;">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fas fa-cart-plus"></i>
+                                            <span>Add Cart</span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer p-3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="pagination m-0 ">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1"
+                                                aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="information_right_2">
-            
-        </div>
-
-        <div class="information_right_3">
-
-        </div>
-
-        <div class="information_right_4">
-
-        </div>
-
-        <div class="information_right_5">
-
-        </div>
-
-    </div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
 
 </body>
 

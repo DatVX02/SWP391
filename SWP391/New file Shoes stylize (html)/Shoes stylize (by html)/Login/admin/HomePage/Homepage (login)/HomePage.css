@@ -3,9 +3,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
-.header{
+
+.header {
   background-color: #979797;
+  width:100%;
 }
 
 .header img {
@@ -23,23 +26,14 @@ body {
   text-decoration: none;
   color: white;
   padding-right: 50px;
+  transform: translate(-60px,-85px);
 }
 
 .header_info img {
-  max-width: 20px;
-  transform: translateX(0px);
-
-
+  max-width: 30px;
+  transform: translateX(7px);
 }
 
-/* Header */
-.header {
-  background-color: #979797;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Navigation bar */
 .header_info {
   float: right;
 }
@@ -49,3 +43,4 @@ body {
   text-decoration: none;
   padding: 10px;
 }
+
