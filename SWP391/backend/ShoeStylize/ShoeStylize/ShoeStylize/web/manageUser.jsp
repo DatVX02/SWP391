@@ -64,7 +64,7 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <%= ++count%>
+                                    <input type="text" name="id" value="<%= dto.getUserID()%>" />
                                 </td>
 
                                 <td>

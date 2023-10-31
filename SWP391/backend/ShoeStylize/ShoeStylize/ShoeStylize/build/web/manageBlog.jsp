@@ -61,7 +61,7 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <%= ++count%>
+                                    <input type="text" name="id" value="<%= dto.getPostID()%>" />
                                 </td>
 
                                 <td>
@@ -81,7 +81,7 @@
                                 </td>
                                 
                                 <td>
-                                    <a href="DeleteBlogController?id=<%= dto.getPostID()%>">Delete</a>
+                                    <input type="submit" value="Delete Blog" name="btAction" />
                                 </td>
                             </tr>
                         </form>

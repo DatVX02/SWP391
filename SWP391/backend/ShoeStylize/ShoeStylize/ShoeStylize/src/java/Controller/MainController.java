@@ -24,7 +24,8 @@ public class MainController extends HttpServlet {
     private static final String ADDBLOGCONTROLLER="AddBlogController";
     private static final String SEARCHBLOGCONTROLLER="SearchBlogController";
     private static final String SEARCHCONTROLLER="SearchController";
-
+    private static final String DELETECONTROLLER="DeleteController";
+    private static final String DELETEBLOGCONTROLLER="DeleteBlogController";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -46,6 +47,10 @@ public class MainController extends HttpServlet {
                 case "Search Blog": url=SEARCHBLOGCONTROLLER;
                                break;
                 case "Search": url=SEARCHCONTROLLER;
+                               break;
+                case "Delete": url=DELETECONTROLLER;
+                               break;
+                case "Delete Blog": url=DELETEBLOGCONTROLLER;
                                break;
                 default: break;
             }
