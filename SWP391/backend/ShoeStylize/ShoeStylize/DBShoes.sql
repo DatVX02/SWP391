@@ -15,7 +15,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
-	[UserID] [int] NULL,
+	[UserID] [int]  NULL,
 	[Title] [nvarchar] (30) NULL,
 	[Content] [text] NULL,
 	[PostDay] [date] NULL,

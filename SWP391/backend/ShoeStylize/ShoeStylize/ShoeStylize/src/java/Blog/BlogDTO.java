@@ -1,6 +1,7 @@
 package Blog;
 
 public class BlogDTO {
+    private int postID;
     private String title;
     private String author;
     private String date;
@@ -9,7 +10,8 @@ public class BlogDTO {
     public BlogDTO() {
     }
 
-    public BlogDTO(String title, String author, String date, String content) {
+    public BlogDTO(int postID, String title, String author, String date, String content) {
+        this.postID = postID;
         this.title = title;
         this.author = author;
         this.date = date;
@@ -48,4 +50,14 @@ public class BlogDTO {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public int getPostID() {
+        return postID;
+    }
+
+    public void setPostID(int postID) {
+        this.postID = postID;
+    }
+    
+    
 }

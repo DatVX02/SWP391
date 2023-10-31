@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class LoginController extends HttpServlet {
-    private final String HOMEPAGE= "home.jsp";
+    private final String HOMEPAGE= "homepage.jsp";
     private final String LOGINPAGE= "login.jsp";
     private final String ADMINPAGE = "adminpage.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

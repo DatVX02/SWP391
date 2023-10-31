@@ -32,7 +32,7 @@
                 </div>
                 <div style="clear: both;">
                     <%
-                        List<BlogDTO> result =null;
+                        List<BlogDTO> result = null;
                         RegistrationDAO dao = new RegistrationDAO();
                         String searchValue = request.getParameter("txtSearchbytitle");
                         if(searchValue != null){
@@ -57,7 +57,6 @@
                             <%
                                 int count = 0;
                                 for (BlogDTO dto : result) {
-                                    String urlRewriting = "MainController?btAction=Delete&pk=" + dto.getAuthor() + "&lastSearchValue=" + request.getParameter("txtSearchbyaccount");
                             %>
                         <form action="MainController">
                             <tr>
@@ -79,6 +78,10 @@
 
                                 <td>
                                     <input type="text" name="txtContent" value="<%= dto.getContent()%>" />
+                                </td>
+                                
+                                <td>
+                                    <a href="DeleteBlogController?id=<%= dto.getPostID()%>">Delete</a>
                                 </td>
                             </tr>
                         </form>

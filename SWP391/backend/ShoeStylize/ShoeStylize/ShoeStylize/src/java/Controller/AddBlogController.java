@@ -37,13 +37,12 @@ public class AddBlogController extends HttpServlet {
         try {
             String title = request.getParameter("txtTitle");
             String content = request.getParameter("txtContent");
-            String txtUserID = request.getParameter("userID");
-            int userID = Integer.parseInt(txtUserID);
+            String author = request.getParameter("userID");
             String postDate = request.getParameter("txtDate");
             
             RegistrationDAO dao = new RegistrationDAO();
            
-            boolean result = dao.addBlog(userID, title, content, postDate);
+            boolean result = dao.addBlog(title, content,author, postDate);
             if (result) {
                 url = MANAGEBLOGPAGE;
             }

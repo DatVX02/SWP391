@@ -172,18 +172,18 @@ public class RegistrationDAO implements Serializable {
         return false;
     }
 
-    public boolean addBlog(int userID, String title, String content, String postDate) throws SQLException {
+    public boolean addBlog(String title, String content, String author, String postDate) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "INSERT INTO [BlogPosts]([UserID],[Title],[Content],[PostDay])"
+                String sql = "INSERT INTO [BlogPosts]([Title],[Content],[UserID],[PostDay])"
                         + " VALUES (?, ?, ?, ?)";
                 stm = con.prepareStatement(sql);
-                stm.setInt(1, userID);
-                stm.setString(2, title);
-                stm.setString(3, content);
+                stm.setString(1, title);
+                stm.setString(2, content);
+                stm.setString(3, author);
                 stm.setString(4, postDate);
                 int row = stm.executeUpdate();
                 if (row > 0) {
@@ -214,16 +214,17 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT Email, FullName, PhoneNumber, Birthdate, Gender FROM Users";
+                String sql = "SELECT UserID,Email, FullName, PhoneNumber, Birthdate, Gender FROM Users";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {
+                    int id = rs.getInt("UserID");
                     String email = rs.getString("Email");
                     String name = rs.getString("FullName");
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id,email, name, phone, date, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -250,18 +251,19 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT Email, FullName, PhoneNumber, Birthdate, Gender FROM Users"
+                String sql = "SELECT UserID, Email, FullName, PhoneNumber, Birthdate, Gender FROM Users"
                         + " Where FullName LIKE ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%" + searchValue + "%");
                 rs = stm.executeQuery();
                 while (rs.next()) {
+                    int id = rs.getInt("UserID");
                     String email = rs.getString("Email");
                     String name = rs.getString("FullName");
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id,email, name, phone, date, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -294,16 +296,17 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT UserID, Title, Content, PostDay FROM BlogPosts \n"
+                String sql = "SELECT [PostID],[FullName],[Title],[Content],[PostDay] FROM BlogPosts \n"
                         + "INNER JOIN Users ON BlogPosts.UserId = Users.UserId;";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {
+                    int id = rs.getInt("PostID");
                     String title = rs.getString("Title");
                     String author = rs.getString("FullName");
-                    String date = rs.getString("PostDay");
-                    String content = rs.getString("Content");
-                    BlogDTO dto = new BlogDTO(title, author, date, content);
+                    String date = rs.getString("Content");
+                    String content = rs.getString("PostDay");
+                    BlogDTO dto = new BlogDTO(id, title, author, date, content);
                     if (ListBlogs == null) {
                         ListBlogs = new ArrayList<>();
                     }
@@ -330,17 +333,18 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT UserID, Title, Content, PostDay FROM BlogPosts \n"
+                String sql = "SELECT [PostID],[FullName],[Title],[Content],[PostDay] FROM BlogPosts \n"
                         + "Where Title LIKE ?;";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%" + searchValue + "%");
                 rs = stm.executeQuery();
                 while (rs.next()) {
-                    String title = rs.getString("UserID");
-                    String author = rs.getString("Title");
+                    int id = rs.getInt("PostID");
+                    String title = rs.getString("Title");
+                    String author = rs.getString("FullName");
                     String date = rs.getString("Content");
                     String content = rs.getString("PostDay");
-                    BlogDTO dto = new BlogDTO(title, author, date, content);
+                    BlogDTO dto = new BlogDTO(id, title, author, date, content);
                     if (ListBlogs == null) {
                         ListBlogs = new ArrayList<>();
                     }
@@ -358,6 +362,59 @@ public class RegistrationDAO implements Serializable {
                 con.close();
             }
         }
+    }
+    public boolean deleteRecord(String id) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "EXEC sp_msforeachtable 'ALTER TABLE Users NOCHECK CONSTRAINT ALL';\n"
+                        + "DELETE FROM Users WHERE UserID = ?;\n"
+                        + "EXEC sp_msforeachtable 'ALTER TABLE Users WITH CHECK CONSTRAINT ALL';";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, id);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
+    
+    public boolean deleteBlogRecord(String id) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "EXEC sp_msforeachtable 'ALTER TABLE BlogPosts NOCHECK CONSTRAINT ALL';\n"
+                        + "DELETE FROM BlogPosts WHERE PostID = ?;\n"
+                        + "EXEC sp_msforeachtable 'ALTER TABLE BlogPosts WITH CHECK CONSTRAINT ALL';";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, id);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
     }
 
 }

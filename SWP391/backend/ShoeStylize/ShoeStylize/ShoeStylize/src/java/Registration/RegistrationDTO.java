@@ -3,6 +3,7 @@ package Registration;
 import java.sql.Date;
 
 public class RegistrationDTO {
+    private int userID;
     private String email;
     private String password;
     private String phone;
@@ -14,16 +15,21 @@ public class RegistrationDTO {
     public RegistrationDTO() {
     }
 
-    public RegistrationDTO(String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) {
+    public RegistrationDTO(int userID, String email, String password, String phone, String fullname, String birthDate, String roleID, String gender) {
+        this.userID = userID;
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.fullname = fullname;
         this.birthDate = birthDate;
         this.roleID = roleID;
+        this.gender = gender;
     }
 
-    public RegistrationDTO(String email, String fullname, String phone, String birthDate, String gender) {
+    
+
+    public RegistrationDTO(int userID, String email, String fullname, String phone, String birthDate, String gender) {
+        this.userID = userID;
         this.email = email;
         this.fullname = fullname;
         this.phone = phone;
@@ -86,4 +92,14 @@ public class RegistrationDTO {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+    
+    
 }

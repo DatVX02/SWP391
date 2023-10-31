@@ -75,7 +75,7 @@ public final class manageBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div style=\"clear: both;\">\n");
       out.write("                    ");
 
-                        List<BlogDTO> result =null;
+                        List<BlogDTO> result = null;
                         RegistrationDAO dao = new RegistrationDAO();
                         String searchValue = request.getParameter("txtSearchbytitle");
                         if(searchValue != null){
@@ -102,7 +102,6 @@ public final class manageBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                                 int count = 0;
                                 for (BlogDTO dto : result) {
-                                    String urlRewriting = "MainController?btAction=Delete&pk=" + dto.getAuthor() + "&lastSearchValue=" + request.getParameter("txtSearchbyaccount");
                             
       out.write("\n");
       out.write("                        <form action=\"MainController\">\n");
@@ -135,6 +134,12 @@ public final class manageBlog_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <input type=\"text\" name=\"txtContent\" value=\"");
       out.print( dto.getContent());
       out.write("\" />\n");
+      out.write("                                </td>\n");
+      out.write("                                \n");
+      out.write("                                <td>\n");
+      out.write("                                    <a href=\"DeleteBlogController?id=");
+      out.print( dto.getPostID());
+      out.write("\">Delete</a>\n");
       out.write("                                </td>\n");
       out.write("                            </tr>\n");
       out.write("                        </form>\n");

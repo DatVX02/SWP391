@@ -28,6 +28,14 @@
         <servlet-name>SearchController</servlet-name>
         <servlet-class>Controller.SearchController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteBlogController</servlet-name>
+        <servlet-class>Controller.DeleteBlogController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteController</servlet-name>
+        <servlet-class>Controller.DeleteController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -56,12 +64,20 @@
         <servlet-name>SearchController</servlet-name>
         <url-pattern>/SearchController</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteBlogController</servlet-name>
+        <url-pattern>/DeleteBlogController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteController</servlet-name>
+        <url-pattern>/DeleteController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>homepage_guest.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
