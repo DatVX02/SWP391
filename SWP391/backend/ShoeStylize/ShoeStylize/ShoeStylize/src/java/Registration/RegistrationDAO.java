@@ -171,6 +171,36 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
+    
+    public boolean updatePassword(int userID, String password) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        try {
+            con = DBUtils.makeConnection();
+            // tra ra null or k.
+            if (con != null) {
+                String sql = "UPDATE Users SET [Password] = ?"
+                        + " WHERE UserID = ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, password);
+                stm.setInt(2, userID);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+                // hoan chinh roi thi excutequery
+
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
 
     public boolean addBlog(String title, String content, String author, String postDate) throws SQLException {
         Connection con = null;

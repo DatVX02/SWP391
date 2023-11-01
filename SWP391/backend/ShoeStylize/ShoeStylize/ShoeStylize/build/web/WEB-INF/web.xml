@@ -36,6 +36,10 @@
         <servlet-name>DeleteController</servlet-name>
         <servlet-class>Controller.DeleteController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdatePasswordController</servlet-name>
+        <servlet-class>Controller.UpdatePasswordController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>DeleteController</servlet-name>
         <url-pattern>/DeleteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdatePasswordController</servlet-name>
+        <url-pattern>/UpdatePasswordController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
