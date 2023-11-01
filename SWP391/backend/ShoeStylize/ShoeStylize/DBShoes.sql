@@ -112,10 +112,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [int] IDENTITY(1,1) NOT NULL,
-	[FeedbackType] [varchar](50) NULL,
+	[FeedbackType] [nvarchar](50) NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
-	[Title] [varchar](100) NULL,
+	[Title] [nvarchar](100) NULL,
 	[Rating] [int] NULL,
 	[Content] [text] NULL,
 PRIMARY KEY CLUSTERED 
