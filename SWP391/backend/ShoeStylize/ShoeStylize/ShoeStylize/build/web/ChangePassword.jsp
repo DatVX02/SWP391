@@ -11,13 +11,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <link rel="icon"
-              href="image\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
-        <link rel="stylesheet" href="ChangePassword.css">
+              href="image\shoelogo.png">
+        <link rel="stylesheet" href="CSS\ChangePassword.css">
     </head>
 
     <body>
         <div class="header">
-            <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+            <img src="image\shoelogo.png"
                  alt="Shoes stylize"></img>
         </div>
 
@@ -40,13 +40,13 @@
                 <ul class="information_left_2">
                     <img src="image\padlock.png"
                          style="width: 15px; transform: translateY(02px);">
-                    <a href="ChangePassword.jsp">Change password</a>
+                    <a href="changePassword.jsp">Change password</a>
                 </ul>
 
                 <ul class="information_left_3">
                     <img src="image\checklist.png"
                          style="width: 15px; transform: translateY(02px);" />
-                    <a href="sccountManagement.jsp">
+                    <a href="accountManagement.jsp">
                         Order management
                     </a>
                 </ul>

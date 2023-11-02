@@ -95,7 +95,7 @@
                     <%
                     } else {
                     %>
-                    <h2>No record is matched!</h2>
+                    <h2>No blog available.</h2>
                     <%
                         }
                     %>
