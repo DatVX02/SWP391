@@ -43,6 +43,66 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
+    
+    public boolean checkEmail(String Email) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "Select Email From Users"
+                        + " Where Email = ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, Email);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    return true;
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
+    
+    public int checkUserID(String Email) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "Select UserID From Users"
+                        + " Where Email = ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, Email);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt("UserID");
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return -1;
+    }
 
     public String checkRoleID(String Email, String Password) throws SQLException {
         Connection con = null;

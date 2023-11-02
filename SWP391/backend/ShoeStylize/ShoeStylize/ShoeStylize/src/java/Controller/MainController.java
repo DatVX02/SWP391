@@ -6,7 +6,6 @@
 package Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +26,8 @@ public class MainController extends HttpServlet {
     private static final String DELETECONTROLLER="DeleteController";
     private static final String DELETEBLOGCONTROLLER="DeleteBlogController";
     private static final String UPDATEPASSWORDCONTROLLER="UpdatePasswordController";
+    private static final String FORGOTPASSWORDCONTROLLER="ForgotPasswordController";
+    private static final String RESETPASSWORDCONTROLLER="ResetPasswordController";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -54,6 +55,10 @@ public class MainController extends HttpServlet {
                 case "Delete Blog": url=DELETEBLOGCONTROLLER;
                                break;
                 case "Change Password": url=UPDATEPASSWORDCONTROLLER;
+                               break;
+                case "Forgot Password": url=FORGOTPASSWORDCONTROLLER;
+                               break;
+                case "Reset Password": url=RESETPASSWORDCONTROLLER;
                                break;
                 default: break;
             }

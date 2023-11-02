@@ -41,7 +41,7 @@
                 <br/>
 
                 <div style="font-style: italic;" class="form_2">
-                    <a href="#">
+                    <a href="FP.jsp">
                         <h4> Forget password</h4>
                     </a>
                     <a href="register.jsp">
