@@ -17,6 +17,10 @@
         <link rel="stylesheet" href="CSS\manageBlog.css">
     </head>
     <body>
+        <div class="header">
+        <img src="image\shoelogo.png"
+            alt="Shoes stylize"></img>
+        </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
                 <a href="manageUser.jsp">Account Management</a>

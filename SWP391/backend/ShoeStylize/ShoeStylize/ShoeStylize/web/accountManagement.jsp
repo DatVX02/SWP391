@@ -27,12 +27,12 @@
         <div>
             <ul class="information_left_1">
                 <img src="image\user.png" style="width: 15px; transform: translateY(02px);">
-                <a href="information.jsp">Account information </a>
+                <a href="information0.jsp">Account information </a>
             </ul>
 
             <ul class="information_left_1">
                 <img src="image\padlock.png" style="width: 15px; transform: translateY(02px);">
-                <a href="ChangePassword.jsp">Change password</a>
+                <a href="changePassword.jsp">Change password</a>
             </ul>
 
             <ul class="information_left_2">

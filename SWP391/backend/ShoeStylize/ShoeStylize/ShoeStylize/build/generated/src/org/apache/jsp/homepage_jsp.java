@@ -80,7 +80,7 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\r\n");
       out.write("\r\n");
       out.write("    <div style=\"text-align: right; transform: translateX(160px); margin-top: 20px; \">\r\n");
-      out.write("        <a href=\"#\">\r\n");
+      out.write("        <a href=\"homeDes.jsp\">\r\n");
       out.write("            <button style=\"background: #FF9900; font-weight: bold; padding: 5px 10px; border: 0.5px \">Create New Shoes</button>\r\n");
       out.write("        </a>\r\n");
       out.write("    </div>\r\n");

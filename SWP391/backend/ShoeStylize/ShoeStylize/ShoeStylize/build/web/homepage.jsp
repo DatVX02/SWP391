@@ -37,7 +37,7 @@
     </div>
 
     <div style="text-align: right; transform: translateX(160px); margin-top: 20px; ">
-        <a href="#">
+        <a href="homeDes.jsp">
             <button style="background: #FF9900; font-weight: bold; padding: 5px 10px; border: 0.5px ">Create New Shoes</button>
         </a>
     </div>
