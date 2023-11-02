@@ -62,20 +62,12 @@
         </div>
         </div>
 
-        <div class="information_right">
-            <div class="information_right_1">
-                <img
-                    src="image\headphones.png">
-                <p>Tư vấn bán hàng</p>
-                <p>Thời gian hoạt động: 08:00 - 21:00</p>
-                <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1772">Hotline: 1900
-                        1772</a> </p>
-            </div>
+        
 
              <div class="information_right">
             <div class="information_right_1">
                 <img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\headphones.png">
+                    src="image\headphones.png">
                 <p>Shopping Advice</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1772">Hotline: 1900 1772</a> </p>
@@ -83,7 +75,7 @@
 
             <div class="information_right_2">
                 <img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\letterbox.png">
+                    src="image\letterbox.png">
                 <p>Complain</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1773 ">Hotline: 1900 1234</a> </p>
@@ -91,7 +83,7 @@
 
             <div class="information_right_3">
                 <img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\insurance.png">
+                    src="image\insurance.png">
                 <p>Policies and promotions</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1773 ">Hotline: 1900 1773</a> </p>
@@ -99,7 +91,7 @@
 
             <div class="information_right_4">
                 <img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\gmail.png">
+                    src="image\gmail.png">
                 <p>Email</p>
                 <p style="color: red;"> <a style="text-decoration: none; color: red;"
                         href="mailto:@gmail.com">cskh@gmail.com</a></p>

@@ -64,7 +64,7 @@
         <div class="information_right">
             <h2 style="color: #FF0000;">Suggestions</h2>
             <div class="information_right_1">
-                <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\feedback (1).png"
+                <img src="image\feedback (1).png"
                     alt="feedback">
                 <h3>Please rate your satisfaction with the promotion program.<br>
                     Please give us more feedback to improve better</h3>
