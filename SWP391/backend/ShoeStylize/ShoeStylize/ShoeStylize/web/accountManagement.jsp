@@ -60,15 +60,15 @@
             </ul>
         </div>
 
-        <div class="information_right">
-            <h2>Quản lí đơn hàng</h2>
-            <ul style="list-style-type: none; ">
-                <li>Tất cả</li>
-                <li>Đơn đang chờ duyệt</li>
-                <li>Hoàn thành</li>
-                <li>Hủy</li>
-            </ul>
-        </div>
+    <div class="information_right">
+        <h2>Quản lí đơn hàng</h2>
+        <ul style="list-style-type: none; ">
+            <li>Tất cả</li>
+            <li>Đơn đang chờ duyệt</li>
+            <li>Hoàn thành</li>
+            <li>Hủy</li>
+        </ul>
+    </div>
 </body>
 
 </html>

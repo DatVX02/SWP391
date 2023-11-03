@@ -237,7 +237,7 @@
                                         <!-- Giá s?n ph?m -->
                                     </p>
                                     <p class="h6">
-                                        <!-- Tên s?n ph?m  -->
+                                        <!--dddddaddddzdd Tên s?n ph?m  -->
                                     </p>
 
                                 </div>
