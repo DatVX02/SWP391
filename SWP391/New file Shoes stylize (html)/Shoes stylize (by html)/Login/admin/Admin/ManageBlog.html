@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Management</title>
     <link rel="stylesheet" href="ManageBlog.css">
+    <link rel="icon" href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
 </head>
+
 <body>
     <div class="header">
-        <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
-            alt="Shoes stylize"></img>
+        <a href="../HomePage/Homepage (login)/HomePage.html"><img
+                src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+                alt="Shoes stylize"></img></a>
+        <button style="background: #FF0000; color: #fff;">Manage Blog</button>
     </div>
     <div class="manage">
         <div style="width: 20%; float:left" class="managefunction">
@@ -20,25 +25,26 @@
             <div style="float: right;">
                 <form action="*" method="post">
                     <span>
-                        <input type="search" placeholder="search blog">
+                        <input type="search" placeholder="search blog" style="text-align: center;">
                         <input type="button" value="Search Blog">
                     </span>
-                    <a href="AddBlog.html"><input type="button" value="Thêm bài viết" class="button"></a>
+                    <a href="AddBlog.html"><input type="button" value="Add Blog" class="button"></a>
                 </form>
             </div>
             <div style="clear: both;">
                 <table>
                     <tr class="tablehead">
-                        <td>STT</td>
-                        <td>Tiêu Đề</td>
-                        <td>Người Đăng</td>
-                        <td>Ngày Đăng</td>
-                        <td>Hạng Mục</td>
-                        <td>Trạng Thái</td>
+                        <td>BlogID</td>
+                        <td>Title</td>
+                        <td>Poster</td>
+                        <td>Date Submitted</td>
+                        <td>Category</td>
+                        <td>Status</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
 </body>
+
 </html>
