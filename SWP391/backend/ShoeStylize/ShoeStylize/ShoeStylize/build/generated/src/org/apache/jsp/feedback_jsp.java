@@ -117,7 +117,7 @@ public final class feedback_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <a style=\"color: black; font-weight: normal; text-decoration: none; \" href=\"tel:1900 1772\">1900 1772</a>\r\n");
       out.write("                </h3>\r\n");
       out.write("            </div>\r\n");
-      out.write("\r\n");
+      out.write("        </div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {

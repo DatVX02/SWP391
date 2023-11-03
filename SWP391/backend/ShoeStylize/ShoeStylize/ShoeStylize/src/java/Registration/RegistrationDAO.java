@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import Database.DBUtils;
-import java.sql.Date;
+import Order.OrderDTO;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
-    
+
     public boolean checkEmail(String Email) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -73,7 +73,7 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
-    
+
     public int checkUserID(String Email) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -231,7 +231,7 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
-    
+
     public boolean updatePassword(int userID, String password) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -314,7 +314,7 @@ public class RegistrationDAO implements Serializable {
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id,email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email, name, phone, date, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -353,7 +353,7 @@ public class RegistrationDAO implements Serializable {
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id,email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email, name, phone, date, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -453,6 +453,48 @@ public class RegistrationDAO implements Serializable {
             }
         }
     }
+
+    List<OrderDTO> ListOrders;
+
+    public List<OrderDTO> getListOrders() {
+        return ListOrders;
+    }
+
+    public void showOrderDetail() throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "SELECT [ShoesName],[Price],[OrderDetails].[Quantity] FROM OrderDetails\n"
+                        + "INNER JOIN Shoes ON Shoes.ShoeID = OrderDetails.ShoeID;";
+                stm = con.prepareStatement(sql);
+                rs = stm.executeQuery();
+                while (rs.next()) {
+                    String name = rs.getString("ShoesName");
+                    double price = rs.getDouble("Price");
+                    int quantity = rs.getInt("Quantity");
+                    OrderDTO dto = new OrderDTO(name, price, quantity);
+                    if (ListOrders == null) {
+                        ListOrders = new ArrayList<>();
+                    }
+                    ListOrders.add(dto);
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+    }
+
     public boolean deleteRecord(String id) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -479,7 +521,7 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
-    
+
     public boolean deleteBlogRecord(String id) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;

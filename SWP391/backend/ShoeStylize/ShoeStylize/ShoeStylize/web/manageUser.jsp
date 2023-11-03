@@ -61,7 +61,6 @@
                             <%
                                 int count = 0;
                                 for (RegistrationDTO dto : result) {
-                                    String urlRewriting = "MainController?btAction=Delete&pk=" + dto.getEmail() + "&lastSearchValue=" + request.getParameter("txtSearchbyaccount");
                             %>
                         <form action="MainController">
                             <tr>
