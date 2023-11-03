@@ -171,7 +171,7 @@ GO
 CREATE TABLE [dbo].[Shoes](
 	[ShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[BrandID] [int] NULL,
-	[ShoesName] [int] NULL,
+	[ShoesName] [varchar] NULL,
 	[Description] [text] NULL,
 	[Size] [varchar](10) NULL,
 	[Color] [varchar](50) NULL,
