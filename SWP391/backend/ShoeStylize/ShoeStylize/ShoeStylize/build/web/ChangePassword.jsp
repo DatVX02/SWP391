@@ -18,17 +18,8 @@
     <body>
         <div class="header">
             <img src="image\shoelogo.png"
-                 alt="Shoes stylize"></img>
+                 alt="Shoes stylize">
         </div>
-
-        <%
-            String userID = "";
-            Cookie[] cookie = request.getCookies();
-            if (cookie != null) {
-                userID = cookie[cookie.length - 1].getName();
-            }
-        %>
-
         <div class="information_left">
             <div>
                 <ul class="information_left_1">
@@ -75,14 +66,13 @@
                 Connection con = null;
                 PreparedStatement stm = null;
                 ResultSet rs = null;
-                int id = Integer.valueOf(userID);
 
                 try {
                     con = DBUtils.makeConnection();
                     if (con != null) {
                         String sql = "SELECT [Password] FROM Users WHERE UserID = ?";
                         stm = con.prepareStatement(sql);
-                        stm.setInt(1, id);
+                        stm.setObject(1, session.getAttribute("id"));
                         rs = stm.executeQuery();
 
                         if (rs.next()) { // Check if there are results
@@ -112,7 +102,7 @@
                 <form action="MainController">
 
                     <input type="hidden" name="txtOldPasswordConfirm" value="<%= session.getAttribute("Password")%>" >
-                    <input type="hidden" name="txtUserID" value="<%= userID%>" >
+                    <input type="hidden" name="txtUserID" value="<%= session.getAttribute("id")%>" >
 
                     <div>
                         <h4>Old password</h4>

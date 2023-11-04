@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 
-public final class ChangePassword_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class changePassword_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -46,94 +46,82 @@ public final class ChangePassword_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html lang=\"en\">\n");
-      out.write("\n");
-      out.write("    <head>\n");
-      out.write("        <meta charset=\"UTF-8\">\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("        <title>Login</title>\n");
-      out.write("        <link rel=\"icon\"\n");
-      out.write("              href=\"image\\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png\">\n");
-      out.write("        <link rel=\"stylesheet\" href=\"ChangePassword.css\">\n");
-      out.write("    </head>\n");
-      out.write("\n");
-      out.write("    <body>\n");
-      out.write("        <div class=\"header\">\n");
-      out.write("            <img src=\"C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP391\\New file Shoes stylize (html)\\Shoes stylize (by html)\\image\\logo\\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png\"\n");
-      out.write("                 alt=\"Shoes stylize\"></img>\n");
-      out.write("        </div>\n");
-      out.write("\n");
-      out.write("        ");
-
-            String userID = "";
-            Cookie[] cookie = request.getCookies();
-            if (cookie != null) {
-                userID = cookie[cookie.length - 1].getName();
-            }
-        
-      out.write("\n");
-      out.write("\n");
-      out.write("        <div class=\"information_left\">\n");
-      out.write("            <div>\n");
-      out.write("                <ul class=\"information_left_1\">\n");
-      out.write("                    <img src=\"image\\user.png\"\n");
-      out.write("                         style=\"width: 15px; transform: translateY(02px);\">\n");
-      out.write("                    <a href=\"information0.jsp\">Account information </a>\n");
-      out.write("                </ul>\n");
-      out.write("\n");
-      out.write("                <ul class=\"information_left_2\">\n");
-      out.write("                    <img src=\"image\\padlock.png\"\n");
-      out.write("                         style=\"width: 15px; transform: translateY(02px);\">\n");
-      out.write("                    <a href=\"ChangePassword.jsp\">Change password</a>\n");
-      out.write("                </ul>\n");
-      out.write("\n");
-      out.write("                <ul class=\"information_left_3\">\n");
-      out.write("                    <img src=\"image\\checklist.png\"\n");
-      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\n");
-      out.write("                    <a href=\"sccountManagement.jsp\">\n");
-      out.write("                        Order management\n");
-      out.write("                    </a>\n");
-      out.write("                </ul>\n");
-      out.write("\n");
-      out.write("                <ul class=\"information_left_4\">\n");
-      out.write("                    <img src=\"image\\support.png\"\n");
-      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\n");
-      out.write("                    <a href=\"support.jsp\">\n");
-      out.write("                        Support\n");
-      out.write("                    </a>\n");
-      out.write("                </ul>\n");
-      out.write("\n");
-      out.write("                <ul class=\"information_left_5\">\n");
-      out.write("                    <img src=\"image\\feedback.png\"\n");
-      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\n");
-      out.write("                    <a href=\"feedback.jsp\">Suggestions </a>\n");
-      out.write("                </ul>\n");
-      out.write("\n");
-      out.write("                <ul class=\"information_left_6\">\n");
-      out.write("                    <img src=\"image\\logout.png\"\n");
-      out.write("                         style=\"width: 15px;\" />\n");
-      out.write("                    <a href=\"homepage_guest.jsp\">Log out </a>\n");
-      out.write("                </ul>\n");
-      out.write("            </div>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html lang=\"en\">\r\n");
+      out.write("\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta charset=\"UTF-8\">\r\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("        <title>Login</title>\r\n");
+      out.write("        <link rel=\"icon\"\r\n");
+      out.write("              href=\"image\\shoelogo.png\">\r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"CSS\\ChangePassword.css\">\r\n");
+      out.write("    </head>\r\n");
+      out.write("\r\n");
+      out.write("    <body>\r\n");
+      out.write("        <div class=\"header\">\r\n");
+      out.write("            <img src=\"image\\shoelogo.png\"\r\n");
+      out.write("                 alt=\"Shoes stylize\">\r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class=\"information_left\">\r\n");
+      out.write("            <div>\r\n");
+      out.write("                <ul class=\"information_left_1\">\r\n");
+      out.write("                    <img src=\"image\\user.png\"\r\n");
+      out.write("                         style=\"width: 15px; transform: translateY(02px);\">\r\n");
+      out.write("                    <a href=\"information0.jsp\">Account information </a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("\r\n");
+      out.write("                <ul class=\"information_left_2\">\r\n");
+      out.write("                    <img src=\"image\\padlock.png\"\r\n");
+      out.write("                         style=\"width: 15px; transform: translateY(02px);\">\r\n");
+      out.write("                    <a href=\"changePassword.jsp\">Change password</a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("\r\n");
+      out.write("                <ul class=\"information_left_3\">\r\n");
+      out.write("                    <img src=\"image\\checklist.png\"\r\n");
+      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\r\n");
+      out.write("                    <a href=\"accountManagement.jsp\">\r\n");
+      out.write("                        Order management\r\n");
+      out.write("                    </a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("\r\n");
+      out.write("                <ul class=\"information_left_4\">\r\n");
+      out.write("                    <img src=\"image\\support.png\"\r\n");
+      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\r\n");
+      out.write("                    <a href=\"support.jsp\">\r\n");
+      out.write("                        Support\r\n");
+      out.write("                    </a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("\r\n");
+      out.write("                <ul class=\"information_left_5\">\r\n");
+      out.write("                    <img src=\"image\\feedback.png\"\r\n");
+      out.write("                         style=\"width: 15px; transform: translateY(02px);\" />\r\n");
+      out.write("                    <a href=\"feedback.jsp\">Suggestions </a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("\r\n");
+      out.write("                <ul class=\"information_left_6\">\r\n");
+      out.write("                    <img src=\"image\\logout.png\"\r\n");
+      out.write("                         style=\"width: 15px;\" />\r\n");
+      out.write("                    <a href=\"homepage_guest.jsp\">Log out </a>\r\n");
+      out.write("                </ul>\r\n");
+      out.write("            </div>\r\n");
       out.write("            ");
 
                 Connection con = null;
                 PreparedStatement stm = null;
                 ResultSet rs = null;
-                int id = Integer.valueOf(userID);
 
                 try {
                     con = DBUtils.makeConnection();
                     if (con != null) {
                         String sql = "SELECT [Password] FROM Users WHERE UserID = ?";
                         stm = con.prepareStatement(sql);
-                        stm.setInt(1, id);
+                        stm.setObject(1, session.getAttribute("id"));
                         rs = stm.executeQuery();
 
                         if (rs.next()) { // Check if there are results
@@ -158,38 +146,38 @@ public final class ChangePassword_jsp extends org.apache.jasper.runtime.HttpJspB
                     }
                 }
             
-      out.write("\n");
-      out.write("            <div class=\"information_right\">\n");
-      out.write("                <h2>Change Password</h2>\n");
-      out.write("                <form action=\"MainController\">\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("            <div class=\"information_right\">\r\n");
+      out.write("                <h2>Change Password</h2>\r\n");
+      out.write("                <form action=\"MainController\">\r\n");
+      out.write("\r\n");
       out.write("                    <input type=\"hidden\" name=\"txtOldPasswordConfirm\" value=\"");
       out.print( session.getAttribute("Password"));
-      out.write("\" >\n");
+      out.write("\" >\r\n");
       out.write("                    <input type=\"hidden\" name=\"txtUserID\" value=\"");
-      out.print( userID);
-      out.write("\" >\n");
-      out.write("\n");
-      out.write("                    <div>\n");
-      out.write("                        <h4>Old password</h4>\n");
-      out.write("                        <input type=\"password\" name=\"txtOldPassword\" required>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div>\n");
-      out.write("                        <h4>New password</h4>\n");
-      out.write("                        <input type=\"password\" name=\"txtPassword\" required>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div>\n");
-      out.write("                        <h4>Confirm password</h4>\n");
-      out.write("                        <input type=\"password\" name=\"txtConfirm\" required>\n");
-      out.write("                        <br>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div>\n");
-      out.write("                        <button name=\"btAction\" value=\"Change Password\" style=\"border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;\">Change</button>\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                </form>\n");
-      out.write("            </div>\n");
-      out.write("    </body>\n");
+      out.print( session.getAttribute("id"));
+      out.write("\" >\r\n");
+      out.write("\r\n");
+      out.write("                    <div>\r\n");
+      out.write("                        <h4>Old password</h4>\r\n");
+      out.write("                        <input type=\"password\" name=\"txtOldPassword\" required>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                    <div>\r\n");
+      out.write("                        <h4>New password</h4>\r\n");
+      out.write("                        <input type=\"password\" name=\"txtPassword\" required>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                    <div>\r\n");
+      out.write("                        <h4>Confirm password</h4>\r\n");
+      out.write("                        <input type=\"password\" name=\"txtConfirm\" required>\r\n");
+      out.write("                        <br>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                    <div>\r\n");
+      out.write("                        <button name=\"btAction\" value=\"Change Password\" style=\"border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;\">Change</button>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("\r\n");
+      out.write("                </form>\r\n");
+      out.write("            </div>\r\n");
+      out.write("    </body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

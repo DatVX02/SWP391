@@ -16,14 +16,6 @@
 </head>
 
 <body>
-
-    <% 
-        String userID="";
-        Cookie[] cookie = request.getCookies();
-        if(cookie !=null){
-            userID = cookie[cookie.length-1].getName();
-        }
-    %>
     
     <div class="header">
         <img src="image\shoelogo.png"
@@ -40,9 +32,9 @@
             <form action="MainController">
                 <p>Title: <input type="text" name="txtTitle" /></p>
                 <p>Content: <input type="text" name="txtContent" /></p>
-                <p>User ID: <input type="text" name="userID" value="<%= userID%>"/></p>
+                <p>User ID: <input type="text" name="userID" value="<%= session.getAttribute("id")%>"/></p>
                 <p>Date submitted: <input type="date" name="txtDate" /></p>
-                <input type="hidden" name="userID" value="<%= userID %>">
+                <input type="hidden" name="userID" value="<%= session.getAttribute("id") %>">
                 <input type="submit" name="btAction" value="Add Blog">
             </form>
         </div>

@@ -3,23 +3,23 @@ package Controller;
 import Error.LoginInsertError;
 import Registration.RegistrationDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.Boolean.FALSE;
-import static java.lang.Boolean.TRUE;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LoginController extends HttpServlet {
-    private final String HOMEPAGE= "homepage.jsp";
-    private final String LOGINPAGE= "login.jsp";
+
+    private final String HOMEPAGE = "homepage.jsp";
+    private final String LOGINPAGE = "login.jsp";
     private final String ADMINPAGE = "adminpage.jsp";
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
@@ -27,39 +27,34 @@ public class LoginController extends HttpServlet {
         String roleID;
         int userID;
         String txtUserID;
-        boolean bError = FALSE; 
+        boolean bError = FALSE;
         LoginInsertError error = new LoginInsertError();
         try {
-            String email= request.getParameter("txtEmail");
-            String password= request.getParameter("txtPassword");
+            String email = request.getParameter("txtEmail");
+            String password = request.getParameter("txtPassword");
             RegistrationDAO dao = new RegistrationDAO();
+            HttpSession session = request.getSession();
             boolean result = dao.checkLogin(email, password);
-            if(result){
+            if (result) {
                 roleID = dao.checkRoleID(email, password);
                 if (roleID != null) {
                     if (roleID.equals("ADMIN")) {
                         url = ADMINPAGE;
                         userID = dao.checkUserID(email, password);
-                        txtUserID = String.valueOf(userID);
-                        Cookie cookie = new Cookie(txtUserID, "Admin");
-                        cookie.setMaxAge(1*60);
-                        response.addCookie(cookie);
+                        session.setAttribute("id", userID);
                     } else if (roleID.equals("CUSTOMER")) {
                         url = HOMEPAGE;
                         userID = dao.checkUserID(email, password);
-                        txtUserID = String.valueOf(userID);
-                        Cookie cookie = new Cookie(txtUserID, "Customer");
-                        cookie.setMaxAge(1*60);
-                        response.addCookie(cookie);
+                        session.setAttribute("id", userID);
                     }
                 }
             } else {
                 error.setInvalid("Invalid Username or Password, please try again.");
                 request.setAttribute("INSERTERROR", error);
             }
-        } catch(SQLException ex){
+        } catch (SQLException ex) {
             ex.printStackTrace();
-        } finally{
+        } finally {
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
         }

@@ -280,7 +280,7 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <!-- Giá s?n ph?m -->\r\n");
       out.write("                                    </p>\r\n");
       out.write("                                    <p class=\"h6\">\r\n");
-      out.write("                                        <!-- Tên s?n ph?m  -->\r\n");
+      out.write("                                        <!--dddddaddddzdd Tên s?n ph?m  -->\r\n");
       out.write("                                    </p>\r\n");
       out.write("\r\n");
       out.write("                                </div>\r\n");

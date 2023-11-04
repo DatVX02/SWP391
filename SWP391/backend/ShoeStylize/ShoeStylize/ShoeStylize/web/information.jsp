@@ -30,14 +30,6 @@
             alt="Shoes stylize"></img>
     </div>
     
-    <% 
-        String userID="";
-        Cookie[] cookie = request.getCookies();
-        if(cookie !=null){
-            userID = cookie[cookie.length-1].getName();
-        }
-    %>
-    
     <!-- menu -->
     <div class="information_left">
         <div>
@@ -81,14 +73,13 @@
                     Connection con = null;
                     PreparedStatement stm = null;
                     ResultSet rs = null;
-                    int id = Integer.valueOf(userID);
 
                     try {
                         con = DBUtils.makeConnection();
                         if (con != null) {
                             String sql = "SELECT FullName, Email, PhoneNumber, Birthdate, Gender FROM Users WHERE UserID = ?";
                             stm = con.prepareStatement(sql);
-                            stm.setInt(1, id);
+                            stm.setObject(1, session.getAttribute("id"));
                             rs = stm.executeQuery();
 
                             if (rs.next()) { // Check if there are results
@@ -153,7 +144,7 @@
                 </div>
                 
                 <div>
-                    <input type="hidden" name="txtUserID" value="<%= userID%>"> 
+                    <input type="hidden" name="txtUserID" value="<%= session.getAttribute("id")%>"> 
                 </div>
 
                 <button name="btAction" value="Update" style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Submit </button>
