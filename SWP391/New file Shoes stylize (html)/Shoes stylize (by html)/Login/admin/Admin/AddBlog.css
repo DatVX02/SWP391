@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-.header{
+
+.header {
     background-color: #979797;
-    
+    margin-bottom: 20px;
 }
 
 .header img {
@@ -17,13 +17,26 @@ body {
     padding: 5px 5px;
 }
 
+button {
+    float: right;
+    margin-top: -75px;
+    padding: 10px 20px;
+    margin-right: 80px;
+    border: 0.5px;
+    font-size: 15px ;
+    background-color: #FF0000;
+    color: white;
+}
+
+
+
 .manage{
     font-family: sans-serif;
 }
 .managefunction{
     background-color: #D9D9D9;
     border-radius: 50px;
-    height: 100vh;
+    height: 600px;
 
 }
 
@@ -45,7 +58,7 @@ a:hover {
 .addBLog{
     background-color: #D9D9D9;
     border-radius: 50px;
-    height: 100vh;
+    height: 600px;
 }
 
 h2{
