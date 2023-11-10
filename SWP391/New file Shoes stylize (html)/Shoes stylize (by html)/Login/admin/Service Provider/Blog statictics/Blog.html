@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoes Page</title>
+    <title>Blog statictics</title>
     <link rel="icon"
         href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
-    <link rel="stylesheet" href="../HomeDes/Uploadfile.css">
+    <link rel="stylesheet" href="../Blog statictics/Blog.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,8 +24,8 @@
     <div class="header">
         <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
             alt="shoes">
-        <div class="header_info" style="color: white;">
-            <a href="../../../Login/admin/Profile/Account information.html"><img
+        <div class="header_info">
+            <a href="../../Profile/Account information.html"><img
                     src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\user (1).png"
                     alt="profile">Profile</a>
             <a href="#"><img
@@ -34,32 +34,42 @@
             <a href="../../../../Cart/MyCart.html"><img
                     src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
+            <a href="#"><img
+                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\blog (2).png"
+                    alt="shopping-cart">News</a>
         </div>
     </div>
 
-
-    <button style="
-            margin-top: 20px;
-            border-radius: 20px;
-            padding: 5px 20px;
-            background: #FF9900;
-            border: 0.5px;
-            margin-left: 1250px;
-            transform: translateX(150px);
-            ">
-        <a href="../../../Cart/MyCart.html" style="color: black; text-decoration: none;"> Done</a></button>
-
-    <div class="information_left">
-        <div class="information_left_1">
-            <p>Left Outside</p>
-            <div class="information_left_1_1">
-                <form action="" method="">
-                    <input id="file" name="file" type="text" accept="image/jpg image/png" />
+    <div class="manage">
+        <div style="width: 20%; float:left" class="managefunction">
+            <a href="../Order statictics/Order.html">Order statictics</a>
+            <a href="../Cost statictics/Cost.html">Cost statictics</a>
+            <a href="../Blog statictics/Blog.html">Blog statictics</a>
+            <a href="../Store statictics/Store.html">Store manage</a>
+        </div>
+        <div style="width: 79%; float:right" class="bloglist">
+            <div style="float: right;">
+                <form action="*" method="post">
+                    <span>
+                        <input type="search" placeholder="search blog" style="text-align: center;">
+                        <input type="button" value="Search Blog" style="background: aqua">
+                    </span>
+                    <a href="../Blog statictics/AddBLog.html"><input type="button" value="Add Blog" class="button"></a>
                 </form>
             </div>
-
-
-
+            <div style="clear: both;" class="">
+                <table>
+                    <tr class="tablehead">
+                        <td>BlogID</td>
+                        <td>Title</td>
+                        <td>Content</td>
+                        <td>Poster</td>
+                        <td>Date Submitted</td>
+                        <td>Category</td>
+                        <td>Status</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </body>
