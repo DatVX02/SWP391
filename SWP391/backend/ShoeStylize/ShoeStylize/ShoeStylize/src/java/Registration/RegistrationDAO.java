@@ -10,6 +10,8 @@ import Database.DBUtils;
 import Order.OrderDTO;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class RegistrationDAO implements Serializable {
 
