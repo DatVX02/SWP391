@@ -75,7 +75,7 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <input type="text" name="id" value="<%= dto.getPostID()%>" />
+                                    <%= dto.getPostID()%>
                                 </td>
 
                                 <td>
