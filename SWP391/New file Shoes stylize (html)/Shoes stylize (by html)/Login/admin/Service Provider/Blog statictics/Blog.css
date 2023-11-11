@@ -80,8 +80,7 @@ body {
 }
 
 form input {
-  transform: translate(-200px, 20px);
-  font-size: 15px;
+  transform: translate(-120px, 20px);
 }
 
 

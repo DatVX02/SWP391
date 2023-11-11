@@ -25,6 +25,7 @@ button {
     font-size: 15px;
     background: #FF0000;
     color: #FFF;
+    transform: translate(-20px, -70px);
 }
 
 .manage {
@@ -40,7 +41,7 @@ button {
 }
 
 
-a {
+.managefunction a {
     margin-left: 50px;
     margin-top: 20px;
     display: block;
@@ -51,7 +52,7 @@ a {
     font-weight: bolder;
 }
 
-a:hover {
+.managefunction a:hover {
     text-decoration: underline;
 }
 
@@ -59,6 +60,7 @@ a:hover {
     background-color: #D9D9D9;
     border-radius: 50px;
     height: 100vh;
+    margin-top: -20px;
 }
 
 form {
@@ -67,8 +69,9 @@ form {
 }
 
 form input {
-    text-align: center;
+    transform: translate(35px, 15px);
 }
+
 
 table {
     margin: 5% auto;
@@ -80,7 +83,7 @@ table tr {
 }
 
 table tr td {
-    padding: 0 30px;
+    padding: 0 50px;
 }
 
 .searchlist div {
