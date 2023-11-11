@@ -72,7 +72,7 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <input type="text" name="id" value="<%= dto.getUserID()%>" />
+                                    <%= dto.getUserID()%>
                                 </td>
 
                                 <td>
@@ -89,6 +89,10 @@
 
                                 <td>
                                     <input type="text" name="birthDate" value="<%= dto.getBirthDate()%>" />
+                                </td>
+                                
+                                <td>
+                                    <input type="text" name="roleID" value="<%= dto.getRoleID()%>" />
                                 </td>
 
                                 <td>
