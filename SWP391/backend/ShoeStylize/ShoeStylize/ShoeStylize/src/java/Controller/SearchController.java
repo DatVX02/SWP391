@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SearchController extends HttpServlet {
 
-    private final String SEARCHPAGE = "manageUser.jsp";
+    private final String SEARCHPAGE = "ManageUser.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

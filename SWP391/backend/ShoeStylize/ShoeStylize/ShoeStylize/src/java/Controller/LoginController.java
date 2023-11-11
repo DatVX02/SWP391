@@ -16,9 +16,9 @@ import javax.servlet.http.HttpSession;
 
 public class LoginController extends HttpServlet {
 
-    private final String HOMEPAGE = "homepage.jsp";
+    private final String HOMEPAGE = "HomePage/Homepage (login)/HomePage.jsp";
     private final String LOGINPAGE = "login.jsp";
-    private final String ADMINPAGE = "adminpage.jsp";
+    private final String ADMINPAGE = "Admin/AdminPage.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {

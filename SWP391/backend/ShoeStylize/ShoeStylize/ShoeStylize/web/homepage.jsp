@@ -30,7 +30,7 @@
             <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
-            <a href="MyCart.html"><img
+            <a href="MyCart.jsp"><img
                     src="image\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
         </div>
