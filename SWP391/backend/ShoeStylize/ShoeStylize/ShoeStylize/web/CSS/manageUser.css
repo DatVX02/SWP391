@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.header{
+.header {
     background-color: #979797;
 }
 
@@ -15,18 +15,33 @@ body {
     /* margin: 0 auto; */
     padding: 5px 5px;
 }
+
+button {
+    float: right;
+    margin-top: -75px;
+    padding: 10px 20px;
+    margin-right: 80px;
+    border: 0.5px;
+    font-size: 15px;
+    background: #FF0000;
+    color: #FFF;
+    transform: translate(-20px, -70px);
+}
+
 .manage {
     width: 100%;
     margin-top: 20px;
 }
-.managefunction{
+
+.managefunction {
     background-color: #D9D9D9;
     border-radius: 50px;
     height: 100vh;
 
 }
 
-a{
+
+.managefunction a {
     margin-left: 50px;
     margin-top: 20px;
     display: block;
@@ -37,45 +52,49 @@ a{
     font-weight: bolder;
 }
 
-a:hover {
+.managefunction a:hover {
     text-decoration: underline;
-  }
+}
 
-.searchlist{
+.searchlist {
     background-color: #D9D9D9;
     border-radius: 50px;
     height: 100vh;
+    margin-top: -20px;
 }
 
-form{
+form {
     margin-top: -25px;
+
 }
 
-table{
+form input {
+    transform: translate(35px, 15px);
+}
+
+
+table {
     margin: 5% auto;
     border-collapse: collapse;
 }
 
-table tr{
+table tr {
     border: 1px solid #979797;
 }
 
-table tr td{
-    padding:0 30px;
+table tr td {
+    padding: 0 38px;
 }
 
-.searchlist div{
+.searchlist div {
     margin-top: 5%;
     margin-left: 5%;
 }
 
-.button{
+.button {
     background-color: aqua;
 }
 
-.tablehead{
+.tablehead {
     font-weight: bold;
 }
-
-
-

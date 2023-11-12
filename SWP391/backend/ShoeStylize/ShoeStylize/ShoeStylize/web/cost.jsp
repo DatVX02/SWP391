@@ -29,7 +29,7 @@
 <body>
     <!-- header -->
     <div class="header">
-        <a href="homepage.html"><img src="image\shoelogo.png"
+        <a href="homepage.jsp"><img src="image\shoelogo.png"
             alt="shoes"></a>
         <div class="header_info">
             <a href="information0.jsp"><img
@@ -38,7 +38,7 @@
             <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
-            <a href="../../../../Cart/MyCart.html"><img
+            <a href="../../../../Cart/MyCart.jsp"><img
                     src="image\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
             <a href="#"><img

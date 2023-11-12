@@ -26,8 +26,22 @@
 
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="Shoes stylize"></img>
+            <a href="homepage.jsp"><img src="image\shoelogo.png"
+                                        alt="shoes"></img></a>
+            <div class="header_info">
+                <a href="information.jsp"><img
+                        src="image\user (1).png"
+                        alt="profile">Profile</a>
+                <a href="OrderDetail.jsp"><img
+                        src="image\heart.png"
+                        alt="Orders">Orders</a>
+                <a href="MyCart.jsp"><img
+                        src="image\shopping-cart.png"
+                        alt="shopping-cart">My cart</a>
+                <a href="Blog.jsp"><img
+                        src="image\blog (2).png "
+                        alt="shopping-cart">News</a>
+            </div>
         </div>
 
         <!-- menu -->
@@ -99,9 +113,9 @@
 
                 <div>
                     <h3>Gender</h3>
-                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Male
-                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Female
-                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(session.getAttribute("Gender"))) { %> checked <% }%>>Other
+                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Male<br>
+                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(session.getAttribute("Gender"))) { %> checked <% } %>>Female<br>
+                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(session.getAttribute("Gender"))) { %> checked <% }%>>Other<br>
                 </div>
 
                 <div>
@@ -110,6 +124,52 @@
 
                 <button name="btAction" value="Update" style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Submit </button>
             </form>
+        </div>
+        <div class="footer">
+            <div style="float:right">
+                <img src="image\facebook.png"
+                     alt="Facebook" />
+                <img src="image\twitter.png"
+                     alt="twitter" />
+                <img src="image\linkedin.png"
+                     alt="linkedin" />
+                <img src="image\instagram (1).png"
+                     alt="Instagram" />
+                <img src="image\youtube (5).png"
+                     alt="youtube" />
+            </div>
+            <div style=" float:right">
+                <table class="center">
+                    <tr class="tableHeader">
+                        <td>About Us</td>
+                        <td>For Users</td>
+                        <td>Information</td>
+                    </tr>
+                    <tr>
+                        <td>About Us</td>
+                        <td>Login</td>
+                        <td>Help Center</td>
+                    </tr>
+                    <tr>
+                        <td>Find Store</td>
+                        <td>Register</td>
+                        <td>Money Refund</td>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Settings</td>
+                        <td>Shipping</td>
+                    </tr>
+                    <tr>
+                        <td>Blogs</td>
+                        <td>My Orders</td>
+                        <td>Contact us</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="clear: both" class="commerce">
+                @2023 Ecommerce
+            </div>
         </div>
 
     </body>
