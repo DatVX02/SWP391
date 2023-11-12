@@ -1,6 +1,6 @@
 <%-- 
-    Document   : cost
-    Created on : Nov 12, 2023, 4:32:37 PM
+    Document   : order_provider
+    Created on : Nov 12, 2023, 10:19:00 PM
     Author     : Administrator
 --%>
 
@@ -11,10 +11,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cost statictics</title>
+    <title>Order statictics</title>
     <link rel="icon"
-        href="image\shoelogo.png">
-    <link rel="stylesheet" href="CSS/cost.css">
+        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+    <link rel="stylesheet" href="order_provider.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -60,16 +60,19 @@
                         <tr class="tablehead">
                             <td>Shoe ID</td>
                             <td>Shoe name</td>
-                            <td>Old cost</td>
-                            <td>Quantity sold</td>
-                            <td>New cost</td>
-                            <td>Increase/decrease ratio</td>
+                            <td>Image</td>
+                            <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Category ID</td>
                             <td>Status</td>
+                            <td>Detail</td>
                         </tr>
                     </table>
                 </div>
-            </div>
+        </div>
+    </div>
+        
+
 
 </body>
-
 </html>

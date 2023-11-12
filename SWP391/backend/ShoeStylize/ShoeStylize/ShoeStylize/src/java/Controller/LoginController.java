@@ -19,6 +19,7 @@ public class LoginController extends HttpServlet {
     private final String HOMEPAGE = "homepage.jsp";
     private final String LOGINPAGE = "login.jsp";
     private final String ADMINPAGE = "adminpage.jsp";
+    private final String COSTPAGE = "cost.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
@@ -44,6 +45,10 @@ public class LoginController extends HttpServlet {
                         session.setAttribute("id", userID);
                     } else if (roleID.equals("CUSTOMER")) {
                         url = HOMEPAGE;
+                        userID = dao.checkUserID(email, password);
+                        session.setAttribute("id", userID);
+                    } else if (roleID.equals("PROVIDER")) {
+                        url = COSTPAGE;
                         userID = dao.checkUserID(email, password);
                         session.setAttribute("id", userID);
                     }

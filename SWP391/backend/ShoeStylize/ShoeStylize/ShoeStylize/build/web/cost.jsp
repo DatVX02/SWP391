@@ -49,17 +49,17 @@
 
     <div class="manage">
         <div style="width: 20%; float:left" class="managefunction">
-            <a href="../Order statictics/Order.html">Order statictics</a>
+            <a href="order_provider.jsp">Order statictics</a>
             <a href="cost.jsp">Cost statictics</a>
-            <a href="../Blog statictics/Blog.html">Blog statictics</a>
-            <a href="../Store statictics/Store.html">Store manage</a>
+            <a href="blog_provider.jsp">Blog statictics</a>
+            <a href="store.jsp">Store manage</a>
         </div>
         <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" >
                     <table>
                         <tr class="tablehead">
-                            <td>ShoesID</td>
-                            <td>Shoes name</td>
+                            <td>Shoe ID</td>
+                            <td>Shoe name</td>
                             <td>Old cost</td>
                             <td>Quantity sold</td>
                             <td>New cost</td>
