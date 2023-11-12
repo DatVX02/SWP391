@@ -8,23 +8,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Admin Page</title>
     <link rel="icon"
         href="image\shoelogo.png">
     <link rel="stylesheet" href="CSS\adminpage.css">
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
 <body>
     <div class="header">
-        <img src="image\shoelogo.png"
-            alt="Shoes stylize"></img>
+        <a href="homepage.jsp"><img src="image\shoelogo.png"
+            alt="shoes"></a>
     </div>
 
     <div class="AD">
-        <h1 style="font-size: 50px;">Admin Page</h1>
+        <h1 style="font-size: 50px; margin-bottom: 50px;">Admin Page</h1>
         <a href="manageUser.jsp" >
         <button style="width: 200px; background-color: red; padding: 25px 30px; border: 1px solid black; cursor: pointer; text-decoration: none; color: white; font-size: 20px;">Manage User</button></a>
         <br>

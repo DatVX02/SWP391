@@ -29,7 +29,7 @@
 <body>
     <!-- header -->
     <div class="header">
-        <a href="homepage.html"><img src="image\shoelogo.png"
+        <a href="homepage.jsp"><img src="image\shoelogo.png"
             alt="shoes"></a>
         <div class="header_info">
             <a href="information0.jsp"><img
@@ -38,7 +38,7 @@
             <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
-            <a href="../../../../Cart/MyCart.html"><img
+            <a href="../../../../Cart/MyCart.jsp"><img
                     src="image\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
             <a href="#"><img
@@ -49,10 +49,10 @@
 
     <div class="manage">
         <div style="width: 20%; float:left" class="managefunction">
-            <a href="../Order statictics/Order.html">Order statictics</a>
+            <a href="../Order statictics/Order.jsp">Order statictics</a>
             <a href="cost.jsp">Cost statictics</a>
-            <a href="../Blog statictics/Blog.html">Blog statictics</a>
-            <a href="../Store statictics/Store.html">Store manage</a>
+            <a href="../Blog statictics/Blog.jsp">Blog statictics</a>
+            <a href="../Store statictics/Store.jsp">Store manage</a>
         </div>
         <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" >

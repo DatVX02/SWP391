@@ -14,12 +14,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>User Management</title>
-        <link rel="stylesheet" href="CSS\manageUser.css">
-    </head>
+        <link rel="icon"
+        href="image\shoelogo.png">
+    <link rel="stylesheet" href="CSS\manageUser.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
     <body>
         <div class="header">
-        <img src="image\shoelogo.png"
-            alt="Shoes stylize"></img>
+            <img src="image\shoelogo.png"
+                 alt="shoes">
+        <button style="background: #FF0000; color: #fff;">Manage Account</button>
         </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
@@ -35,31 +44,32 @@
                 </div>
                 <div style="clear: both;">
                     <%
-                        List<RegistrationDTO> result =null;
+                        List<RegistrationDTO> result = null;
                         RegistrationDAO dao = new RegistrationDAO();
                         String searchValue = request.getParameter("txtSearchbyaccount");
-                        if(searchValue != null){
+                        if (searchValue != null) {
                             result = (List<RegistrationDTO>) request.getAttribute("SEARCHRESULT");
-                        } else{
+                        } else {
                             dao.showUser();
                             result = dao.getListAccounts();
-                        }                       
+                        }
                         if (result != null) {
                     %>
                     <table>
                         <thead>
                             <tr class="tablehead">
-                                <td>No.</td>
+                                <td>UserID</td>
                                 <td>Email</td>
-                                <td>Full Name</td>
-                                <td>Phone</td>
-                                <td>Birth Date</td>
+                                <td>Password</td>
+                                <td>FullName</td>
+                                <td>PhoneNumber</td>
+                                <td>Birthdate</td>
+                                <td>RoleID</td>
                                 <td>Gender</td>
                             </tr>
                         </thead>
                         <tbody>
                             <%
-                                int count = 0;
                                 for (RegistrationDTO dto : result) {
                             %>
                         <form action="MainController">
@@ -70,6 +80,10 @@
 
                                 <td>
                                     <input type="text" name="txtEmail" value="<%= dto.getEmail()%>" />
+                                </td>
+                                
+                                <td>
+                                    <input type="password" name="txtPassword" value="<%= dto.getPassword()%>" />
                                 </td>
 
                                 <td>
@@ -85,9 +99,13 @@
                                 </td>
 
                                 <td>
-                                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(dto.getGender())) { %> checked <% } %>>Male
-                                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(dto.getGender())) { %> checked <% } %>>Female
-                                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(dto.getGender())) { %> checked <% }%>>Other
+                                    <input type="text" name="roleID" value="<%= dto.getRoleID()%>" />
+                                </td>
+
+                                <td>
+                                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(dto.getGender())) { %> checked <% } %>>Male<br>
+                                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(dto.getGender())) { %> checked <% } %>>Female<br>
+                                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(dto.getGender())) { %> checked <% }%>>Other<br>
                                 </td>
 
                                 <td>
@@ -113,5 +131,51 @@
                 </div>
             </div>
         </div>
+                <div class="footer">
+        <div style="float:right">
+            <img src="image\facebook.png"
+                alt="Facebook" />
+            <img src="image\twitter.png"
+                alt="twitter" />
+            <img src="image\linkedin.png"
+                alt="linkedin" />
+            <img src="image\instagram (1).png"
+                alt="Instagram" />
+            <img src="image\youtube (5).png"
+                alt="youtube" />
+        </div>
+            <div style=" float:right">
+            <table class="center">
+                <tr class="tableHeader">
+                    <td>About Us</td>
+                    <td>For Users</td>
+                    <td>Information</td>
+                </tr>
+                <tr>
+                    <td>About Us</td>
+                    <td>Login</td>
+                    <td>Help Center</td>
+                </tr>
+                <tr>
+                    <td>Find Store</td>
+                    <td>Register</td>
+                    <td>Money Refund</td>
+                </tr>
+                <tr>
+                    <td>Categories</td>
+                    <td>Settings</td>
+                    <td>Shipping</td>
+                </tr>
+                <tr>
+                    <td>Blogs</td>
+                    <td>My Orders</td>
+                    <td>Contact us</td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear: both" class="commerce">
+            @2023 Ecommerce
+        </div>
+    </div>
     </body>
 </html>

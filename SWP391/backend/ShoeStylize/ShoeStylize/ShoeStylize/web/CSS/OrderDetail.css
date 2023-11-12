@@ -1,17 +1,14 @@
-/* *{
-    font-family: sans-serif;
-} */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 .header {
     background-color: #979797;
-
+    width: 100%;
 }
 
 .header img {
@@ -21,39 +18,64 @@ body {
     /* margin: 0 auto; */
     padding: 5px 5px;
 }
-.product{
+
+
+.header_info a {
+    float: left;
+    background: #979797;
+    text-decoration: none;
+    color: white;
+    padding-right: 50px;
+    transform: translate(-60px, -90px);
+}
+
+.header_info img {
+    max-width: 20px;
+    transform: translateX(7px);
+}
+
+.header_info {
+    float: right;
+}
+
+.header_info a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+
+
+
+.product {
     background-color: #E4E0E0;
     width: 80%;
     height: 20%;
     margin: auto;
 }
 
-img{
-    margin-top: 1vh;
-    margin-left: 1%;
-    width: 80%;
-    height: 80%;
-}
-
 .column {
     float: left;
     padding: 10px;
-  }
-  
-  .left, .right {
+}
+
+.left,
+.right {
     width: 25%;
-  }
-  
-  .middle {
+}
+
+.middle {
     width: 40%;
-  }
-.product:after{
+}
+
+.product:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.product .right input{
+.product .right input {
     display: block;
     height: 30px;
     width: 200px;
@@ -64,8 +86,49 @@ img{
     margin-top: 10%;
 }
 
-h3{
+h3 {
     font-weight: bolder;
     float: right;
-    margin-right: 20% ;
+    margin-right: 20%;
+    transform: translateY(20px);
+    font-size: 25px;
+}
+
+.footer {
+    background-color: #979797;
+    width: 100%;
+    margin-top: 169px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    transform: translateX(-380px);
+    margin-bottom: 20px;
+}
+
+.center tr td {
+    width: 42%;
+    padding: 4px;
+    color: white;
+}
+
+.footer img {
+    max-width: 30px;
+    margin: 20px 20px 10px 10px;
+}
+
+.commerce {
+    text-align: center;
+    color: #606060;
+    background: white;
+    padding: 10px;
+}
+
+
+.center .tableHeader td {
+    font-weight: bolder;
+    color: black;
+
 }

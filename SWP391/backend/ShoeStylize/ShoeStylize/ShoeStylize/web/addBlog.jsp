@@ -31,9 +31,9 @@
             <h2>Add Blog</h2>
             <form action="MainController">
                 <p>Title: <input type="text" name="txtTitle" /></p>
+                <p>Author: <input type="text" name="txtAccount" /></p>
                 <p>Content: <input type="text" name="txtContent" /></p>
-                <p>User ID: <input type="text" name="userID" value="<%= session.getAttribute("id")%>"/></p>
-                <p>Date submitted: <input type="date" name="txtDate" /></p>
+                <p>PostDay <input type="date" name="txtDate" /></p>
                 <input type="hidden" name="userID" value="<%= session.getAttribute("id") %>">
                 <input type="submit" name="btAction" value="Add Blog">
             </form>

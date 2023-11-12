@@ -30,7 +30,7 @@
             <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
-            <a href="MyCart.html"><img
+            <a href="MyCart.jsp"><img
                     src="image\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
         </div>
@@ -221,8 +221,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -244,8 +244,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -267,8 +267,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -290,8 +290,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -313,8 +313,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -336,8 +336,8 @@
                                 <div class="card-footer p-0" style="text-align: center;">
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-light">
-                                            <i class="fas fa-cart-plus"></i>
-                                            <span>Add Cart</span>
+                                            <!-- <i class="fas fa-cart-plus"></i> -->
+                                            <span>Custom Now</span>
                                         </button>
 
                                     </div>
@@ -345,7 +345,7 @@
                             </div>
                         </div>
 
-                        <div class="card-footer p-3">
+                        <!--div class="card-footer p-3">
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="pagination m-0 ">
@@ -363,7 +363,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>OrderDetail</title>
+        <title>Order Detail</title>
         <link rel="stylesheet" href="CSS\OrderDetail.css">
         <link rel="icon"
               href="image\shoelogo.png">
@@ -23,10 +23,25 @@
 
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="Shoes stylize">
+            <a href="homepage.jsp"><img src="image\shoelogo.png"
+            alt="shoes"></img></a>
+        <div class="header_info">
+            <a href="information.jsp"><img
+                    src="image\user (1).png"
+                    alt="profile">Profile</a>
+            <a href="OrderDetail.jsp"><img
+                    src="image\heart.png"
+                    alt="Orders">Orders</a>
+            <a href="MyCart.jsp"><img
+                    src="image\shopping-cart.png"
+                    alt="shopping-cart">My cart</a>
+            <a href="Blog.jsp"><img
+                    src="image\blog (2).png "
+                    alt="shopping-cart">News</a>
         </div>
-        <h1>Order Detail</h1>
+        </div>
+        <div>
+        <h1 style="margin-left: 100px; margin-top: 30px; margin-bottom: 15px; font-size: 30px;">Order Detail</h1>
         <%
             RegistrationDAO dao = new RegistrationDAO();
             dao.showOrderDetail();
@@ -46,7 +61,8 @@
                 <div class="column middle">
                     <h2><%= dto.getName()%></h2>
                     <p>Price:&nbsp&nbsp&nbsp<%= dto.getPrice()%></p>
-                    <p>Quantity:&nbsp&nbsp<%= dto.getQuantity()%> </p>
+                    <span>Quantity:&nbsp&nbsp <input type="number" value="<%= dto.getQuantity()%>" name="" id="" min="0"
+                            max="999999"></span>
                 </div>
                 <div class="column right">
                     <input type="button" value="Detail"/>
@@ -60,6 +76,8 @@
             %>
             <h3>Total amount:<%= totalAmount%></h3></br>
         </form>
+        </div>
+        
         <%
         } else {
         %>
@@ -67,6 +85,52 @@
         <%
             }
         %>
+        <div class="footer">
+        <div style="float:right">
+            <img src="image\facebook.png"
+                alt="Facebook" />
+            <img src="image\twitter.png"
+                alt="twitter" />
+            <img src="image\linkedin.png"
+                alt="linkedin" />
+            <img src="image\instagram (1).png"
+                alt="Instagram" />
+            <img src="image\youtube (5).png"
+                alt="youtube" />
+        </div>
+            <div style=" float:right">
+            <table class="center">
+                <tr class="tableHeader">
+                    <td>About Us</td>
+                    <td>For Users</td>
+                    <td>Information</td>
+                </tr>
+                <tr>
+                    <td>About Us</td>
+                    <td>Login</td>
+                    <td>Help Center</td>
+                </tr>
+                <tr>
+                    <td>Find Store</td>
+                    <td>Register</td>
+                    <td>Money Refund</td>
+                </tr>
+                <tr>
+                    <td>Categories</td>
+                    <td>Settings</td>
+                    <td>Shipping</td>
+                </tr>
+                <tr>
+                    <td>Blogs</td>
+                    <td>My Orders</td>
+                    <td>Contact us</td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear: both" class="commerce">
+            @2023 Ecommerce
+        </div>
+    </div>
     </body>
 
 </html>
