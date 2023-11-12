@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class UpdatePasswordController extends HttpServlet {
 
-    private final String UPDATEPAGE = "ChangePassword.jsp";
+    private final String UPDATEPAGE = "changePassword.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
 
     /**

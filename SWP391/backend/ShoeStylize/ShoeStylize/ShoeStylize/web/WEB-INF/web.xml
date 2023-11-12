@@ -110,6 +110,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>HomePage/HomePage(no login)/HomePage.jsp</welcome-file>
+        <welcome-file>homepage_guest.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

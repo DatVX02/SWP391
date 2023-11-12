@@ -26,16 +26,6 @@ public class RegistrationDTO {
         this.gender = gender;
     }
 
-    public RegistrationDTO(int userID, String email, String fullname, String phone, String birthDate, String roleID, String gender) {
-        this.userID = userID;
-        this.email = email;
-        this.phone = phone;
-        this.fullname = fullname;
-        this.birthDate = birthDate;
-        this.roleID = roleID;
-        this.gender = gender;
-    }
-
     
 
     public RegistrationDTO(int userID, String email, String fullname, String phone, String birthDate, String gender) {

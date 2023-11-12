@@ -1,3 +1,7 @@
+/* *{
+    font-family: sans-serif;
+} */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,6 +26,13 @@ body {
     width: 80%;
     height: 20%;
     margin: auto;
+}
+
+img{
+    margin-top: 1vh;
+    margin-left: 1%;
+    width: 80%;
+    height: 80%;
 }
 
 .column {
