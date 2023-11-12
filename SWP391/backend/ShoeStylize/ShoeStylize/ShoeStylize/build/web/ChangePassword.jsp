@@ -1,3 +1,4 @@
+<%@page import="Registration.RegistrationDAO"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="Database.DBUtils"%>
 <%@page import="java.sql.ResultSet"%>
@@ -63,39 +64,8 @@
                 </ul>
             </div>
             <%
-                Connection con = null;
-                PreparedStatement stm = null;
-                ResultSet rs = null;
-
-                try {
-                    con = DBUtils.makeConnection();
-                    if (con != null) {
-                        String sql = "SELECT [Password] FROM Users WHERE UserID = ?";
-                        stm = con.prepareStatement(sql);
-                        stm.setObject(1, session.getAttribute("id"));
-                        rs = stm.executeQuery();
-
-                        if (rs.next()) { // Check if there are results
-                            String password = rs.getString("Password");
-                            session.setAttribute("Password", password);
-                        }
-                    }
-                } catch (SQLException e) {
-                    // Handle the SQLException, or at least log it
-                    e.printStackTrace();
-                    throw e; // Re-throw the exception if needed
-                } finally {
-                    // Close resources in reverse order of acquisition, and check for null
-                    if (rs != null) {
-                        rs.close();
-                    }
-                    if (stm != null) {
-                        stm.close();
-                    }
-                    if (con != null) {
-                        con.close();
-                    }
-                }
+                RegistrationDAO dao = new RegistrationDAO();
+                dao.changePassword(request);
             %>
             <div class="information_right">
                 <h2>Change Password</h2>
