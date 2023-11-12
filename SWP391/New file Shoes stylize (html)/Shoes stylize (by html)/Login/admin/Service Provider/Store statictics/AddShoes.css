@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    overflow-x: hidden;
 }
 
 .header {
@@ -26,11 +26,11 @@ body {
     text-decoration: none;
     color: white;
     padding-right: 50px;
-    transform: translate(-60px, -90px);
+    transform: translate(-60px, -85px);
 }
 
 .header_info img {
-    max-width: 20px;
+    max-width: 30px;
     transform: translateX(7px);
 }
 
@@ -77,20 +77,20 @@ body {
     transform: translateY(-50px);
 }
 
-h2 {
+.addBLog h2 {
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.addBLog p  {
     margin-left: 5%;
 }
 
-p {
-    margin-left: 5%;
+form input {
+    width: 50%;
+    margin-left: 77px;
 }
 
-input {
-    float: right;
-    width: 80%;
-    margin-right: 5%;
-
-}
 
 .button {
     width: 10%;
