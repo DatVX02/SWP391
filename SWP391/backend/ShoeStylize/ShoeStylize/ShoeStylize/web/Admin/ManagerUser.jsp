@@ -61,6 +61,7 @@
                                 <td>Full Name</td>
                                 <td>Phone</td>
                                 <td>Birth Date</td>
+                                <td>Role</td>
                                 <td>Gender</td>
                             </tr>
                         </thead>
