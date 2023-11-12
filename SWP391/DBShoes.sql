@@ -15,9 +15,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[BlogPosts](
 	[PostID] [int] IDENTITY(1,1) NOT NULL,
-	[UserID] [int] NULL,
-	[ShoeID] [int] NULL,
-	[Title] [varchar](100) NULL,	 
+	[UserID] [int]  NULL,
+	[Title] [nvarchar] (30) NULL,
 	[Content] [text] NULL,
 	[PostDay] [date] NULL,
 PRIMARY KEY CLUSTERED 
@@ -63,7 +62,12 @@ GO
 CREATE TABLE [dbo].[Image](
 	[ImageID] [int] IDENTITY(1,1) NOT NULL,
 	[CusShoeID] [int] NOT NULL,
-	[ImageLink] [varchar](max) NULL,
+	[ImageLink1] [nvarchar](max) NULL,
+	[ImageLink2] [nvarchar](max) NULL,
+	[ImageLink3] [nvarchar](max) NULL,
+	[ImageLink4] [nvarchar](max) NULL,
+	[ImageLink5] [nvarchar](max) NULL,
+	[ImageLink6] [nvarchar](max) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[ImageID] ASC
@@ -113,7 +117,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [int] IDENTITY(1,1) NOT NULL,
-	[FeedbackType] [varchar](50) NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
 	[Title] [varchar](100) NULL,
@@ -136,7 +139,7 @@ CREATE TABLE [dbo].[OrderDetails](
 	[OrderID] [int] NULL,
 	[ShoeID] [int] NULL,
 	[CusShoeID] [int] NULL,
-	[Status] [bit] NULL,
+	[Status] [nvarchar](20) NULL,
 	[Quantity] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -155,7 +158,7 @@ CREATE TABLE [dbo].[Orders](
 	[UserID] [int] NULL,
 	[OrderDate] [date] NULL,
 	[TotalAmount] [decimal](10, 2) NULL,
-	[Status] [bit] NULL,
+	[Status] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[OrderID] ASC
@@ -171,11 +174,10 @@ GO
 CREATE TABLE [dbo].[Shoes](
 	[ShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[BrandID] [int] NULL,
-	[ShoesName] [varchar] NULL,
+	[ShoesName] [nvarchar](20) NULL,
+	[Category] [varchar](20) NULL,
 	[Description] [text] NULL,
-	[Size] [varchar](10) NULL,
-	[Color] [varchar](50) NULL,
-	[Image] [varchar](max) NULL,
+	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
 	[Price] [decimal](10, 2) NULL,
 	[SizeID] [int] NULL
@@ -194,13 +196,13 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Users](
 	[UserID] [int] IDENTITY(1,1) NOT NULL,
-	[Email] [varchar](255) NOT NULL,
-	[Password] [varchar](255) NOT NULL,
-	[FullName] [varchar](50) NULL,
-	[PhoneNumber] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](30) NOT NULL,
+	[Password] [nvarchar](30) NOT NULL,
+	[FullName] [nvarchar](20) NULL,
+	[PhoneNumber] [nvarchar](20) NOT NULL,
 	[Birthdate] [date] NULL,
 	[RoleID] [varchar](50) NULL,
-	[Gender] [varchar](10) NOT NULL,
+	[Gender] [nvarchar](10) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC
