@@ -5,13 +5,9 @@
  */
 package Controller;
 
-import Blog.BlogDTO;
 import Registration.RegistrationDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,32 +15,41 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Admin
+ * @author SivaRyi
  */
-public class SearchBlogController extends HttpServlet {
+public class ProAddBlogController extends HttpServlet {
 
-    private final String SEARCHPAGE = "manageBlog.jsp";
-
+    private final String INVALIDPAGE = "invalid.jsp";
+    private final String MANAGEBLOGPAGE = "blog_provider.jsp";
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            String searchValue = request.getParameter("txtSearchbytitle");
-            String url = SEARCHPAGE;
-            try {
-                if (!searchValue.isEmpty()) {
-                    RegistrationDAO dao = new RegistrationDAO();
-                    dao.searchByTitle(searchValue);
-                    List<BlogDTO> result = dao.getListBlogs();
-                    request.setAttribute("BLOGSEARCHRESULT", result);
-                } 
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } finally {
-                RequestDispatcher rd = request.getRequestDispatcher(url);
-                rd.forward(request, response);
+        throws ServletException, IOException {
+        String url = INVALIDPAGE;
+        response.setContentType("text/html;charset=UTF-8");   
+        try {
+            String title = request.getParameter("txtTitle");
+            String content = request.getParameter("txtContent");
+            String author = request.getParameter("userID");
+            String postDate = request.getParameter("txtDate");
+            
+            RegistrationDAO dao = new RegistrationDAO();
+           
+            boolean result = dao.addBlog(title, content,author, postDate);
+            if (result) {
+                url = MANAGEBLOGPAGE;
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            response.sendRedirect(url);
         }
     }
 

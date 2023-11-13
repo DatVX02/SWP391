@@ -14,9 +14,13 @@ import java.util.Map;
  * @author SivaRyi
  */
 public class OrderDTO {
+    private int id;
     private String name;
+    private String img;
     private double price;
     private int quantity;
+    private String category;
+    private String status;
     Map<String, Integer> items;
 
     public OrderDTO() {
@@ -27,6 +31,50 @@ public class OrderDTO {
         this.price = price;
         this.quantity = quantity;
     }
+
+    public OrderDTO(int id, String name, String img, double price, int quantity, String category, String status) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.price = price;
+        this.quantity = quantity;
+        this.category = category;
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    
 
     public String getName() {
         return name;

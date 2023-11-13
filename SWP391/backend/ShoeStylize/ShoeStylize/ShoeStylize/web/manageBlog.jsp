@@ -38,7 +38,7 @@
                 <div style="float: right;">
                     <form action="MainController" method="post">
                         <input type="text" name="txtSearchbytitle" placeholder="Find some blog">
-                        <input type="submit" name="btAction" value="Search Blog" class="button">
+                        <input type="submit" name="btAction" value="Find Blog" class="button">
                         <a href="addBlog.jsp"><input type="button" value="Add Blog" class="button"></a>
                     </form>
                 </div>

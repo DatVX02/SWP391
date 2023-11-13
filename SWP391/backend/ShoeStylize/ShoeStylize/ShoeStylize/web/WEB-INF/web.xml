@@ -56,6 +56,14 @@
         <servlet-name>CategoryController</servlet-name>
         <servlet-class>Controller.CategoryController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProSearchBlogController</servlet-name>
+        <servlet-class>Controller.ProSearchBlogController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProAddBlogController</servlet-name>
+        <servlet-class>Controller.ProAddBlogController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -111,6 +119,14 @@
     <servlet-mapping>
         <servlet-name>CategoryController</servlet-name>
         <url-pattern>/CategoryController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProSearchBlogController</servlet-name>
+        <url-pattern>/ProSearchBlogController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProAddBlogController</servlet-name>
+        <url-pattern>/ProAddBlogController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -44,12 +44,13 @@
         </div>
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add Blog</h2>
-            <form action="*" method="post">
-                <p>Title: <input type="text" name="txtTieude" /></p>
-                <p>Content: <textarea type="text" name="txtTen" style="width: 70%; margin-left: 100px; padding-right: 120px ;"></textarea>
-                <p>Poster: <input type="text" name="txtAccount" readonly /></p>
+            <form action="MainController" method="post">
+                <p>Title: <input type="text" name="txtTitle" /></p>
+                <p>Content: <textarea type="text" name="txtContent" style="width: 70%; margin-left: 100px; padding-right: 120px ;"></textarea>
+                <p>Poster: <input type="text" name="txtAccount" value="<%= session.getAttribute("id") %>"  readonly /></p>
                 <p>Date submitted: <input type="date" name="txtDate" /></p>
-                <input type="button" value="Post" class="button">
+                <input type="hidden" name="userID" value="<%= session.getAttribute("id") %>">
+                <input type="submit" name="btAction" value="Post" class="button">
             </form>
         </div>
     </div>

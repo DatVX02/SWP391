@@ -19,11 +19,11 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Admin
+ * @author SivaRyi
  */
-public class SearchBlogController extends HttpServlet {
+public class ProSearchBlogController extends HttpServlet {
 
-    private final String SEARCHPAGE = "manageBlog.jsp";
+    private final String SEARCHPAGE = "blog_provider.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

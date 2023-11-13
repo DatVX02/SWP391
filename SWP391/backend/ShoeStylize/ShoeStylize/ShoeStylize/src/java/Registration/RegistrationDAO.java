@@ -396,8 +396,8 @@ public class RegistrationDAO implements Serializable {
                     int id = rs.getInt("PostID");
                     String title = rs.getString("Title");
                     String author = rs.getString("FullName");
-                    String date = rs.getString("Content");
-                    String content = rs.getString("PostDay");
+                    String date = rs.getString("PostDay");
+                    String content = rs.getString("Content");
                     BlogDTO dto = new BlogDTO(id, title, author, date, content);
                     if (ListBlogs == null) {
                         ListBlogs = new ArrayList<>();
@@ -425,8 +425,9 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT [PostID],[FullName],[Title],[Content],[PostDay] FROM BlogPosts \n"
-                        + "Where Title LIKE ?;";
+                String sql = "SELECT [PostID],[FullName],[Title],[Content],[PostDay] FROM BlogPosts\n"
+                        + "INNER JOIN Users ON BlogPosts.UserId = Users.UserId\n"
+                        + "Where Title LIKE ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%" + searchValue + "%");
                 rs = stm.executeQuery();
@@ -434,8 +435,8 @@ public class RegistrationDAO implements Serializable {
                     int id = rs.getInt("PostID");
                     String title = rs.getString("Title");
                     String author = rs.getString("FullName");
-                    String date = rs.getString("Content");
-                    String content = rs.getString("PostDay");
+                    String date = rs.getString("PostDay");
+                    String content = rs.getString("Content");
                     BlogDTO dto = new BlogDTO(id, title, author, date, content);
                     if (ListBlogs == null) {
                         ListBlogs = new ArrayList<>();
@@ -550,7 +551,8 @@ public class RegistrationDAO implements Serializable {
         }
         return false;
     }
-public void changePassword(HttpServletRequest request) throws SQLException {
+
+    public void changePassword(HttpServletRequest request) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         ResultSet rs = null;

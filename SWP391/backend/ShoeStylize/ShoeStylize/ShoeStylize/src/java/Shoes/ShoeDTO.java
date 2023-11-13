@@ -10,29 +10,30 @@ package Shoes;
  * @author duong
  */
 public class ShoeDTO {
-   private int ShoeID;
-    private int BrandID;
-     private String ShoesName;
-     private String Category;
-     private String Description;
-     private String Image;
-      private int Quantity;
-     private double Price;
-     private int SizeID;
+
+    private int ShoeID;
+    private String Brand;
+    private String ShoesName;
+    private String Category;
+    private String Description;
+    private String Image;
+    private int Quantity;
+    private double Price;
+    private String Size;
 
     public ShoeDTO() {
     }
 
-    public ShoeDTO(int ShoeID, int BrandID, String ShoesName, String Category, String Description, String Image, int Quantity, double Price, int SizeID) {
+    public ShoeDTO(int ShoeID, String Brand, String ShoesName, String Category, String Description, String Image, int Quantity, double Price, String Size) {
         this.ShoeID = ShoeID;
-        this.BrandID = BrandID;
+        this.Brand = Brand;
         this.ShoesName = ShoesName;
         this.Category = Category;
         this.Description = Description;
         this.Image = Image;
         this.Quantity = Quantity;
         this.Price = Price;
-        this.SizeID = SizeID;
+        this.Size = Size;
     }
 
     public int getShoeID() {
@@ -43,13 +44,22 @@ public class ShoeDTO {
         this.ShoeID = ShoeID;
     }
 
-    public int getBrandID() {
-        return BrandID;
+    public String getBrand() {
+        return Brand;
     }
 
-    public void setBrandID(int BrandID) {
-        this.BrandID = BrandID;
+    public void setBrand(String Brand) {
+        this.Brand = Brand;
     }
+
+    public String getSize() {
+        return Size;
+    }
+
+    public void setSize(String Size) {
+        this.Size = Size;
+    }
+
 
     public String getShoesName() {
         return ShoesName;
@@ -99,11 +109,4 @@ public class ShoeDTO {
         this.Price = Price;
     }
 
-    public int getSizeID() {
-        return SizeID;
-    }
-
-    public void setSizeID(int SizeID) {
-        this.SizeID = SizeID;
-    }
 }

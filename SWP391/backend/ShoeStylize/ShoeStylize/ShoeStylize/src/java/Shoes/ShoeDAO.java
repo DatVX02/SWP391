@@ -25,29 +25,31 @@ public class ShoeDAO implements Serializable {
         try {
             cn = DBUtils.makeConnection();
             String sql = "SELECT [ShoeID]\n"
-                    + "      ,[BrandID]\n"
-                    + "      ,[ShoesName]\n"
-                    + "      ,[Category]\n"
-                    + "      ,[Description]\n"
-                    + "      ,[Image]\n"
-                    + "      ,[Quantity]\n"
-                    + "      ,[Price]\n"
-                    + "      ,[SizeID]\n"
-                    + "  FROM [dbo].[Shoes]";
+                    + "                           ,[BrandName]\n"
+                    + "                           ,[ShoesName]\n"
+                    + "                           ,[Category]\n"
+                    + "                           ,[Description]\n"
+                    + "                           ,[Image]\n"
+                    + "                           ,[Quantity]\n"
+                    + "                           ,[Price]\n"
+                    + "                           ,[Size]\n"
+                    + "                       FROM [dbo].[Shoes]\n"
+                    + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
+                    + "INNER JOIN SizeList ON Shoes.SizeID = SizeList.SizeID;";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
             if (rs != null) {
                 while (rs.next()) {
                     int ShoeID = rs.getInt("ShoeID");
-                    int BrandID = rs.getInt("BrandID");
+                    String Brand = rs.getString("BrandName");
                     String ShoesName = rs.getString("ShoesName");
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    int SizeID = rs.getInt("SizeID");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, BrandID, ShoesName, Image, Description, Image, Quantity, Price, SizeID);
+                    String Size = rs.getString("Size");
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price, Size);
                     list.add(shoes);
                 }
             }
@@ -63,16 +65,18 @@ public class ShoeDAO implements Serializable {
         try {
             cn = DBUtils.makeConnection();
             String sql = "SELECT [ShoeID]\n"
-                    + "      ,[BrandID]\n"
-                    + "      ,[ShoesName]\n"
-                    + "      ,[Category]\n"
-                    + "      ,[Description]\n"
-                    + "      ,[Image]\n"
-                    + "      ,[Quantity]\n"
-                    + "      ,[Price]\n"
-                    + "      ,[SizeID]\n"
-                    + "  FROM [dbo].[Shoes]\n"
-                    + "  Where [Category] = ?";
+                    + "                           ,[BrandName]\n"
+                    + "                           ,[ShoesName]\n"
+                    + "                           ,[Category]\n"
+                    + "                           ,[Description]\n"
+                    + "                           ,[Image]\n"
+                    + "                           ,[Quantity]\n"
+                    + "                           ,[Price]\n"
+                    + "                           ,[Size]\n"
+                    + "                       FROM [dbo].[Shoes]\n"
+                    + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
+                    + "INNER JOIN SizeList ON Shoes.SizeID = SizeList.SizeID\n"
+                    + "Where [Category] = ?;";
 
             PreparedStatement pst = cn.prepareStatement(sql);
             pst.setString(1, by);
@@ -80,14 +84,14 @@ public class ShoeDAO implements Serializable {
             if (rs != null) {
                 while (rs.next()) {
                     int ShoeID = rs.getInt("ShoeID");
-                    int BrandID = rs.getInt("BrandID");
+                    String Brand = rs.getString("BrandName");
                     String ShoesName = rs.getString("ShoesName");
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    int SizeID = rs.getInt("SizeID");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, BrandID, ShoesName, Image, Description, Image, Quantity, Price, SizeID);
+                    String Size = rs.getString("Size");
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price, Size);
                     list.add(shoes);
                 }
             }

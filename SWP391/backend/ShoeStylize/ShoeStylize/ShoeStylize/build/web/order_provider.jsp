@@ -4,6 +4,9 @@
     Author     : Administrator
 --%>
 
+<%@page import="Order.OrderDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="Order.OrderDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +60,7 @@
         <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" >
                     <table>
+                        <thead>
                         <tr class="tablehead">
                             <td>Shoe ID</td>
                             <td>Shoe name</td>
@@ -67,6 +71,47 @@
                             <td>Status</td>
                             <td>Detail</td>
                         </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                OrderDAO dao = new OrderDAO();
+                                List<OrderDTO> result = dao.AlllistOrder();
+                                for (OrderDTO dto : result) {
+                            %>
+                        <form action="MainController">
+                            <tr>
+                                <td>
+                                    <%= dto.getId()%>
+                                </td>
+
+                                <td>
+                                    <%= dto.getName()%>
+                                </td>
+
+                                <td>
+                                    <%= dto.getImg()%>
+                                </td>
+
+                                <td>
+                                    <%= dto.getPrice()%>
+                                </td>
+
+                                <td>
+                                    <%= dto.getQuantity()%>
+                                </td>
+                                
+                                <td>
+                                    <%= dto.getCategory()%>
+                                </td>
+                                
+                                <td>
+                                    <%= dto.getStatus()%>
+                                </td>
+                            </tr>
+                        </form>
+                        <%
+                            }
+                        %>
                     </table>
                 </div>
         </div>
