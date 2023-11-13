@@ -4,6 +4,10 @@
     Author     : Administrator
 --%>
 
+<%@page import="Shoes.ShoeDAO"%>
+<%@page import="Shoes.ShoeDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,15 +52,15 @@
 
 
 
-
+        <form action="MainController">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-3">
                     <div class="card mb-4">
                         <div class="card-header" style="font-weight: bold;">Category</div>
                         <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action">Sport</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Party</a>
+                            <a href="CategoryController?byCategory=Sport" class="list-group-item list-group-item-action">Sport</a>
+                            <a href="CategoryController?byCategory=Party" class="list-group-item list-group-item-action ">Party</a>
                         </div>
                     </div>
                     <div class="card">
@@ -70,25 +74,25 @@
                                     <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
                                         <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1" name="brand" value="Nike">
                                                 <label class="custom-control-label" for="customCheck1">Nike</label>
                                             </div>
                                         </li>
                                         <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="brand" value="Jordan">
                                                 <label class="custom-control-label" for="customCheck2">Jordan</label>
                                             </div>
                                         </li>
                                         <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck3" name="brand" value="Adidas">
                                                 <label class="custom-control-label" for="customCheck3">Adidas</label>
                                             </div>
                                         </li>
                                         <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck4" name="brand" value="Adidas">
                                                 <label class="custom-control-label" for="customCheck4">Puma</label>
                                             </div>
                                         </li>
@@ -206,19 +210,33 @@
                             <button type="button" class="btn btn-block btn-primary">Apply</button>
                         </div>
                     </div>
+                      </form>
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
                         <div class="row">
+                            <% ArrayList<ShoeDTO> shoes = new ArrayList<>();
+                               String category = (String) session.getAttribute("Cate");
+                                ShoeDAO dao = new ShoeDAO();
+                                if(category == "Cate"){
+                                    shoes=  (ArrayList<ShoeDTO>) session.getAttribute("shoesList");
+                                }else{
+                                    shoes = dao.AlllistShoe();
+                                }      
+                                if (shoes != null) {
+                                    for (ShoeDTO shoe : shoes) {
+                            %> 
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="card-img-top" src="<%=shoe.getImage()%>" alt="" />
                                     <div class="card-body">
                                         <p class="h5 m-0">
                                             <!-- Giá sản phẩm -->
+                                            <%= shoe.getPrice()%>
                                         </p>
                                         <p class="h6">
                                             <!-- Tên sản phẩm  -->
+                                            <%= shoe.getShoesName()%>
                                         </p>
 
                                     </div>
@@ -233,121 +251,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá sản phẩm -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên sản phẩm  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-cart-plus"></i>
-                                                <span>Add Cart</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá sản phẩm -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên sản phẩm  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-cart-plus"></i>
-                                                <span>Add Cart</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá sản phẩm -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên sản phẩm  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-cart-plus"></i>
-                                                <span>Add Cart</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá sản phẩm -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên sản phẩm  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-cart-plus"></i>
-                                                <span>Add Cart</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá sản phẩm -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên sản phẩm  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <i class="fas fa-cart-plus"></i>
-                                                <span>Add Cart</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <%
+                                    }
+                                }
+                            %>
 
                             <!--div class="card-footer p-3">
                                 <div class="row">

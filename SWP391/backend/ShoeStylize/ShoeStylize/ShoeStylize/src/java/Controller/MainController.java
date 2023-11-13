@@ -28,7 +28,7 @@ public class MainController extends HttpServlet {
     private static final String UPDATEPASSWORDCONTROLLER="UpdatePasswordController";
     private static final String FORGOTPASSWORDCONTROLLER="ForgotPasswordController";
     private static final String RESETPASSWORDCONTROLLER="ResetPasswordController";
-
+    private static final String CategoryController="CategoryController";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

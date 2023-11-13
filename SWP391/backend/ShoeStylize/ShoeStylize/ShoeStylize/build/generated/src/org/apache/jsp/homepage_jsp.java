@@ -73,7 +73,7 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"#\"><img\r\n");
       out.write("                    src=\"image\\heart.png\"\r\n");
       out.write("                    alt=\"Orders\">Orders</a>\r\n");
-      out.write("            <a href=\"MyCart.html\"><img\r\n");
+      out.write("            <a href=\"MyCart.jsp\"><img\r\n");
       out.write("                    src=\"image\\shopping-cart.png\"\r\n");
       out.write("                    alt=\"shopping-cart\">My cart</a>\r\n");
       out.write("        </div>\r\n");
@@ -264,8 +264,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -287,8 +287,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -310,8 +310,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -333,8 +333,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -356,8 +356,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -379,8 +379,8 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <div class=\"card-footer p-0\" style=\"text-align: center;\">\r\n");
       out.write("                                    <div class=\"btn-group\" role=\"group\">\r\n");
       out.write("                                        <button type=\"button\" class=\"btn btn-light\">\r\n");
-      out.write("                                            <i class=\"fas fa-cart-plus\"></i>\r\n");
-      out.write("                                            <span>Add Cart</span>\r\n");
+      out.write("                                            <!-- <i class=\"fas fa-cart-plus\"></i> -->\r\n");
+      out.write("                                            <span>Custom Now</span>\r\n");
       out.write("                                        </button>\r\n");
       out.write("\r\n");
       out.write("                                    </div>\r\n");
@@ -388,7 +388,7 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
       out.write("\r\n");
-      out.write("                        <div class=\"card-footer p-3\">\r\n");
+      out.write("                        <!--div class=\"card-footer p-3\">\r\n");
       out.write("                            <div class=\"row\">\r\n");
       out.write("                                <div class=\"col-md-6\">\r\n");
       out.write("                                    <ul class=\"pagination m-0 \">\r\n");
@@ -406,7 +406,7 @@ public final class homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div>\r\n");
       out.write("\r\n");
       out.write("                            </div>\r\n");
-      out.write("                        </div>\r\n");
+      out.write("                        </div>-->\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
