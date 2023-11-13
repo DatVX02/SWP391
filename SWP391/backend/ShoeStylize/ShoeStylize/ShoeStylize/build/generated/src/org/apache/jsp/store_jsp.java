@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class store_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -50,10 +50,10 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("<head>\n");
       out.write("    <meta charset=\"UTF-8\">\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("    <title>Blog statictics</title>\n");
+      out.write("    <title>Cost statictics</title>\n");
       out.write("    <link rel=\"icon\"\n");
       out.write("        href=\"image\\shoelogo.png\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"CSS\\blog_provider.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"CSS\\store.css\">\n");
       out.write("    <!--Bootstrap CSS-->\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"\n");
       out.write("        integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n");
@@ -94,24 +94,16 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("            <a href=\"store.jsp\">Store manage</a>\n");
       out.write("        </div>\n");
       out.write("        <div style=\"width: 79%; float:right\" class=\"bloglist\">\n");
-      out.write("            <div style=\"float: right;\">\n");
-      out.write("                <form action=\"*\" method=\"post\">\n");
-      out.write("                    <span>\n");
-      out.write("                        <input type=\"search\" placeholder=\"search blog\" style=\"text-align: center;\">\n");
-      out.write("                        <input type=\"button\" value=\"Search Blog\" style=\"background: aqua\">\n");
-      out.write("                    </span>\n");
-      out.write("                    <a href=\"addBlog_provider.jsp\"><input type=\"button\" value=\"Add Blog\" class=\"button\"></a>\n");
-      out.write("                </form>\n");
-      out.write("            </div>\n");
       out.write("            <div style=\"clear: both;\" class=\"\">\n");
       out.write("                <table>\n");
       out.write("                    <tr class=\"tablehead\">\n");
-      out.write("                        <td>Blog ID</td>\n");
-      out.write("                        <td>Title</td>\n");
-      out.write("                        <td>Content</td>\n");
-      out.write("                        <td>Poster</td>\n");
-      out.write("                        <td>Date Submitted</td>\n");
-      out.write("                        <td>Category</td>\n");
+      out.write("                        <td>Shoe ID </td>\n");
+      out.write("                        <td>Shoe Name</td>\n");
+      out.write("                        <td>Brand Name</td>\n");
+      out.write("                        <td>Size</td>\n");
+      out.write("                        <td>Price</td>\n");
+      out.write("                        <td>Quantity</td>\n");
+      out.write("                        <td>Description</td>\n");
       out.write("                        <td>Status</td>\n");
       out.write("                    </tr>\n");
       out.write("                </table>\n");
@@ -120,7 +112,7 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("    </div>\n");
       out.write("</body>\n");
       out.write("\n");
-      out.write("</html>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

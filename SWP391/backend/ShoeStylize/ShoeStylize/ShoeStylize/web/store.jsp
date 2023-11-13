@@ -1,6 +1,6 @@
 <%-- 
-    Document   : order_provider
-    Created on : Nov 12, 2023, 10:19:00 PM
+    Document   : store
+    Created on : Nov 13, 2023, 9:22:19 AM
     Author     : Administrator
 --%>
 
@@ -11,10 +11,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order statictics</title>
+    <title>Store manage</title>
     <link rel="icon"
         href="image\shoelogo.png">
-    <link rel="stylesheet" href="CSS\order_provider.css">
+    <link rel="stylesheet" href="CSS\store.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,8 +29,8 @@
 <body>
     <!-- header -->
     <div class="header">
-        <a href="homepage.html"><img src="image\shoelogo.png"
-            alt="shoes"></a>
+        <img src="image\shoelogo.png"
+            alt="shoes">
         <div class="header_info">
             <a href="information0.jsp"><img
                     src="image\user (1).png"
@@ -55,24 +55,22 @@
             <a href="store.jsp">Store manage</a>
         </div>
         <div style="width: 79%; float:right" class="bloglist">
-                <div style="clear: both;" >
-                    <table>
-                        <tr class="tablehead">
-                            <td>Shoe ID</td>
-                            <td>Shoe name</td>
-                            <td>Image</td>
-                            <td>Price</td>
-                            <td>Quantity</td>
-                            <td>Category ID</td>
-                            <td>Status</td>
-                            <td>Detail</td>
-                        </tr>
-                    </table>
-                </div>
+            <div style="clear: both;" class="">
+                <table>
+                    <tr class="tablehead">
+                        <td>Shoe ID </td>
+                        <td>Shoe Name</td>
+                        <td>Brand Name</td>
+                        <td>Size</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Description</td>
+                        <td>Status</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-        
-
-
 </body>
+
 </html>
