@@ -67,7 +67,21 @@
                         <a href="addBlog_provider.jsp"><input type="button" value="Add Blog" class="button"></a>
                     </form>
                 </div>
+
                 <div style="clear: both;" class="">
+                    <%
+                        List<BlogDTO> result = null;
+                        RegistrationDAO dao = new RegistrationDAO();
+                        String searchValue = request.getParameter("txtSearchbytitle");
+                        if (searchValue != null) {
+                            result = (List<BlogDTO>) request.getAttribute("BLOGSEARCHRESULT");
+                        } else {
+                            dao.showBlog();
+                            result = dao.getListBlogs();
+                        }
+                        if (result != null) {
+
+                    %>
                     <table>
                         <thead>
                             <tr class="tablehead">
@@ -82,15 +96,6 @@
                         </thead>
                         <tbody>
                             <%
-                                List<BlogDTO> result = null;
-                                RegistrationDAO dao = new RegistrationDAO();
-                                String searchValue = request.getParameter("txtSearchbytitle");
-                                if (searchValue != null) {
-                                    result = (List<BlogDTO>) request.getAttribute("BLOGSEARCHRESULT");
-                                } else {
-                                    dao.showBlog();
-                                    result = dao.getListBlogs();
-                                }
                                 for (BlogDTO dto : result) {
                             %>
                         <form action="MainController">
@@ -122,6 +127,13 @@
 
                         </tbody>
                     </table>
+                    <%
+                    } else {
+                    %>
+                    <h2>No blog available.</h2>
+                    <%
+                        }
+                    %>
                 </div>
             </div>
         </div>

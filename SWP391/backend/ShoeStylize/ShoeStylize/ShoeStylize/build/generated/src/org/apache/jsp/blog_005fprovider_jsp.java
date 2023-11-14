@@ -109,7 +109,23 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                        <a href=\"addBlog_provider.jsp\"><input type=\"button\" value=\"Add Blog\" class=\"button\"></a>\r\n");
       out.write("                    </form>\r\n");
       out.write("                </div>\r\n");
+      out.write("\r\n");
       out.write("                <div style=\"clear: both;\" class=\"\">\r\n");
+      out.write("                    ");
+
+                        List<BlogDTO> result = null;
+                        RegistrationDAO dao = new RegistrationDAO();
+                        String searchValue = request.getParameter("txtSearchbytitle");
+                        if (searchValue != null) {
+                            result = (List<BlogDTO>) request.getAttribute("BLOGSEARCHRESULT");
+                        } else {
+                            dao.showBlog();
+                            result = dao.getListBlogs();
+                        }
+                        if (result != null) {
+
+                    
+      out.write("\r\n");
       out.write("                    <table>\r\n");
       out.write("                        <thead>\r\n");
       out.write("                            <tr class=\"tablehead\">\r\n");
@@ -125,15 +141,6 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                        <tbody>\r\n");
       out.write("                            ");
 
-                                List<BlogDTO> result = null;
-                                RegistrationDAO dao = new RegistrationDAO();
-                                String searchValue = request.getParameter("txtSearchbytitle");
-                                if (searchValue != null) {
-                                    result = (List<BlogDTO>) request.getAttribute("BLOGSEARCHRESULT");
-                                } else {
-                                    dao.showBlog();
-                                    result = dao.getListBlogs();
-                                }
                                 for (BlogDTO dto : result) {
                             
       out.write("\r\n");
@@ -178,6 +185,17 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\r\n");
       out.write("                        </tbody>\r\n");
       out.write("                    </table>\r\n");
+      out.write("                    ");
+
+                    } else {
+                    
+      out.write("\r\n");
+      out.write("                    <h2>No blog available.</h2>\r\n");
+      out.write("                    ");
+
+                        }
+                    
+      out.write("\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("        </div>\r\n");
