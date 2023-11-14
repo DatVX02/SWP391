@@ -30,9 +30,12 @@
             <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
-            <a href="MyCart.jsp"><img
+            <a href="myCart.jsp"><img
                     src="image\shopping-cart.png"
                     alt="shopping-cart">My cart</a>
+            <a href="#"><img
+                    src="image\blog (2).png"
+                    alt="shopping-cart">News</a>
         </div>
     </div>
 

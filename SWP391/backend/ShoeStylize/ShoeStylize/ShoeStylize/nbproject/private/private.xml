@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/order_provider.jsp</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/MainController.java</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/cost.jsp</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Shoes/ShoeDTO.java</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Blog/BlogDTO.java</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/blog_provider.jsp</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/manageBlog.jsp</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Shoes/ShoeDAO.java</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/store.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/orderDetail.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Order/OrderDTO.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Order/OrderDAO.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Registration/RegistrationDAO.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/order.jsp</file>
         </group>
     </open-files>
 </project-private>

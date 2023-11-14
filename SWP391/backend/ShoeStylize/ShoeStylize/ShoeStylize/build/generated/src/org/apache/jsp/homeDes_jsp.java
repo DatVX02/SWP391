@@ -74,7 +74,7 @@ public final class homeDes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"#\"><img\r\n");
       out.write("                    src=\"image\\heart.png\"\r\n");
       out.write("                    alt=\"Orders\">Orders</a>\r\n");
-      out.write("            <a href=\"MyCart.html\"><img\r\n");
+      out.write("            <a href=\"MyCart.jsp\"><img\r\n");
       out.write("                    src=\"image\\shopping-cart.png\"\r\n");
       out.write("                    alt=\"shopping-cart\">My cart</a>\r\n");
       out.write("        </div>\r\n");
