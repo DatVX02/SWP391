@@ -20,6 +20,8 @@ public class ShoeDTO {
     private int Quantity;
     private double Price;
     private String Size;
+    private double NewPrice;
+    private double increaseDecreaseRatio;
 
     public ShoeDTO() {
     }
@@ -35,6 +37,34 @@ public class ShoeDTO {
         this.Price = Price;
         this.Size = Size;
     }
+
+    public ShoeDTO(int ShoeID, String ShoesName, int Quantity, double Price, double NewPrice,double increaseDecreaseRatio) {
+        this.ShoeID = ShoeID;
+        this.ShoesName = ShoesName;
+        this.Quantity = Quantity;
+        this.Price = Price;
+        this.NewPrice = NewPrice;
+        this.increaseDecreaseRatio = increaseDecreaseRatio;
+    }
+
+    public double getIncreaseDecreaseRatio() {
+        return increaseDecreaseRatio;
+    }
+
+    public void setIncreaseDecreaseRatio(double increaseDecreaseRatio) {
+        this.increaseDecreaseRatio = increaseDecreaseRatio;
+    }
+    
+
+    public double getNewPrice() {
+        return NewPrice;
+    }
+
+    public void setNewPrice(double NewPrice) {
+        this.NewPrice = NewPrice;
+    }
+    
+    
 
     public int getShoeID() {
         return ShoeID;

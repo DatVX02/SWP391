@@ -148,13 +148,13 @@ public final class cost_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                                <td>\r\n");
       out.write("                                    ");
-      out.print( dto.getPrice());
+      out.print( dto.getNewPrice());
       out.write("\r\n");
       out.write("                                </td>\r\n");
       out.write("                                \r\n");
       out.write("                                <td>\r\n");
       out.write("                                    ");
-      out.print( dto.getPrice());
+      out.print( dto.getIncreaseDecreaseRatio());
       out.write("\r\n");
       out.write("                                </td>\r\n");
       out.write("                            </tr>\r\n");

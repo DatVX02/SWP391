@@ -100,4 +100,65 @@ public class ShoeDAO implements Serializable {
         }
         return list;
     }
+
+    public ArrayList<ShoeDTO> AlllistShoeCost() throws SQLException {
+        ArrayList<ShoeDTO> list = new ArrayList<>();
+        Connection cn = null;
+        try {
+            cn = DBUtils.makeConnection();
+            String sql = "SELECT [Shoes].[ShoeID]\n"
+                    + "      ,[Shoes].[ShoesName]\n"
+                    + "      ,[Price]\n"
+                    + "	  ,[Quantity]\n"
+                    + "      ,[Shoes].[ShoesName]\n"
+                    + "      ,[ImageLink1]\n"
+                    + "      ,[ImageLink2]\n"
+                    + "      ,[ImageLink3]\n"
+                    + "      ,[ImageLink4]\n"
+                    + "      ,[ImageLink5]\n"
+                    + "      ,[ImageLink6]\n"
+                    + "  FROM [dbo].[CustomizeShoes]\n"
+                    + "  INNER JOIN Shoes ON Shoes.ShoeID = CustomizeShoes.ShoeID\n"
+                    + "  INNER JOIN [Image] ON [Image].ImageID = CustomizeShoes.ImageID";
+            PreparedStatement pst = cn.prepareStatement(sql);
+
+            ResultSet rs = pst.executeQuery();
+            if (rs != null) {
+                while (rs.next()) {
+                    int ShoeID = rs.getInt("ShoeID");
+                    String ShoesName = rs.getString("ShoesName");
+                    int Quantity = rs.getInt("Quantity");
+                    double Price = rs.getDouble("Price");
+                    int count = 0;
+                    if (rs.getString("ImageLink1") != null) {
+                        count++;
+                    }
+                    if (rs.getString("ImageLink2") != null) {
+                        count++;
+                    }
+                    if (rs.getString("ImageLink3") != null) {
+                        count++;
+                    }
+                    if (rs.getString("ImageLink4") != null) {
+                        count++;
+                    }
+                    if (rs.getString("ImageLink5") != null) {
+                        count++;
+                    }
+                    if (rs.getString("ImageLink6") != null) {
+                        count++;
+                    }
+                    double NewPrice = count*Price;
+                    
+                    double increaseDecreaseRatio = (NewPrice - Price) / Price;
+
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, ShoesName, Quantity, Price, NewPrice,increaseDecreaseRatio);
+                    list.add(shoes);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

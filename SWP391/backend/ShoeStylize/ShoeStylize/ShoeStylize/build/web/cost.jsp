@@ -95,11 +95,11 @@
                                 </td>
 
                                 <td>
-                                    <%= dto.getPrice()%>
+                                    <%= dto.getNewPrice()%>
                                 </td>
                                 
                                 <td>
-                                    <%= dto.getPrice()%>
+                                    <%= dto.getIncreaseDecreaseRatio()%>
                                 </td>
                             </tr>
                         </form>
