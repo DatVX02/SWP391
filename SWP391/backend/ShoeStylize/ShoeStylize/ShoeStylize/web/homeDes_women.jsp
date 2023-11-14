@@ -62,16 +62,16 @@
         <div class="information_left_1">
             <p>Left Outside</p>
             <div class="information_left_1_1">
-                <form action="" method="">
-                    <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                <form action="HomeDesController" method="">
+                    <input id="file" name="file1" type="text" accept="image/jpg image/png" />
                 </form>
             </div>
 
             <div class="information_left_2">
                 <p>Right Outside</p>
                 <div class="information_left_2_1">
-                    <form action="" method="">
-                        <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                    <form action="HomeDesController" method="">
+                        <input id="file" name="file2" type="text" accept="image/jpg image/png" />
                     </form>
                 </div>
             </div>
@@ -79,8 +79,8 @@
             <div class="information_left_3">
                 <p>Left Inside</p>
                 <div class="information_left_3_1">
-                    <form action="" method="">
-                        <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                    <form action="HomeDesController" method="">
+                        <input id="file" name="file3" type="text" accept="image/jpg image/png" />
                     </form>
                 </div>
             </div>
@@ -88,8 +88,8 @@
             <div class="information_left_4">
                 <p>Left Outside</p>
                 <div class="information_left_4_1">
-                    <form action="" method="">
-                        <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                    <form action="HomeDesController" method="">
+                        <input id="file" name="file4" type="text" accept="image/jpg image/png" />
                     </form>
                 </div>
             </div>
@@ -97,8 +97,8 @@
             <div class="information_left_5">
                 <p>Back</p>
                 <div class="information_left_5_1">
-                    <form action="" method="">
-                        <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                    <form action="HomeDesController" method="">
+                        <input id="file" name="file5" type="text" accept="image/jpg image/png" />
                     </form>
                 </div>
             </div>
@@ -106,14 +106,14 @@
             <div class="information_left_6">
                 <p>Overlook</p>
                 <div class="information_left_6_1">
-                    <form action="" method="">
-                        <input id="file" name="file" type="text" accept="image/jpg image/png" />
+                    <form action="HomeDesController" method="">
+                        <input id="file" name="file6" type="text" accept="image/jpg image/png" />
                     </form>
                 </div>
             </div>
 
             <div class="information_right">
-                <form action="" method="">
+                <form action="HomeDesController" method="">
                     <div>
                         <h3>
                             <!-- Tên giày -->
@@ -127,36 +127,37 @@
                     <div class="information_right_2">
                         <p>Select Gender</p>
                         <a href="homeDes_men.jsp"><input type="button" value="Men's"></a>
-                        <input type="button" value="Women's"
+                        <input type="button" name="gen" value="Women"
                             style="transform: translateX(35px);background-color: black; color: white;">
                     </div>
                     <div class="information_right_3">
                         <p>Select Size</p>
                         <a href="sizeChart.jsp" target="_blank" style="color: black;"><span>Size Guide</span></a>
-                        <input type="button" value="39" name="" id="">
-                        <input type="button" value="40" name="" id="">
-                        <input type="button" value="41" name="" id="">
-                        <input type="button" value="42" name="" id="">
-                        <input type="button" value="43" name="" id="">
-                        <input type="button" value="44" name="" id="">
-                        <input type="button" value="45" name="" id="">
-                        <input type="button" value="46" name="" id="">
+                        <input type="button" value="39" name="size" id="">
+                        <input type="button" value="40" name="size" id="">
+                        <input type="button" value="41" name="size" id="">
+                        <input type="button" value="42" name="size" id="">
+                        <input type="button" value="43" name="size" id="">
+                        <input type="button" value="44" name="size" id="">
+                        <input type="button" value="45" name="size" id="">
+                        <input type="button" value="46" name="size" id="">
                     </div>
 
                     <div class="information_right_4">
                         <p>Service</p>
                         <div>
-                            <div class="information_right_4_1"><input type="checkbox" name="" id="">Left Outside</div>
-                            <div class="information_right_4_2"><input type="checkbox" name="" id="">Right Outside</div>
+                            <div class="information_right_4_1"><input type="checkbox" name="Service1" value="Left Outside" id="">Left Outside</div>
+                            <div class="information_right_4_2"><input type="checkbox" name="Service2" value="Right Outside" id="">Right Outside</div>
                             <br>
-                            <div class="information_right_4_1"><input type="checkbox" name="" id="">Left Inside </div>
-                            <div class="information_right_4_2"><input type="checkbox" name="" id="">Right Inside</div>
+                            <div class="information_right_4_1"><input type="checkbox" name="Service3" value="Left Inside" id="">Left Inside </div>
+                            <div class="information_right_4_2"><input type="checkbox" name="Service4" value="Right Inside" id="">Right Inside</div>
                             <br>
-                            <div class="information_right_4_4" style="margin-left: -278px;"><input type="checkbox" name="" id="">Back</div>
-                            <div class="information_right_4_3" style="margin-left: 96px; margin-top: -23px"><input type="checkbox" name="" id="">Overlook</div>
+                            <div class="information_right_4_4" style="margin-left: -278px;"><input type="checkbox" name="Service5" value="Back" id="">Back</div>
+                            <div class="information_right_4_3" style="margin-left: 96px; margin-top: -23px"><input type="checkbox" name="Service6" value="Overlook" id="">Overlook</div>
                         </div>
                         <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">Total
                             amount:<!-- Tong Tien --></h3>
+                    </div>
                 </form>
             </div>
         </div>

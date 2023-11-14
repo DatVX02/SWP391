@@ -12,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -204,5 +206,41 @@ public class ShoeDAO implements Serializable {
             e.printStackTrace();
         }
         return list;
+    }
+    
+    public void getInfo(HttpServletRequest request) throws SQLException{
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        HttpSession session = request.getSession();
+
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "SELECT FullName, Email, PhoneNumber, Birthdate, Gender FROM Users WHERE UserID = ?";
+                stm = con.prepareStatement(sql);
+                stm.setObject(1, session.getAttribute("id"));
+                rs = stm.executeQuery();
+
+                if (rs.next()) { // Check if there are results
+                    session.setAttribute("Price", rs.getString("Price"));
+                }
+            }
+        } catch (SQLException e) {
+            // Handle the SQLException, or at least log it
+            e.printStackTrace();
+            throw e; // Re-throw the exception if needed
+        } finally {
+            // Close resources in reverse order of acquisition, and check for null
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
     }
 }

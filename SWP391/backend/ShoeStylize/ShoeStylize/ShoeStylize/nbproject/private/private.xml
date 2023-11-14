@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/orderDetail.jsp</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Order/OrderDTO.java</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Order/OrderDAO.java</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Registration/RegistrationDAO.java</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/order.jsp</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/MainController.java</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/register.jsp</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Registration/RegistrationDAO.java</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/RegistrationController.java</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Shoes/ShoeDAO.java</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/HomeDesController.java</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/homeDes_women.jsp</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/homeDes_men.jsp</file>
+            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/information.jsp</file>
         </group>
     </open-files>
 </project-private>
