@@ -102,7 +102,8 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[UserID] [int] NULL,
 	[ImageID] [int] NOT NULL,
 	[ShoesName] [varchar](100) NULL,
-	[CustomizationDetails] [text] NULL,
+	[Gender] [varchar](10) NULL,
+	[Size] [nvarchar](10) NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
