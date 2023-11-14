@@ -44,11 +44,6 @@
             </div>
         </div>
 
-        <div style="text-align: right; transform: translateX(20px); margin-top: 20px; ">
-            <a href="login.jsp">
-                <button style="background: #FF9900; font-weight: bold; padding: 5px 10px; border: 0.5px ">Create New Shoes</button>
-            </a>
-        </div>
 
 
 
@@ -66,46 +61,21 @@
                     <div class="card">
                         <div class="card-body p-1">
                             <div class="card border-0 b-3">
-                                <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample1"
-                                     aria-expanded="false">
-                                    <p class="m-0 h6">Brand</p>
-                                </div>
-                                <div class="card-body p-0 collapse show" id="collapseExample1">
-                                    <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
-                                        <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1" name="brand" value="Nike">
-                                                <label class="custom-control-label" for="customCheck1">Nike</label>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="brand" value="Jordan">
-                                                <label class="custom-control-label" for="customCheck2">Jordan</label>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3" name="brand" value="Adidas">
-                                                <label class="custom-control-label" for="customCheck3">Adidas</label>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4" name="brand" value="Adidas">
-                                                <label class="custom-control-label" for="customCheck4">Puma</label>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                <label class="custom-control-label" for="customCheck5">Converse</label>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                            <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample1"
+                                aria-expanded="false">
+                                <p class="m-0 h6">Brand</p>
                             </div>
+                            <div class="card-body p-0 collapse show" id="collapseExample1">
+                                <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
+                                    <a href="CategoryController?byCategory=Nike" class="list-group-item list-group-item-action">Nike</a>
+                                    <a href="CategoryController?byCategory=Jordan" class="list-group-item list-group-item-action ">Jordan</a>
+                                    <a href="CategoryController?byCategory=Adidas" class="list-group-item list-group-item-action ">Adidas</a>
+                                    <a href="CategoryController?byCategory=Puma" class="list-group-item list-group-item-action ">Puma</a>
+                                    <a href="CategoryController?byCategory=Converse" class="list-group-item list-group-item-action ">Converse</a>
+
+                                </ul>
+                            </div>
+                        </div>
 
 
                             <div class="card border-0 b-3">

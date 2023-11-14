@@ -39,8 +39,13 @@ public class CategoryController extends HttpServlet {
         HttpSession session = request.getSession(false);
         String url = "";
         try {
-            if(byCategory != null){
+            if(byCategory.equals("Sport")|| byCategory.equals("Party")){
                 list = dao.CatelistShoe(byCategory);
+                session.setAttribute("shoesList", list);
+                session.setAttribute("Cate", "Cate");
+                url = "homepage_guest.jsp";
+            }else{
+                 list = dao.BrandlistShoe(byCategory);
                 session.setAttribute("shoesList", list);
                 session.setAttribute("Cate", "Cate");
                 url = "homepage_guest.jsp";
