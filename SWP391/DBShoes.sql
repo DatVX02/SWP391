@@ -1,4 +1,4 @@
-﻿USE [master]
+USE [master]
 GO
 
 /****** Object:  Database [ShoesStylize]    Script Date: 10/22/2023 11:44:02 PM ******/
@@ -61,7 +61,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Image](
 	[ImageID] [int] IDENTITY(1,1) NOT NULL,
-	[CusShoeID] [int] NOT NULL,
 	[ImageLink1] [nvarchar](max) NULL,
 	[ImageLink2] [nvarchar](max) NULL,
 	[ImageLink3] [nvarchar](max) NULL,
@@ -101,6 +100,7 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
+	[ImageID] [int] NOT NULL,
 	[ShoesName] [varchar](100) NULL,
 	[CustomizationDetails] [text] NULL,
 PRIMARY KEY CLUSTERED
@@ -258,6 +258,6 @@ GO
 ALTER TABLE [dbo].[Shoes]  WITH CHECK ADD FOREIGN KEY([SizeID])
 REFERENCES [dbo].[SizeList] ([SizeID])
 GO
-ALTER TABLE [dbo].[Image]  WITH CHECK ADD FOREIGN KEY([CusShoeID])
-REFERENCES [dbo].[CustomizeShoes] ([CusShoeID])
+ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([ImageID])
+REFERENCES [dbo].[Image] ([ImageID])
 GO
