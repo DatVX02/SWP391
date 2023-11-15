@@ -24,21 +24,21 @@
     <body>
         <div class="header">
             <a href="homepage.jsp"><img src="image\shoelogo.png"
-            alt="shoes"></img></a>
-        <div class="header_info">
-            <a href="information.jsp"><img
-                    src="image\user (1).png"
-                    alt="profile">Profile</a>
-            <a href="orderDetail.jsp"><img
-                    src="image\heart.png"
-                    alt="Orders">Orders</a>
-            <a href="myCart.jsp"><img
-                    src="image\shopping-cart.png"
-                    alt="shopping-cart">My cart</a>
-            <a href="blog.jsp"><img
-                    src="image\blog (2).png"
-                    alt="shopping-cart">News</a>
-        </div>
+                                        alt="shoes"></img></a>
+            <div class="header_info">
+                <a href="information.jsp"><img
+                        src="image\user (1).png"
+                        alt="profile">Profile</a>
+                <a href="orderDetail.jsp"><img
+                        src="image\heart.png"
+                        alt="Orders">Orders</a>
+                <a href="myCart.jsp"><img
+                        src="image\shopping-cart.png"
+                        alt="shopping-cart">My cart</a>
+                <a href="blog.jsp"><img
+                        src="image\blog (2).png "
+                        alt="shopping-cart">News</a>
+            </div>
         </div>
         <div>
         <h1 style="margin-left: 100px; margin-top: 30px; margin-bottom: 15px; font-size: 30px;">Order Detail</h1>

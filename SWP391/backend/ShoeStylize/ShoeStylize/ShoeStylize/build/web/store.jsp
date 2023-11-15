@@ -56,6 +56,7 @@
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>
                 <a href="store.jsp">Store manage</a>
+                <a href="login.jsp">Logout</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" class="">
