@@ -101,7 +101,6 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
 	[ImageID] [int] NOT NULL,
-	[ShoesName] [varchar](100) NULL,
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
 PRIMARY KEY CLUSTERED
@@ -120,6 +119,7 @@ CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
+	[Category] [varchar](20) NULL,
 	[Title] [varchar](100) NULL,
 	[Rating] [int] NULL,
 	[Content] [text] NULL,
@@ -140,6 +140,7 @@ CREATE TABLE [dbo].[OrderDetails](
 	[OrderID] [int] NULL,
 	[ShoeID] [int] NULL,
 	[CusShoeID] [int] NULL,
+	[Price] [decimal](10, 2) NULL,
 	[Status] [nvarchar](20) NULL,
 	[Quantity] [int] NULL,
 PRIMARY KEY CLUSTERED 
@@ -246,9 +247,6 @@ REFERENCES [dbo].[CustomizeShoes] ([CusShoeID])
 GO
 ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([OrderID])
 REFERENCES [dbo].[Orders] ([OrderID])
-GO
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([ShoeID])
-REFERENCES [dbo].[Shoes] ([ShoeID])
 GO
 ALTER TABLE [dbo].[Orders]  WITH CHECK ADD FOREIGN KEY([UserID])
 REFERENCES [dbo].[Users] ([UserID])
