@@ -47,6 +47,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[SizeList](
 	[SizeID] [int] IDENTITY(1,1) NOT NULL,
+	[ShoeID] [int] NULL,
 	[Size] [varchar](10) NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -54,24 +55,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Image](
-	[ImageID] [int] IDENTITY(1,1) NOT NULL,
-	[ImageLink1] [nvarchar](max) NULL,
-	[ImageLink2] [nvarchar](max) NULL,
-	[ImageLink3] [nvarchar](max) NULL,
-	[ImageLink4] [nvarchar](max) NULL,
-	[ImageLink5] [nvarchar](max) NULL,
-	[ImageLink6] [nvarchar](max) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[ImageID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+
 
 GO
 /****** Object:  Table [dbo].[Comment]    Script Date: 10/22/2023 11:39:51 PM ******/
@@ -100,8 +84,18 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
-	[ImageID] [int] NOT NULL,
-	[ShoesName] [varchar](100) NULL,
+	[ImageLink1] [nvarchar](max) NULL,
+	[ImageLink2] [nvarchar](max) NULL,
+	[ImageLink3] [nvarchar](max) NULL,
+	[ImageLink4] [nvarchar](max) NULL,
+	[ImageLink5] [nvarchar](max) NULL,
+	[ImageLink6] [nvarchar](max) NULL,
+	[OutLeft] [bit] NULL,
+	[OutRight] [bit] NULL,
+	[InLeft] [bit] NULL,
+	[InRight] [bit] NULL,
+	[Back] [bit] NULL,
+	[Overlook] [bit] NULL,
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
 PRIMARY KEY CLUSTERED
@@ -120,6 +114,7 @@ CREATE TABLE [dbo].[Feedback](
 	[FeedbackID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[ShoeID] [int] NULL,
+	[Category] [varchar](20) NULL,
 	[Title] [varchar](100) NULL,
 	[Rating] [int] NULL,
 	[Content] [text] NULL,
@@ -138,8 +133,8 @@ GO
 CREATE TABLE [dbo].[OrderDetails](
 	[OrderDetailID] [int] IDENTITY(1,1) NOT NULL,
 	[OrderID] [int] NULL,
-	[ShoeID] [int] NULL,
 	[CusShoeID] [int] NULL,
+	[Price] [decimal](10, 2) NULL,
 	[Status] [nvarchar](20) NULL,
 	[Quantity] [int] NULL,
 PRIMARY KEY CLUSTERED 
@@ -180,8 +175,7 @@ CREATE TABLE [dbo].[Shoes](
 	[Description] [text] NULL,
 	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
-	[Price] [decimal](10, 2) NULL,
-	[SizeID] [int] NULL
+	[Price] [decimal](10, 2) NULL
 
 PRIMARY KEY CLUSTERED 
 (
@@ -247,18 +241,13 @@ GO
 ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([OrderID])
 REFERENCES [dbo].[Orders] ([OrderID])
 GO
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([ShoeID])
-REFERENCES [dbo].[Shoes] ([ShoeID])
-GO
 ALTER TABLE [dbo].[Orders]  WITH CHECK ADD FOREIGN KEY([UserID])
 REFERENCES [dbo].[Users] ([UserID])
 GO
 ALTER TABLE [dbo].[Shoes]  WITH CHECK ADD FOREIGN KEY([BrandID])
 REFERENCES [dbo].[Brand] ([BrandID])
 GO
-ALTER TABLE [dbo].[Shoes]  WITH CHECK ADD FOREIGN KEY([SizeID])
-REFERENCES [dbo].[SizeList] ([SizeID])
+ALTER TABLE [dbo].[SizeList]  WITH CHECK ADD FOREIGN KEY([ShoeID])
+REFERENCES [dbo].[Shoes] ([ShoeID])
 GO
-ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([ImageID])
-REFERENCES [dbo].[Image] ([ImageID])
-GO
+

@@ -15,14 +15,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ManageBlog</title>
         <link rel="icon"
-        href="image\shoelogo.png">
-    <link rel="stylesheet" href="CSS\manageBlog.css">
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <!--font awesome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+              href="image\shoelogo.png">
+        <link rel="stylesheet" href="CSS\manageBlog.css">
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
         <div class="header">
@@ -33,6 +33,7 @@
             <div style="width: 20%; float:left" class="managefunction">
                 <a href="manageUser.jsp">Account Management</a>
                 <a href="manageBlog.jsp">Blog Management</a>
+                <a href="login.jsp">Logout</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="float: right;">
@@ -86,7 +87,7 @@
                                 <td>
                                     <input type="text" name="txtContent" value="<%= dto.getContent()%>" />
                                 </td>
-                                
+
                                 <td>
                                     <input type="text" name="postDate" value="<%= dto.getDate()%>" />
                                 </td>
@@ -113,51 +114,51 @@
                 </div>
             </div>
         </div>
-                <div class="footer">
-        <div style="float:right">
-            <img src="image\facebook.png"
-                alt="Facebook" />
-            <img src="image\twitter.png"
-                alt="twitter" />
-            <img src="image\linkedin.png"
-                alt="linkedin" />
-            <img src="image\instagram (1).png"
-                alt="Instagram" />
-            <img src="image\youtube (5).png"
-                alt="youtube" />
-        </div>
+        <div class="footer">
+            <div style="float:right">
+                <img src="image\facebook.png"
+                     alt="Facebook" />
+                <img src="image\twitter.png"
+                     alt="twitter" />
+                <img src="image\linkedin.png"
+                     alt="linkedin" />
+                <img src="image\instagram (1).png"
+                     alt="Instagram" />
+                <img src="image\youtube (5).png"
+                     alt="youtube" />
+            </div>
             <div style=" float:right">
-            <table class="center">
-                <tr class="tableHeader">
-                    <td>About Us</td>
-                    <td>For Users</td>
-                    <td>Information</td>
-                </tr>
-                <tr>
-                    <td>About Us</td>
-                    <td>Login</td>
-                    <td>Help Center</td>
-                </tr>
-                <tr>
-                    <td>Find Store</td>
-                    <td>Register</td>
-                    <td>Money Refund</td>
-                </tr>
-                <tr>
-                    <td>Categories</td>
-                    <td>Settings</td>
-                    <td>Shipping</td>
-                </tr>
-                <tr>
-                    <td>Blogs</td>
-                    <td>My Orders</td>
-                    <td>Contact us</td>
-                </tr>
-            </table>
+                <table class="center">
+                    <tr class="tableHeader">
+                        <td>About Us</td>
+                        <td>For Users</td>
+                        <td>Information</td>
+                    </tr>
+                    <tr>
+                        <td>About Us</td>
+                        <td>Login</td>
+                        <td>Help Center</td>
+                    </tr>
+                    <tr>
+                        <td>Find Store</td>
+                        <td>Register</td>
+                        <td>Money Refund</td>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Settings</td>
+                        <td>Shipping</td>
+                    </tr>
+                    <tr>
+                        <td>Blogs</td>
+                        <td>My Orders</td>
+                        <td>Contact us</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="clear: both" class="commerce">
+                @2023 Ecommerce
+            </div>
         </div>
-        <div style="clear: both" class="commerce">
-            @2023 Ecommerce
-        </div>
-    </div>
     </body>
 </html>

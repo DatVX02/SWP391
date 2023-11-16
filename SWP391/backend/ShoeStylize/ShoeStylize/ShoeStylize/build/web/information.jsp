@@ -29,16 +29,16 @@
             <a href="homepage.jsp"><img src="image\shoelogo.png"
                                         alt="shoes"></img></a>
             <div class="header_info">
-                <a href="information.jsp"><img
+                <a href="information0.jsp"><img
                         src="image\user (1).png"
                         alt="profile">Profile</a>
-                <a href="OrderDetail.jsp"><img
+                <a href="orderDetail.jsp"><img
                         src="image\heart.png"
                         alt="Orders">Orders</a>
-                <a href="MyCart.jsp"><img
+                <a href="myCart.jsp"><img
                         src="image\shopping-cart.png"
                         alt="shopping-cart">My cart</a>
-                <a href="Blog.jsp"><img
+                <a href="blog.jsp"><img
                         src="image\blog (2).png "
                         alt="shopping-cart">News</a>
             </div>
@@ -54,7 +54,7 @@
 
                 <ul class="information_left_1">
                     <img src="image\padlock.png" style="width: 15px; transform: translateY(02px);">
-                    <a href="ChangePassword.jsp">Change password</a>
+                    <a href="changePassword.jsp">Change password</a>
                 </ul>
 
                 <ul class="information_left_2">
