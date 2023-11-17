@@ -84,6 +84,7 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
+	[ShoesName] [nvarchar](20) NULL,
 	[ImageLink1] [nvarchar](max) NULL,
 	[ImageLink2] [nvarchar](max) NULL,
 	[ImageLink3] [nvarchar](max) NULL,
