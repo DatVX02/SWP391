@@ -26,18 +26,18 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [ShoeID]\n"
-                    + "                           ,[BrandName]\n"
-                    + "                           ,[ShoesName]\n"
-                    + "                           ,[Category]\n"
-                    + "                           ,[Description]\n"
-                    + "                           ,[Image]\n"
-                    + "                           ,[Quantity]\n"
-                    + "                           ,[Price]\n"
-                    + "                           ,[Size]\n"
-                    + "                       FROM [dbo].[Shoes]\n"
+            String sql = "SELECT [Shoes].[ShoeID]                 \n"
+                    + ",[BrandName]                    \n"
+                    + ",[ShoesName]         \n"
+                    + ",[Category]               \n"
+                    + ",[Description]                \n"
+                    + ",[Image]  \n"
+                    + ",[Quantity]                   \n"
+                    + ",[Price]                        \n"
+                    + ",[Size]                       \n"
+                    + "FROM [dbo].[Shoes]\n"
                     + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
-                    + "INNER JOIN SizeList ON Shoes.SizeID = SizeList.SizeID;";
+                    + "INNER JOIN SizeList ON Shoes.ShoeID = SizeList.ShoeID;";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
@@ -66,19 +66,19 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [ShoeID]\n"
-                    + "                           ,[BrandName]\n"
-                    + "                           ,[ShoesName]\n"
-                    + "                           ,[Category]\n"
-                    + "                           ,[Description]\n"
-                    + "                           ,[Image]\n"
-                    + "                           ,[Quantity]\n"
-                    + "                           ,[Price]\n"
-                    + "                           ,[Size]\n"
-                    + "                       FROM [dbo].[Shoes]\n"
+            String sql = "SELECT [Shoes].[ShoeID],\n"
+                    + "       [BrandName],\n"
+                    + "       [ShoesName],\n"
+                    + "       [Category],\n"
+                    + "       [Description],\n"
+                    + "       [Image],\n"
+                    + "       [Quantity],\n"
+                    + "       [Price],\n"
+                    + "       [Size]\n"
+                    + "FROM [dbo].[Shoes]\n"
                     + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
-                    + "INNER JOIN SizeList ON Shoes.SizeID = SizeList.SizeID\n"
-                    + "Where [Category] = ?;";
+                    + "INNER JOIN SizeList ON Shoes.ShoeID = SizeList.ShoeID\n"
+                    + "WHERE [Category] = ?;";
 
             PreparedStatement pst = cn.prepareStatement(sql);
             pst.setString(1, by);
@@ -108,21 +108,24 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT \n"
+            String sql = "SELECT\n"
                     + "    [Shoes].[ShoeID],\n"
-                    + "	[Brand].[BrandName],\n"
+                    + "    [Brand].[BrandName],\n"
                     + "    [Shoes].[ShoesName],\n"
                     + "    [Shoes].[Category],\n"
                     + "    [Shoes].[Description],\n"
                     + "    [Shoes].[Image],\n"
                     + "    [Shoes].[Quantity],\n"
                     + "    [Shoes].[Price],\n"
-                    + "    [Shoes].[SizeID]\n"
-                    + "FROM \n"
-                    + "     [dbo].[Shoes]\n"
-                    + "LEFT JOIN \n"
-                    + "   [dbo].[Brand]  ON [Brand].[BrandID] = [Shoes].[BrandID] \n"
-                    + "   Where  [Brand].[BrandName] = ? ";
+                    + "    [Size]\n"
+                    + "FROM\n"
+                    + "    [dbo].[Shoes]\n"
+                    + "LEFT JOIN\n"
+                    + "    [dbo].[Brand] ON [Brand].[BrandID] = [Shoes].[BrandID]\n"
+                    + "LEFT JOIN\n"
+                    + "    [dbo].[SizeList] ON [SizeList].[ShoeID] = [Shoes].[ShoeID]\n"
+                    + "WHERE\n"
+                    + "    [Brand].[BrandName] = ?";
 
             PreparedStatement pst = cn.prepareStatement(sql);
             pst.setString(1, by);
@@ -152,20 +155,21 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [Shoes].[ShoeID]\n"
-                    + "      ,[Shoes].[ShoesName]\n"
-                    + "      ,[Price]\n"
-                    + "	  ,[Quantity]\n"
-                    + "      ,[Shoes].[ShoesName]\n"
-                    + "      ,[ImageLink1]\n"
-                    + "      ,[ImageLink2]\n"
-                    + "      ,[ImageLink3]\n"
-                    + "      ,[ImageLink4]\n"
-                    + "      ,[ImageLink5]\n"
-                    + "      ,[ImageLink6]\n"
-                    + "  FROM [dbo].[CustomizeShoes]\n"
-                    + "  INNER JOIN Shoes ON Shoes.ShoeID = CustomizeShoes.ShoeID\n"
-                    + "  INNER JOIN [Image] ON [Image].ImageID = CustomizeShoes.ImageID";
+            String sql = "SELECT \n"
+                    + "    [Shoes].[ShoeID],\n"
+                    + "    [Shoes].[ShoesName],\n"
+                    + "    [Price],\n"
+                    + "    [Quantity],\n"
+                    + "    [ImageLink1],\n"
+                    + "    [ImageLink2],\n"
+                    + "    [ImageLink3],\n"
+                    + "    [ImageLink4],\n"
+                    + "    [ImageLink5],\n"
+                    + "    [ImageLink6]\n"
+                    + "FROM \n"
+                    + "    [dbo].[CustomizeShoes]\n"
+                    + "INNER JOIN \n"
+                    + "    Shoes ON Shoes.ShoeID = CustomizeShoes.ShoeID";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
@@ -207,8 +211,8 @@ public class ShoeDAO implements Serializable {
         }
         return list;
     }
-    
-    public void getInfo(HttpServletRequest request) throws SQLException{
+
+    public void getInfo(HttpServletRequest request) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         ResultSet rs = null;

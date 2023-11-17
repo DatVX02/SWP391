@@ -306,17 +306,19 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT UserID,Email, FullName, PhoneNumber, Birthdate, Gender FROM Users";
+                String sql = "SELECT UserID, Email, FullName,Password, PhoneNumber, Birthdate, RoleID, Gender FROM Users";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     int id = rs.getInt("UserID");
                     String email = rs.getString("Email");
                     String name = rs.getString("FullName");
+                    String password = rs.getString("Password");
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
+                    String role = rs.getString("RoleID");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id, email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email,password, phone, name, date, role, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -343,7 +345,7 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT UserID, Email, FullName, PhoneNumber, Birthdate, Gender FROM Users"
+                String sql = "SELECT UserID, Email, FullName,Password, PhoneNumber, Birthdate, RoleID, Gender FROM Users"
                         + " Where FullName LIKE ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%" + searchValue + "%");
@@ -352,10 +354,12 @@ public class RegistrationDAO implements Serializable {
                     int id = rs.getInt("UserID");
                     String email = rs.getString("Email");
                     String name = rs.getString("FullName");
+                    String password = rs.getString("Password");
                     String phone = rs.getString("PhoneNumber");
                     String date = rs.getString("Birthdate");
+                    String role = rs.getString("RoleID");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id, email, name, phone, date, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email,password, phone, name, date, role, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -470,8 +474,9 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT [ShoesName],[Price],[OrderDetails].[Quantity] FROM OrderDetails\n"
-                        + "INNER JOIN Shoes ON Shoes.ShoeID = OrderDetails.ShoeID;";
+                String sql = "SELECT ShoesName, Price, OrderDetails.Quantity\n"
+                        + "FROM OrderDetails\n"
+                        + "INNER JOIN CustomizeShoes ON CustomizeShoes.CusShoeID = OrderDetails.CusShoeID;";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {

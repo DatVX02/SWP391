@@ -84,6 +84,7 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
+	[ShoesName] [nvarchar](20) NULL,
 	[ImageLink1] [nvarchar](max) NULL,
 	[ImageLink2] [nvarchar](max) NULL,
 	[ImageLink3] [nvarchar](max) NULL,
@@ -175,7 +176,7 @@ CREATE TABLE [dbo].[Shoes](
 	[Description] [text] NULL,
 	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
-	[Price] [decimal](10, 2) NULL
+	[Price] [decimal](10, 0) NULL
 
 PRIMARY KEY CLUSTERED 
 (

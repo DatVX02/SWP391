@@ -25,21 +25,22 @@ public class OrderDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [ShoeID]\n"
-                    + "      ,[ShoesName]\n"
-                    + "      ,[Image]\n"
-                    + "      ,[Price]\n"
-                    + "	  ,[Quantity]\n"
-                    + "	  ,[Category]\n"
-                    + "      ,[Status]\n"
-                    + "  FROM [dbo].[Orders]\n"
-                    + "  INNER JOIN Shoes ON Shoes.ShoeID = Orders.OrderID";
+            String sql = "SELECT OrderDetails.CusShoeID,\n"
+                    + "       CustomizeShoes.ShoesName,\n"
+                    + "       Image,\n"
+                    + "       OrderDetails.Price,\n"
+                    + "       OrderDetails.Quantity,\n"
+                    + "       Orders.Status\n"
+                    + "  FROM dbo.Orders\n"
+                    + "  INNER JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID\n"
+                    + "  INNER JOIN CustomizeShoes ON CustomizeShoes.CusShoeID = OrderDetails.CusShoeID\n"
+                    + "  INNER JOIN Shoes ON CustomizeShoes.ShoeID = Shoes.ShoeID";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
             if (rs != null) {
                 while (rs.next()) {
-                    int ShoeID = rs.getInt("ShoeID");
+                    int ShoeID = rs.getInt("CusShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     String Image = rs.getString("Image");
                     double Price = rs.getDouble("Price");
@@ -93,5 +94,5 @@ public class OrderDAO implements Serializable {
         }
         return list;
     }
-    
+
 }
