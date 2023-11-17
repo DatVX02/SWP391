@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[Shoes](
 	[Description] [text] NULL,
 	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
-	[Price] [decimal](10, 2) NULL
+	[Price] [decimal](10, 0) NULL
 
 PRIMARY KEY CLUSTERED 
 (
