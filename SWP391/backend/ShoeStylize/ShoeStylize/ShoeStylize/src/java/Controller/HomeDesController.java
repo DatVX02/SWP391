@@ -5,10 +5,7 @@
  */
 package Controller;
 
-import Shoes.ShoeDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +23,7 @@ public class HomeDesController extends HttpServlet {
             throws ServletException, IOException {
         String size = request.getParameter("size");
         String gender = request.getParameter("gen");
+        String name = request.getParameter("ShoeName");
         String[] services = new String[6];
         String[] files = new String[6];
         
@@ -36,7 +34,8 @@ public class HomeDesController extends HttpServlet {
         
         HttpSession session = request.getSession();
         session.setAttribute("Size", size);
-        session.setAttribute("Gender", gender);
+        session.setAttribute("ShoeName", size);
+        session.setAttribute("Gender", name);
         session.setAttribute("Services", services);
         session.setAttribute("Files", files);
         

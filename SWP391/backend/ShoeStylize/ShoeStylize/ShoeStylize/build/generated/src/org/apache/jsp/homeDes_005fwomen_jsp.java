@@ -143,14 +143,11 @@ public final class homeDes_005fwomen_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                        <div>\r\n");
       out.write("                            ");
 
-                                Object name = session.getAttribute("shoeID");
                                 Object total = session.getAttribute("");
                             
       out.write("\r\n");
       out.write("                            <h3>\r\n");
-      out.write("                                <!-- Tên giày --><input type=\"text\" name=\"ShoeName\" value=\"");
-      out.print( name);
-      out.write("\">\r\n");
+      out.write("                                <!-- Tên giày --><input type=\"text\" name=\"ShoeName\" value=\"\">\r\n");
       out.write("                            </h3>\r\n");
       out.write("                            <!-- <a href='../SizeChart/SizeChart.html' target=\"_blank\"><img\r\n");
       out.write("                                    style=\"max-width: 20px; margin-top: -70px; margin-left: 380px;\"\r\n");
