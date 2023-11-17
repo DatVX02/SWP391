@@ -102,8 +102,12 @@
 
                     <div class="information_right">
                         <div>
+                            <%
+                                Object name = session.getAttribute("ShoeName");
+                                Object total = session.getAttribute("");
+                            %>
                             <h3>
-                                <!-- Tên giày -->
+                                <!-- Tên giày --><input type="text" name="ShoeName" value="<%= name%>">
                             </h3>
                             <!-- <a href='../SizeChart/SizeChart.html' target="_blank"><img
                                     style="max-width: 20px; margin-top: -70px; margin-left: 380px;"
@@ -142,8 +146,10 @@
                                 <div class="information_right_4_4" style="margin-left: -278px;"><input type="checkbox" name="Service5" value="Back" id="">Back</div>
                                 <div class="information_right_4_3" style="margin-left: 96px; margin-top: -23px"><input type="checkbox" name="Service6" value="Overlook" id="">Overlook</div>
                             </div>
-                            <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">Total
-                                amount:<!-- Tong Tien --></h3>
+                            <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">
+                                Total amount: <%= total %>
+                            </h3>
+                            <input type="hidden" name="total" value="<%= total%>" >
                         </div>
                     </div>
                 </div>
