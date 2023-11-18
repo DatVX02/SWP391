@@ -26,18 +26,9 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [Shoes].[ShoeID]                 \n"
-                    + ",[BrandName]                    \n"
-                    + ",[ShoesName]         \n"
-                    + ",[Category]               \n"
-                    + ",[Description]                \n"
-                    + ",[Image]  \n"
-                    + ",[Quantity]                   \n"
-                    + ",[Price]                        \n"
-                    + ",[Size]                       \n"
+            String sql = "SELECT [Shoes].[ShoeID], [BrandName], [ShoesName], [Category], [Description], [Image], [Quantity], [Price]\n"
                     + "FROM [dbo].[Shoes]\n"
-                    + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
-                    + "INNER JOIN SizeList ON Shoes.ShoeID = SizeList.ShoeID;";
+                    + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
@@ -50,8 +41,7 @@ public class ShoeDAO implements Serializable {
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    String Size = rs.getString("Size");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price, Size);
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
             }
@@ -66,18 +56,9 @@ public class ShoeDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT [Shoes].[ShoeID],\n"
-                    + "       [BrandName],\n"
-                    + "       [ShoesName],\n"
-                    + "       [Category],\n"
-                    + "       [Description],\n"
-                    + "       [Image],\n"
-                    + "       [Quantity],\n"
-                    + "       [Price],\n"
-                    + "       [Size]\n"
+            String sql = "SELECT [Shoes].[ShoeID], [BrandName], [ShoesName], [Category], [Description], [Image], [Quantity], [Price]\n"
                     + "FROM [dbo].[Shoes]\n"
                     + "INNER JOIN Brand ON Shoes.BrandID = Brand.BrandID\n"
-                    + "INNER JOIN SizeList ON Shoes.ShoeID = SizeList.ShoeID\n"
                     + "WHERE [Category] = ?;";
 
             PreparedStatement pst = cn.prepareStatement(sql);
@@ -92,8 +73,7 @@ public class ShoeDAO implements Serializable {
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    String Size = rs.getString("Size");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price, Size);
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
             }
@@ -116,14 +96,11 @@ public class ShoeDAO implements Serializable {
                     + "    [Shoes].[Description],\n"
                     + "    [Shoes].[Image],\n"
                     + "    [Shoes].[Quantity],\n"
-                    + "    [Shoes].[Price],\n"
-                    + "    [Size]\n"
+                    + "    [Shoes].[Price]\n"
                     + "FROM\n"
                     + "    [dbo].[Shoes]\n"
                     + "LEFT JOIN\n"
                     + "    [dbo].[Brand] ON [Brand].[BrandID] = [Shoes].[BrandID]\n"
-                    + "LEFT JOIN\n"
-                    + "    [dbo].[SizeList] ON [SizeList].[ShoeID] = [Shoes].[ShoeID]\n"
                     + "WHERE\n"
                     + "    [Brand].[BrandName] = ?";
 
@@ -139,8 +116,7 @@ public class ShoeDAO implements Serializable {
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    String Size = String.valueOf("SizeID");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price, Size);
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
             }

@@ -26,7 +26,7 @@ public class ShoeDTO {
     public ShoeDTO() {
     }
 
-    public ShoeDTO(int ShoeID, String Brand, String ShoesName, String Category, String Description, String Image, int Quantity, double Price, String Size) {
+    public ShoeDTO(int ShoeID, String Brand, String ShoesName, String Category, String Description, String Image, int Quantity, double Price) {
         this.ShoeID = ShoeID;
         this.Brand = Brand;
         this.ShoesName = ShoesName;
@@ -35,7 +35,6 @@ public class ShoeDTO {
         this.Image = Image;
         this.Quantity = Quantity;
         this.Price = Price;
-        this.Size = Size;
     }
 
     public ShoeDTO(int ShoeID, String ShoesName, int Quantity, double Price, double NewPrice,double increaseDecreaseRatio) {
