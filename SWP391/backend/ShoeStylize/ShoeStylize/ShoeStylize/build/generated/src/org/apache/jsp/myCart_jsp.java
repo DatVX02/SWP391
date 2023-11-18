@@ -89,7 +89,6 @@ public final class myCart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <div>\n");
       out.write("        <h1 style=\"margin-left: 150px; margin-top: 20px; margin-bottom: 20px;\">Your Cart</h1>\n");
       out.write("        <form action=\"*\" method=\"post\">\n");
-      out.write("            <!-- BẮT ĐẦU VÒNG LẶP -->\n");
       out.write("            <div class=\"product\">\n");
       out.write("                <div class=\"column left\">\n");
       out.write("                    <img src=\"*\" alt=\"Product\">\n");

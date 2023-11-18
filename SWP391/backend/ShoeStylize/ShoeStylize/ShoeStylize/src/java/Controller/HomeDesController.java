@@ -34,8 +34,8 @@ public class HomeDesController extends HttpServlet {
         
         HttpSession session = request.getSession();
         session.setAttribute("Size", size);
-        session.setAttribute("ShoeName", size);
-        session.setAttribute("Gender", name);
+        session.setAttribute("ShoeName", name);
+        session.setAttribute("Gender", gender);
         session.setAttribute("Services", services);
         session.setAttribute("Files", files);
         
