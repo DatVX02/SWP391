@@ -135,7 +135,7 @@ CREATE TABLE [dbo].[OrderDetails](
 	[OrderDetailID] [int] IDENTITY(1,1) NOT NULL,
 	[OrderID] [int] NULL,
 	[CusShoeID] [int] NULL,
-	[Price] [decimal](10, 2) NULL,
+	[Price] [int] NULL,
 	[Status] [nvarchar](20) NULL,
 	[Quantity] [int] NULL,
 PRIMARY KEY CLUSTERED 
@@ -154,7 +154,7 @@ CREATE TABLE [dbo].[Orders](
 	[OrderID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[OrderDate] [date] NULL,
-	[TotalAmount] [decimal](10, 2) NULL,
+	[TotalAmount] [int] NULL,
 	[Status] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED 
 (
@@ -176,7 +176,7 @@ CREATE TABLE [dbo].[Shoes](
 	[Description] [text] NULL,
 	[Image] [nvarchar](max) NULL,
 	[Quantity] [int] NULL,
-	[Price] [decimal](10, 0) NULL
+	[Price] [int] NULL
 
 PRIMARY KEY CLUSTERED 
 (
