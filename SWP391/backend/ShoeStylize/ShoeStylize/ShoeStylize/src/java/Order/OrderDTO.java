@@ -17,7 +17,7 @@ public class OrderDTO {
     private int id;
     private String name;
     private String img;
-    private double price;
+    private int price;
     private int quantity;
     private String category;
     private String status;
@@ -26,13 +26,13 @@ public class OrderDTO {
     public OrderDTO() {
     }
 
-    public OrderDTO(String name, double price, int quantity) {
+    public OrderDTO(String name, int price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public OrderDTO(int id, String name, String img, double price, int quantity, String category, String status) {
+    public OrderDTO(int id, String name, String img, int price, int quantity, String category, String status) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -84,11 +84,11 @@ public class OrderDTO {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
