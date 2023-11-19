@@ -55,7 +55,7 @@
                     <img src="*" alt="Product">
                 </div>
                 <div class="column middle">
-                    <h2>Name product</h2>
+                    <h2><%= session.getAttribute("ShoeName")%></h2>
                     <p>Price:&nbsp&nbsp&nbsp<!-- Price --></p>
                     <p>Quantity:&nbsp&nbsp <input type="number" value="*" min="0" max="9999999999"></p>
                 </div>
