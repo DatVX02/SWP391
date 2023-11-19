@@ -97,8 +97,15 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[InRight] [bit] NULL,
 	[Back] [bit] NULL,
 	[Overlook] [bit] NULL,
+	[OutLeftCost] [int] NULL,
+	[OutRightCost] [int] NULL,
+	[InLeftCost] [int] NULL,
+	[InRightCost] [int] NULL,
+	[BackCost] [int] NULL,
+	[OverlookCost] [int] NULL,
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
+	[totalamount] [int] NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
