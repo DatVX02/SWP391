@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <h3>Confirm password</h3>
-                    <input type="password" name="txtConfirm" required>
+                    <input type="passwd" name="txtConfirm" required>
                     <br>
                 </div>
                 <!-- popup -->
@@ -48,12 +48,12 @@
                     <a class="dialog-btn" href="#my-dialog" style="text-decoration: none;">Reset button</a>
 
                     <div class="dialog overlay" id="my-dialog">
-                        <a href="#" class="overlay-close"></a>
+                        <!--<a href="#" class="overlay-close"></a>-->
 
                         <div class="dialog-body">
                             <img
                                 src="image\yes.png">
-                            <a class="dialog-close-btn" href="#">&times;</a>
+                            <div class="dialog-close-btn">&times;</div>
                             <h3>Reset Password Successful</h3>
                             <p style="color: #EBAA5D; font-style: italic;"><a href="login.jsp">Return to Login</a></p>
                         </div>
