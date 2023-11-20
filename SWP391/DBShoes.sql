@@ -84,6 +84,7 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
+	[ServiceID] [int] NULL,
 	[ShoesName] [nvarchar](20) NULL,
 	[ImageLink1] [nvarchar](max) NULL,
 	[ImageLink2] [nvarchar](max) NULL,
@@ -97,18 +98,32 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[InRight] [bit] NULL,
 	[Back] [bit] NULL,
 	[Overlook] [bit] NULL,
-	[OutLeftCost] [int] NULL,
-	[OutRightCost] [int] NULL,
-	[InLeftCost] [int] NULL,
-	[InRightCost] [int] NULL,
-	[BackCost] [int] NULL,
-	[OverlookCost] [int] NULL,
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
 	[totalamount] [int] NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] 
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Service](
+	[ServiceID] [int] IDENTITY(1,1) NOT NULL,
+	[OutLeftCost] [int] NULL,
+	[OutRightCost] [int] NULL,
+	[InLeftCost] [int] NULL,
+	[InRightCost] [int] NULL,
+	[BackCost] [int] NULL,
+	[OverlookCost] [int] NULL,
+PRIMARY KEY CLUSTERED
+(
+	[ServiceID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] 
 
@@ -258,4 +273,6 @@ GO
 ALTER TABLE [dbo].[SizeList]  WITH CHECK ADD FOREIGN KEY([ShoeID])
 REFERENCES [dbo].[Shoes] ([ShoeID])
 GO
-
+ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([ServiceID])
+REFERENCES [dbo].[Service] ([ServiceID])
+GO
