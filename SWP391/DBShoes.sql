@@ -102,7 +102,6 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
 	[totalamount] [int] NULL,
-	[Status] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
