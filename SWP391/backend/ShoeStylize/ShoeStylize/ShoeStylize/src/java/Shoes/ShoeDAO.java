@@ -40,7 +40,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -72,7 +72,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -115,7 +115,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -154,7 +154,7 @@ public class ShoeDAO implements Serializable {
                     int ShoeID = rs.getInt("ShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     int Quantity = rs.getInt("Quantity");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     int count = 0;
                     if (rs.getString("ImageLink1") != null) {
                         count++;
@@ -174,9 +174,9 @@ public class ShoeDAO implements Serializable {
                     if (rs.getString("ImageLink6") != null) {
                         count++;
                     }
-                    int NewPrice = count * Price;
+                    double NewPrice = count * Price;
 
-                    int increaseDecreaseRatio = (NewPrice - Price) / Price;
+                    double increaseDecreaseRatio = (NewPrice - Price) / Price;
 
                     ShoeDTO shoes = new ShoeDTO(ShoeID, ShoesName, Quantity, Price, NewPrice, increaseDecreaseRatio);
                     list.add(shoes);
@@ -186,42 +186,6 @@ public class ShoeDAO implements Serializable {
             e.printStackTrace();
         }
         return list;
-    }
-
-    public boolean addShoe(String name, String brand, String price, String quantity, String desc) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        try {
-            con = DBUtils.makeConnection();
-            if (con != null) {
-                String sql = "INSERT INTO [dbo].[Shoes]\n"
-                        + "           ([BrandID]\n"
-                        + "           ,[ShoesName]\n"
-                        + "           ,[Description]\n"
-                        + "           ,[Quantity]\n"
-                        + "           ,[Price])\n"
-                        + "     VALUES\n"
-                        + "           (?,?,?,?,?)";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, brand);
-                stm.setString(2, name);
-                stm.setString(3, desc);
-                stm.setInt(4, Integer.valueOf(quantity));
-                stm.setInt(5, Integer.valueOf(price));
-                int row = stm.executeUpdate();
-                if (row > 0) {
-                    return true;
-                }
-            }
-        } finally {
-            if (stm != null) {
-                stm.close();
-            }
-            if (con != null) {
-                con.close();
-            }
-        }
-        return false;
     }
 
     public void getInfo(HttpServletRequest request) throws SQLException {

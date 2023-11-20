@@ -52,6 +52,7 @@
 
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
+                <a href="homepage.jsp">Home</a>
                 <a href="order_provider.jsp">Order statictics</a>
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>

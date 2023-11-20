@@ -8,14 +8,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="icon"
-        href="image\shoelogo.png">
-    <link rel="stylesheet" href="CSS\feedback.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback</title>
+        <link rel="icon" href="image\shoelogo.png">
+        <link href="Profile/Feedback.css" rel="stylesheet" type="text/css"/>
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
 
 <body>
     <div class="header">
@@ -70,13 +78,13 @@
 
             <ul class="information_left_5">
                 <img src="image\logout.png" style="width: 15px;" />
-                <a href="login.jsp">Log out </a>
+                <a href="homepage_guest.jsp">Log out </a>
             </ul>
         </div>
     </div>
 
         <div class="information_right">
-            <h2 style="color: #FF0000;">Suggestions</h2>
+            <h2 style="color: #FF0000; transform: translateX(40px)">Suggestions</h2>
             <div class="information_right_1">
                 <img src="image\feedback (1).png"
                     alt="feedback">
@@ -84,7 +92,7 @@
                     Please give us more feedback to improve better</h3>
             </div>
             <div class="information_left_2">
-                <h2 style="color: #DB00FF">FeedBack information</h2>
+                <h2 style="color: #DB00FF; font-size: 30px; transform: translateX(-80px)">FeedBack information</h2>
                 <h3 style="color: #FF0000; margin-left: 50px;">Link Feedback:
                     <a href="https://forms.gle/pczGG6aRGd8LBRnM9" style="color: black; text-decoration: underline;">https://forms.gle/pczGG6aRGd8LBRnM9</a>
                 </h3>
@@ -93,7 +101,7 @@
                 </h3>
             </div>
         </div>
-    <div class="footer">
+<!--    <div class="footer">
         <div style="float:right">
             <img src="image\facebook.png"
                 alt="Facebook" />
@@ -105,8 +113,8 @@
                 alt="Instagram" />
             <img src="image\youtube (5).png"
                 alt="youtube" />
-        </div>
-            <div style=" float:right">
+        </div>-->
+<!--            <div style=" float:right">
             <table class="center">
                 <tr class="tableHeader">
                     <td>About Us</td>
@@ -138,6 +146,6 @@
         <div style="clear: both" class="commerce">
             @2023 Ecommerce
         </div>
-    </div>
+    </div>-->
 </body>
 </html>

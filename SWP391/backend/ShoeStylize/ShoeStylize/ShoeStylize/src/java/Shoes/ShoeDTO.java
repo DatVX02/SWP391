@@ -18,15 +18,15 @@ public class ShoeDTO {
     private String Description;
     private String Image;
     private int Quantity;
-    private int Price;
+    private double Price;
     private String Size;
-    private int NewPrice;
-    private int increaseDecreaseRatio;
+    private double NewPrice;
+    private double increaseDecreaseRatio;
 
     public ShoeDTO() {
     }
 
-    public ShoeDTO(int ShoeID, String Brand, String ShoesName, String Category, String Description, String Image, int Quantity, int Price) {
+    public ShoeDTO(int ShoeID, String Brand, String ShoesName, String Category, String Description, String Image, int Quantity, double Price) {
         this.ShoeID = ShoeID;
         this.Brand = Brand;
         this.ShoesName = ShoesName;
@@ -37,7 +37,7 @@ public class ShoeDTO {
         this.Price = Price;
     }
 
-    public ShoeDTO(int ShoeID, String ShoesName, int Quantity, int Price, int NewPrice,int increaseDecreaseRatio) {
+    public ShoeDTO(int ShoeID, String ShoesName, int Quantity, double Price, double NewPrice,double increaseDecreaseRatio) {
         this.ShoeID = ShoeID;
         this.ShoesName = ShoesName;
         this.Quantity = Quantity;
@@ -46,20 +46,20 @@ public class ShoeDTO {
         this.increaseDecreaseRatio = increaseDecreaseRatio;
     }
 
-    public int getIncreaseDecreaseRatio() {
+    public double getIncreaseDecreaseRatio() {
         return increaseDecreaseRatio;
     }
 
-    public void setIncreaseDecreaseRatio(int increaseDecreaseRatio) {
+    public void setIncreaseDecreaseRatio(double increaseDecreaseRatio) {
         this.increaseDecreaseRatio = increaseDecreaseRatio;
     }
     
 
-    public int getNewPrice() {
+    public double getNewPrice() {
         return NewPrice;
     }
 
-    public void setNewPrice(int NewPrice) {
+    public void setNewPrice(double NewPrice) {
         this.NewPrice = NewPrice;
     }
     
@@ -130,11 +130,11 @@ public class ShoeDTO {
         this.Quantity = Quantity;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(int Price) {
+    public void setPrice(double Price) {
         this.Price = Price;
     }
 

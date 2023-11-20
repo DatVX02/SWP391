@@ -43,7 +43,7 @@ public class OrderDAO implements Serializable {
                     int ShoeID = rs.getInt("CusShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     String Image = rs.getString("Image");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     int Quantity = rs.getInt("Quantity");
                     String Category = rs.getString("Category");
                     String Status = rs.getString("Status");
@@ -81,7 +81,7 @@ public class OrderDAO implements Serializable {
                     int ShoeID = rs.getInt("ShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     String Image = rs.getString("Image");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     int Quantity = rs.getInt("Quantity");
                     String Category = rs.getString("Category");
                     String Status = rs.getString("Status");

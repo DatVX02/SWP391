@@ -15,11 +15,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Account Information</title>
-        <link rel="icon"
-              href="image\shoelogo.png">
-        <link rel="stylesheet" href="CSS\information.css">
+        <title>Account information</title>
+        <link rel="icon" href="image\shoelogo.png">
+        <link href="Profile/Account information.css" rel="stylesheet" type="text/css"/>
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     </head>
+
 
     <body>
         <div class="header">
@@ -74,7 +83,7 @@
 
                 <ul class="information_left_5">
                     <img src="image\logout.png" style="width: 15px;" />
-                    <a href="login.jsp">Log out </a>
+                    <a href="homepage_guest.jsp">Log out </a>
                 </ul>
             </div>
         </div>
@@ -116,7 +125,7 @@
                     <input type="hidden" name="txtUserID" value="<%= request.getAttribute("id")%>"> 
                 </div>
             </form>
-            <a href="information.jsp"><button style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Update</button></a>
+            <a href="information.jsp"><button style="border-radius: 20px; background-color: #EBAA5D; margin-top: 20px; margin-bottom: 15px">Update</button></a>
         </div>
         <div class="footer">
             <div style="float:right">

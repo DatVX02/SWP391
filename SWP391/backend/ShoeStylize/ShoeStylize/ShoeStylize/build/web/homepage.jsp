@@ -203,7 +203,7 @@
                                         <div class="btn-group" role="group">
                                             <button type="button" class="btn btn-light">
                                                 <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
+                                                <a href="homeDes_men.jsp" style="color: black; text-decoration: none">Custom Now</a>
                                             </button>
 
                                         </div>
