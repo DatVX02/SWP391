@@ -1,3 +1,7 @@
+<%@page import="Shoes.ShoeDAO"%>
+<%@page import="Shoes.ShoeDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +74,7 @@
                                         <!--<ul class="list-group list-group-flush" style="height:200px;overflow:auto;">-->
                                         <a href="#" class="list-group-item list-group-item-action ">Nike</a>
                                         <a href="#" class="list-group-item list-group-item-action ">Jordan</a>
-                                       <a href="#" class="list-group-item list-group-item-action ">Adidas</a>
+                                        <a href="#" class="list-group-item list-group-item-action ">Adidas</a>
                                         <a href="#" class="list-group-item list-group-item-action ">Puma</a>
                                         <a href="#" class="list-group-item list-group-item-action ">Converse</a>
 
@@ -187,29 +191,47 @@
                 <div class="col-md-9">
                     <div class="card-body">
                         <div class="row">
+                            <% ArrayList<ShoeDTO> shoes = new ArrayList<>();
+                                String category = (String) session.getAttribute("Cate");
+                                ShoeDAO dao = new ShoeDAO();
+                                if (category == "Cate") {
+                                    shoes = (ArrayList<ShoeDTO>) session.getAttribute("shoesList");
+                                } else {
+                                    shoes = dao.AlllistShoe();
+                                }
+                                if (shoes != null) {
+                                    for (ShoeDTO shoe : shoes) {
+                            %> 
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="card-img-top" src="<%= shoe.getImage()%>" alt="" />
                                     <div class="card-body">
                                         <p class="h5 m-0">
                                             <!-- Giá s?n ph?m -->
+                                            <%= shoe.getPrice()%>
                                         </p>
                                         <p class="h6">
                                             <!-- Tên s?n ph?m  -->
+                                            <%= shoe.getShoesName()%>
                                         </p>
 
                                     </div>
                                     <div class="card-footer p-0" style="text-align: center;">
                                         <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <a href="homeDes_men.jsp" style="color: black; text-decoration: none">Custom Now</a>
-                                            </button>
-
+                                            <form action="homeDes_men.jsp" >
+                                                <input type="hidden" name="image" value="<%= shoe.getImage()%>" >
+                                                <button type="submit" class="btn btn-light" style="color: black; text-decoration: none">
+                                                    <!-- <i class="fas fa-cart-plus"></i> -->Custom Now
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <%
+                                    }
+                                }
+                            %>
                             <div class="col-md-4 mb-4">
                                 <div class="card">
                                     <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />

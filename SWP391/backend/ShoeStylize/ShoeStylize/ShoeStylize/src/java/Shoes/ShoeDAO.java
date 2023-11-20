@@ -40,7 +40,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    double Price = rs.getDouble("Price");
+                    int Price = rs.getInt("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -72,7 +72,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    double Price = rs.getDouble("Price");
+                    int Price = rs.getInt("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -115,7 +115,7 @@ public class ShoeDAO implements Serializable {
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
                     int Quantity = rs.getInt("Quantity");
-                    double Price = rs.getDouble("Price");
+                    int Price = rs.getInt("Price");
                     ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
@@ -154,7 +154,7 @@ public class ShoeDAO implements Serializable {
                     int ShoeID = rs.getInt("ShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     int Quantity = rs.getInt("Quantity");
-                    double Price = rs.getDouble("Price");
+                    int Price = rs.getInt("Price");
                     int count = 0;
                     if (rs.getString("ImageLink1") != null) {
                         count++;
@@ -174,9 +174,9 @@ public class ShoeDAO implements Serializable {
                     if (rs.getString("ImageLink6") != null) {
                         count++;
                     }
-                    double NewPrice = count * Price;
+                    int NewPrice = count * Price;
 
-                    double increaseDecreaseRatio = (NewPrice - Price) / Price;
+                    int increaseDecreaseRatio = (NewPrice - Price) / Price;
 
                     ShoeDTO shoes = new ShoeDTO(ShoeID, ShoesName, Quantity, Price, NewPrice, increaseDecreaseRatio);
                     list.add(shoes);

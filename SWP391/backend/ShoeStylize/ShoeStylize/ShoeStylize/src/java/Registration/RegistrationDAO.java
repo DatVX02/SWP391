@@ -481,7 +481,7 @@ public class RegistrationDAO implements Serializable {
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     String name = rs.getString("ShoesName");
-                    double price = rs.getDouble("Price");
+                    int price = rs.getInt("Price");
                     int quantity = rs.getInt("Quantity");
                     OrderDTO dto = new OrderDTO(name, price, quantity);
                     if (ListOrders == null) {
