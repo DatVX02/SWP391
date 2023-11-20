@@ -2,6 +2,7 @@
 <%@page import="Shoes.ShoeDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +26,8 @@
     <body>
         <!-- header -->
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="shoes">
+            <a href="homepage.jsp"><img src="image\shoelogo.png"
+                 alt="shoes"></a>
             <div class="header_info" style="color: white;">
                 <a href="information0.jsp"><img
                         src="image\user (1).png"
@@ -50,16 +51,15 @@
             </div>
         -->
 
-
-
+        <form action="MainController">
         <div class="container">
             <div class="row mb-5 mt-5">
                 <div class="col-md-3">
                     <div class="card mb-4">
                         <div class="card-header" style="font-weight: bold;">Category</div>
                         <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action">Sport</a>
-                            <a href="#" class="list-group-item list-group-item-action ">Party</a>
+                            <a href="CategoryController?byCategory1=Sport" class="list-group-item list-group-item-action">Sport</a>
+                            <a href="CategoryController?byCategory1=Party" class="list-group-item list-group-item-action ">Party</a>
                         </div>
                     </div>
                     <div class="card">
@@ -71,14 +71,12 @@
                                 </div>
                                 <div class="card-body p-0 collapse show" id="collapseExample1">
                                     <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
-                                        <!--<ul class="list-group list-group-flush" style="height:200px;overflow:auto;">-->
-                                        <a href="#" class="list-group-item list-group-item-action ">Nike</a>
-                                        <a href="#" class="list-group-item list-group-item-action ">Jordan</a>
-                                        <a href="#" class="list-group-item list-group-item-action ">Adidas</a>
-                                        <a href="#" class="list-group-item list-group-item-action ">Puma</a>
-                                        <a href="#" class="list-group-item list-group-item-action ">Converse</a>
+                                        <a href="CategoryController?byCategory1=Nike" class="list-group-item list-group-item-action ">Nike</a>
+                                        <a href="CategoryController?byCategory1=Jordan"class="list-group-item list-group-item-action ">Jordan</a>
+                                        <a href="CategoryController?byCategory1=Adidas"class="list-group-item list-group-item-action ">Adidas</a>
+                                        <a href="CategoryController?byCategory1=Puma" class="list-group-item list-group-item-action ">Puma</a>
+                                        <a href="CategoryController?byCategory1=Converse"class="list-group-item list-group-item-action ">Converse</a>
 
-                                        <!--</ul>-->
 
                                     </ul>
                                 </div>
@@ -187,6 +185,7 @@
                             <button type="button" class="btn btn-block btn-primary">Apply</button>
                         </div>
                     </div>
+                    </form>
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
@@ -204,26 +203,25 @@
                             %> 
                             <div class="col-md-4 mb-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="<%= shoe.getImage()%>" alt="" />
+                                    <img class="card-img-top" src="<%=shoe.getImage()%>" alt="" />
                                     <div class="card-body">
                                         <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
+                                            <!-- GiÃ¡ sáº£n pháº©m -->
                                             <%= shoe.getPrice()%>
                                         </p>
                                         <p class="h6">
-                                            <!-- Tên s?n ph?m  -->
+                                            <!-- TÃªn sáº£n pháº©m  -->
                                             <%= shoe.getShoesName()%>
                                         </p>
 
                                     </div>
                                     <div class="card-footer p-0" style="text-align: center;">
                                         <div class="btn-group" role="group">
-                                            <form action="homeDes_men.jsp" >
-                                                <input type="hidden" name="image" value="<%= shoe.getImage()%>" >
-                                                <button type="submit" class="btn btn-light" style="color: black; text-decoration: none">
-                                                    <!-- <i class="fas fa-cart-plus"></i> -->Custom Now
-                                                </button>
-                                            </form>
+                                            <button type="button" class="btn btn-light">
+                                                <!--<i class="fas fa-cart-plus"></i>-->
+                                                <a href="homeDes_men.jsp" style="color: black; text-align: none">Custom Now</a>
+                                            </button>
+
                                         </div>
                                     </div>
                                 </div>
@@ -232,122 +230,6 @@
                                     }
                                 }
                             %>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
-                                        </p>
-                                        <p class="h6">
-                                            <!--dddddaddddzdd Tên s?n ph?m  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên s?n ph?m  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên s?n ph?m  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên s?n ph?m  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://via.placeholder.com/200x200" alt="" />
-                                    <div class="card-body">
-                                        <p class="h5 m-0">
-                                            <!-- Giá s?n ph?m -->
-                                        </p>
-                                        <p class="h6">
-                                            <!-- Tên s?n ph?m  -->
-                                        </p>
-
-                                    </div>
-                                    <div class="card-footer p-0" style="text-align: center;">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-light">
-                                                <!-- <i class="fas fa-cart-plus"></i> -->
-                                                <span>Custom Now</span>
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!--div class="card-footer p-3">
                                 <div class="row">
                                     <div class="col-md-6">

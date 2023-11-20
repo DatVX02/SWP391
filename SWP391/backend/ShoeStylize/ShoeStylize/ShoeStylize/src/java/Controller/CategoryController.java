@@ -32,23 +32,41 @@ public class CategoryController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       String byCategory = request.getParameter("byCategory");
-       String byBrand = request.getParameter("brand");
+        String byCategory = request.getParameter("byCategory");
+        String byBrand = request.getParameter("brand");
+        String byCategory1 = request.getParameter("byCategory1");
+        String byBrand1 = request.getParameter("brand1");
         ShoeDAO dao = new ShoeDAO();
         ArrayList list = new ArrayList();
         HttpSession session = request.getSession(false);
         String url = "";
+//        homepage_guest
         try {
-            if(byCategory.equals("Sport")|| byCategory.equals("Party")){
+            if (byCategory.equals("Sport") || byCategory.equals("Party")) {
                 list = dao.CatelistShoe(byCategory);
                 session.setAttribute("shoesList", list);
                 session.setAttribute("Cate", "Cate");
                 url = "homepage_guest.jsp";
-            }else{
-                 list = dao.BrandlistShoe(byCategory);
+            } else {
+                list = dao.BrandlistShoe(byCategory);
                 session.setAttribute("shoesList", list);
                 session.setAttribute("Cate", "Cate");
                 url = "homepage_guest.jsp";
+            }
+        } catch (Exception e) {
+        }
+//        homepage
+        try {
+            if (byCategory1.equals("Sport") || byCategory1.equals("Party")) {
+                list = dao.CatelistShoe(byCategory1);
+                session.setAttribute("shoesList", list);
+                session.setAttribute("Cate", "Cate");
+                url = "homepage.jsp";
+            } else {
+                list = dao.BrandlistShoe(byCategory1);
+                session.setAttribute("shoesList", list);
+                session.setAttribute("Cate", "Cate");
+                url = "homepage.jsp";
             }
         } catch (Exception e) {
         }

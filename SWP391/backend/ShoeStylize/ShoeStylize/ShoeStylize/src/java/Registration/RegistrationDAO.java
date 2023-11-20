@@ -318,7 +318,7 @@ public class RegistrationDAO implements Serializable {
                     String date = rs.getString("Birthdate");
                     String role = rs.getString("RoleID");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id, email,password, phone, name, date, role, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email, password, phone, name, date, role, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -359,7 +359,7 @@ public class RegistrationDAO implements Serializable {
                     String date = rs.getString("Birthdate");
                     String role = rs.getString("RoleID");
                     String gender = rs.getString("Gender");
-                    RegistrationDTO dto = new RegistrationDTO(id, email,password, phone, name, date, role, gender);
+                    RegistrationDTO dto = new RegistrationDTO(id, email, password, phone, name, date, role, gender);
                     if (ListAccounts == null) {
                         ListAccounts = new ArrayList<>();
                     }
@@ -474,14 +474,14 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = "SELECT ShoesName, Price, OrderDetails.Quantity\n"
-                        + "FROM OrderDetails\n"
-                        + "INNER JOIN CustomizeShoes ON CustomizeShoes.CusShoeID = OrderDetails.CusShoeID;";
+                String sql = "SELECT ShoesName, CustomizeShoes.totalamount, Quantity\n"
+                        + "FROM CustomizeShoes\n"
+                        + "INNER JOIN Orders ON CustomizeShoes.OrderID = Orders.OrderID;";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     String name = rs.getString("ShoesName");
-                    int price = rs.getInt("Price");
+                    double price = rs.getDouble("totalamount");
                     int quantity = rs.getInt("Quantity");
                     OrderDTO dto = new OrderDTO(name, price, quantity);
                     if (ListOrders == null) {

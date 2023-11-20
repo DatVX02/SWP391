@@ -52,7 +52,7 @@
         <form action="*" method="post">
             <div class="product">
                 <div class="column left">
-                    <img src="<%= session.getAttribute("Image") %>" alt="Product">
+                    <img src="*" alt="Product">
                 </div>
                 <div class="column middle">
                     <h2>Name product</h2>

@@ -25,16 +25,19 @@ public class OrderDAO implements Serializable {
         Connection cn = null;
         try {
             cn = DBUtils.makeConnection();
-            String sql = "SELECT OrderDetails.CusShoeID,\n"
-                    + "       CustomizeShoes.ShoesName,\n"
-                    + "       Image,\n"
-                    + "       OrderDetails.Price,\n"
-                    + "       OrderDetails.Quantity,\n"
-                    + "       Orders.Status\n"
-                    + "  FROM dbo.Orders\n"
-                    + "  INNER JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID\n"
-                    + "  INNER JOIN CustomizeShoes ON CustomizeShoes.CusShoeID = OrderDetails.CusShoeID\n"
-                    + "  INNER JOIN Shoes ON CustomizeShoes.ShoeID = Shoes.ShoeID";
+            String sql = "SELECT \n"
+                    + "    CusShoeID,\n"
+                    + "    CustomizeShoes.ShoesName,\n"
+                    + "    Image,\n"
+                    + "    Orders.TotalAmount,\n"
+                    + "    Orders.Quantity,\n"
+                    + "    Orders.Status\n"
+                    + "FROM \n"
+                    + "    dbo.Orders\n"
+                    + "INNER JOIN \n"
+                    + "    CustomizeShoes ON CustomizeShoes.OrderID = Orders.OrderID\n"
+                    + "INNER JOIN \n"
+                    + "    Shoes ON CustomizeShoes.ShoeID = Shoes.ShoeID";
             PreparedStatement pst = cn.prepareStatement(sql);
 
             ResultSet rs = pst.executeQuery();
@@ -43,7 +46,7 @@ public class OrderDAO implements Serializable {
                     int ShoeID = rs.getInt("CusShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     String Image = rs.getString("Image");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("TotalAmount");
                     int Quantity = rs.getInt("Quantity");
                     String Category = rs.getString("Category");
                     String Status = rs.getString("Status");
@@ -81,7 +84,7 @@ public class OrderDAO implements Serializable {
                     int ShoeID = rs.getInt("ShoeID");
                     String ShoesName = rs.getString("ShoesName");
                     String Image = rs.getString("Image");
-                    int Price = rs.getInt("Price");
+                    double Price = rs.getDouble("Price");
                     int Quantity = rs.getInt("Quantity");
                     String Category = rs.getString("Category");
                     String Status = rs.getString("Status");

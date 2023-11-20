@@ -24,7 +24,6 @@ public class HomeDesController extends HttpServlet {
         String size = request.getParameter("size");
         String gender = request.getParameter("gen");
         String name = request.getParameter("ShoeName");
-        String img = request.getParameter("img");
         String[] services = new String[6];
         String[] files = new String[6];
         
@@ -37,7 +36,6 @@ public class HomeDesController extends HttpServlet {
         session.setAttribute("Size", size);
         session.setAttribute("ShoeName", name);
         session.setAttribute("Gender", gender);
-        session.setAttribute("Image", img);
         session.setAttribute("Services", services);
         session.setAttribute("Files", files);
         
