@@ -33,7 +33,6 @@ public class MainController extends HttpServlet {
     private static final String RESETPASSWORDCONTROLLER = "ResetPasswordController";
     private static final String CategoryController = "CategoryController";
     private static final String HOMEDESCONTROLLER = "HomeDesController";
-    private static final String ADDSHOECONTROLLER = "AddShoeController";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -85,9 +84,6 @@ public class MainController extends HttpServlet {
                     break;
                 case "Custom":
                     url = HOMEDESCONTROLLER;
-                    break;
-                case "Post Shoe":
-                    url = ADDSHOECONTROLLER;
                     break;
                 default:
                     break;

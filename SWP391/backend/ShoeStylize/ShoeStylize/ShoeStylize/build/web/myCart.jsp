@@ -52,10 +52,10 @@
         <form action="*" method="post">
             <div class="product">
                 <div class="column left">
-                    <img src="*" alt="Product">
+                    <img src="<%= session.getAttribute("Image") %>" alt="Product">
                 </div>
                 <div class="column middle">
-                    <h2><%= session.getAttribute("ShoeName")%></h2>
+                    <h2>Name product</h2>
                     <p>Price:&nbsp&nbsp&nbsp<!-- Price --></p>
                     <p>Quantity:&nbsp&nbsp <input type="number" value="*" min="0" max="9999999999"></p>
                 </div>

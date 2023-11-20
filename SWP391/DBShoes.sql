@@ -82,8 +82,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CustomizeShoes](
 	[CusShoeID] [int] IDENTITY(1,1) NOT NULL,
+	[OrderID] [int] NULL,
 	[ShoeID] [int] NULL,
 	[UserID] [int] NULL,
+	[ServiceID] [int] NULL,
 	[ShoesName] [nvarchar](20) NULL,
 	[ImageLink1] [nvarchar](max) NULL,
 	[ImageLink2] [nvarchar](max) NULL,
@@ -99,9 +101,31 @@ CREATE TABLE [dbo].[CustomizeShoes](
 	[Overlook] [bit] NULL,
 	[Gender] [varchar](10) NULL,
 	[Size] [nvarchar](10) NULL,
+	[totalamount] [int] NULL,
+	[Status] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED
 (
 	[CusShoeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] 
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Service](
+	[ServiceID] [int] IDENTITY(1,1) NOT NULL,
+	[OutLeftCost] [int] NULL,
+	[OutRightCost] [int] NULL,
+	[InLeftCost] [int] NULL,
+	[InRightCost] [int] NULL,
+	[BackCost] [int] NULL,
+	[OverlookCost] [int] NULL,
+PRIMARY KEY CLUSTERED
+(
+	[ServiceID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] 
 
@@ -126,25 +150,7 @@ PRIMARY KEY CLUSTERED
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[OrderDetails]    Script Date: 10/22/2023 11:39:51 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[OrderDetails](
-	[OrderDetailID] [int] IDENTITY(1,1) NOT NULL,
-	[OrderID] [int] NULL,
-	[CusShoeID] [int] NULL,
-	[Price] [int] NULL,
-	[Status] [nvarchar](20) NULL,
-	[Quantity] [int] NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[OrderDetailID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
 
-GO
 /****** Object:  Table [dbo].[Orders]    Script Date: 10/22/2023 11:39:51 PM ******/
 SET ANSI_NULLS ON
 GO
@@ -156,6 +162,7 @@ CREATE TABLE [dbo].[Orders](
 	[OrderDate] [date] NULL,
 	[TotalAmount] [int] NULL,
 	[Status] [nvarchar](20) NULL,
+	[Quantity] [int] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[OrderID] ASC
@@ -236,10 +243,7 @@ GO
 ALTER TABLE [dbo].[Feedback]  WITH CHECK ADD FOREIGN KEY([UserID])
 REFERENCES [dbo].[Users] ([UserID])
 GO
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([CusShoeID])
-REFERENCES [dbo].[CustomizeShoes] ([CusShoeID])
-GO
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD FOREIGN KEY([OrderID])
+ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([OrderID])
 REFERENCES [dbo].[Orders] ([OrderID])
 GO
 ALTER TABLE [dbo].[Orders]  WITH CHECK ADD FOREIGN KEY([UserID])
@@ -251,4 +255,6 @@ GO
 ALTER TABLE [dbo].[SizeList]  WITH CHECK ADD FOREIGN KEY([ShoeID])
 REFERENCES [dbo].[Shoes] ([ShoeID])
 GO
-
+ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([ServiceID])
+REFERENCES [dbo].[Service] ([ServiceID])
+GO

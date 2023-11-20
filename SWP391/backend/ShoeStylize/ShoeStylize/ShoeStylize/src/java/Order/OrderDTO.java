@@ -84,7 +84,7 @@ public class OrderDTO {
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

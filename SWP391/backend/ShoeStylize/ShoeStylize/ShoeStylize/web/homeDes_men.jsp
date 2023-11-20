@@ -142,8 +142,9 @@
                                 <div class="information_right_4_3" style="margin-left: 96px; margin-top: -23px"><input type="checkbox" name="Service6" value="Overlook" id="" >Overlook</div>
                             </div>
                             <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">
-                                Total amount: <%= total %>
+                                Total amount: <%= total%>
                             </h3>
+                                <input type="hidden" name="img" value="<%= request.getParameter("image") %>" >
                             <input type="hidden" name="total" value="<%= total%>" >
                         </div>
                     </div>
@@ -199,5 +200,5 @@
             </div>
         </div>
     </body>
-    
+
 </html>

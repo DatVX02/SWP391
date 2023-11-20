@@ -98,7 +98,6 @@ public final class store_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <a href=\"cost.jsp\">Cost statictics</a>\r\n");
       out.write("                <a href=\"blog_provider.jsp\">Blog statictics</a>\r\n");
       out.write("                <a href=\"store.jsp\">Store manage</a>\r\n");
-      out.write("                <a href=\"login.jsp\">Logout</a>\r\n");
       out.write("            </div>\r\n");
       out.write("            <div style=\"width: 79%; float:right\" class=\"bloglist\">\r\n");
       out.write("                <div style=\"clear: both;\" class=\"\">\r\n");
