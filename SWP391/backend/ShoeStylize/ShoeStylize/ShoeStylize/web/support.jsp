@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Support</title>
-        <link rel="icon" href="image\shoelogo.png">
+        <link rel="icon" href="image/logo/shoelogo.png">
         <link href="Profile/Support.css" rel="stylesheet" type="text/css"/>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -29,20 +29,20 @@
 <body>
     <div>
         <div class="header">
-            <a href="homepage.jsp"><img src="image\shoelogo.png"
+            <a href="homepage.jsp"><img src="image/logo/logo.png"
                                         alt="shoes"></img></a>
             <div class="header_info">
                 <a href="information.0jsp"><img
-                        src="image\user (1).png"
+                        src="image/logo/user (1).png"
                         alt="profile">Profile</a>
                 <a href="orderDetail.jsp"><img
-                        src="image\heart.png"
+                        src="image/logo/heart.png"
                         alt="Orders">Orders</a>
                 <a href="myCart.jsp"><img
-                        src="image\shopping-cart.png"
+                        src="image/logo/shopping-cart.png"
                         alt="shopping-cart">My cart</a>
                 <a href="blog.jsp"><img
-                        src="image\blog (2).png "
+                        src="image/logo/blog (2).png "
                         alt="shopping-cart">News</a>
             </div>
         </div>
@@ -50,36 +50,36 @@
         <div class="information_left">
         <div>
             <ul class="information_left_1">
-                <img src="image\user.png" style="width: 15px; transform: translateY(02px);">
+                <img src="image/logo/user.png" style="width: 15px; transform: translateY(02px);">
                 <a href="information0.jsp">Account information </a>
             </ul>
 
             <ul class="information_left_1">
-                <img src="image\padlock.png" style="width: 15px; transform: translateY(02px);">
+                <img src="image/logo/padlock.png" style="width: 15px; transform: translateY(02px);">
                 <a href="changePassword.jsp">Change password</a>
             </ul>
 
             <ul class="information_left_2">
-                <img src="image\checklist.png" style="width: 15px; transform: translateY(02px);" />
+                <img src="image/logo/checklist.png" style="width: 15px; transform: translateY(02px);" />
                 <a href="accountManagement.jsp">
                     Order management
                 </a>
             </ul>
 
             <ul class="information_left_3">
-                <img src="image\support.png" style="width: 15px; transform: translateY(02px);" />
+                <img src="image/logo/support.png" style="width: 15px; transform: translateY(02px);" />
                 <a href="support.jsp">
                     Support
                 </a>
             </ul>
 
             <ul class="information_left_4">
-                <img src="image\feedback.png" style="width: 15px; transform: translateY(02px);" />
+                <img src="image/logo/feedback.png" style="width: 15px; transform: translateY(02px);" />
                 <a href="feedback.jsp">Suggestions </a>
             </ul>
 
             <ul class="information_left_5">
-                <img src="image\logout.png" style="width: 15px;" />
+                <img src="image/logo/logout.png" style="width: 15px;" />
                 <a href="homepage_guest.jsp">Log out </a>
             </ul>
         </div>
@@ -90,7 +90,7 @@
              <div class="information_right">
             <div class="information_right_1">
                 <img
-                    src="image\headphones.png">
+                    src="image/logo/headphones.png">
                 <p>Shopping Advice</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1772">Hotline: 1900 1772</a> </p>
@@ -98,7 +98,7 @@
 
             <div class="information_right_2">
                 <img
-                    src="image\letterbox.png">
+                    src="image/logo/letterbox.png">
                 <p>Complain</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1773 ">Hotline: 1900 1234</a> </p>
@@ -106,7 +106,7 @@
 
             <div class="information_right_3">
                 <img
-                    src="image\insurance.png">
+                    src="image/logo/insurance.png">
                 <p>Policies and promotions</p>
                 <p>Operating time: 08:00 - 21:00</p>
                 <p style="color: red;"><a style="text-decoration: none; color: red;" href="tel:1900 1773 ">Hotline: 1900 1773</a> </p>
@@ -114,7 +114,7 @@
 
             <div class="information_right_4">
                 <img
-                    src="image\gmail.png">
+                    src="image/logo/gmail.png">
                 <p>Email</p>
                 <p style="color: red;"> <a style="text-decoration: none; color: red;"
                         href="mailto:@gmail.com">cskh@gmail.com</a></p>
@@ -123,16 +123,16 @@
         </div>
     </div>
     <div class="footer">
-        <div style="float:right">
-            <img src="image\facebook.png"
+        <div style="float:right; transform: translateX(-20px)">
+            <img src="image/logo/facebook.png"
                 alt="Facebook" />
-            <img src="image\twitter.png"
+            <img src="image/logo/twitter.png"
                 alt="twitter" />
-            <img src="image\linkedin.png"
+            <img src="image/logo/linkedin.png"
                 alt="linkedin" />
-            <img src="image\instagram (1).png"
+            <img src="image/logo/instagram (1).png"
                 alt="Instagram" />
-            <img src="image\youtube (5).png"
+            <img src="image/logo/youtube (5).png"
                 alt="youtube" />
         </div>
             <div style=" float:right">

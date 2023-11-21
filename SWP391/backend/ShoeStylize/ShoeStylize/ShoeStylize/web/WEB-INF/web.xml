@@ -68,10 +68,6 @@
         <servlet-name>HomeDesController</servlet-name>
         <servlet-class>Controller.HomeDesController</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>AddOrderController</servlet-name>
-        <servlet-class>Controller.AddOrderController</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -139,10 +135,6 @@
     <servlet-mapping>
         <servlet-name>HomeDesController</servlet-name>
         <url-pattern>/HomeDesController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AddOrderController</servlet-name>
-        <url-pattern>/AddOrderController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

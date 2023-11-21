@@ -15,8 +15,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ManageBlog</title>
         <link rel="icon"
-              href="image\shoelogo.png">
-        <link rel="stylesheet" href="CSS\manageBlog.css">
+              href="image/logo/shoelogo.png">
+        <link href="Admin/ManageBlog.css" rel="stylesheet" type="text/css"/>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,11 +26,13 @@
     </head>
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="shoes"></img>
+            <a href="#"> <img src="image/logo/logo.png"
+                 alt="shoes"></a>
+            <button style="background: #FF0000; color: #fff;">Manage Blog</button>
         </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
+                <a href="#">Home</a>
                 <a href="manageUser.jsp">Account Management</a>
                 <a href="manageBlog.jsp">Blog Management</a>
                 <a href="login.jsp">Logout</a>
@@ -73,23 +75,23 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <input type="text" name="id" value="<%= dto.getPostID()%>" />
+                                    <input type="text" name="id" value="<%= dto.getPostID()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtTitle" value="<%= dto.getTitle()%>" />
+                                    <input type="text" name="txtTitle" value="<%= dto.getTitle()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtFullname" value="<%= dto.getAuthor()%>" />
+                                    <input type="text" name="txtFullname" value="<%= dto.getAuthor()%>"  readonly=""/>
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtContent" value="<%= dto.getContent()%>" />
+                                    <input type="text" name="txtContent" value="<%= dto.getContent()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="postDate" value="<%= dto.getDate()%>" />
+                                    <input type="text" name="postDate" value="<%= dto.getDate()%>" readonly="" />
                                 </td>
 
                                 <td>
@@ -107,7 +109,7 @@
                     <%
                     } else {
                     %>
-                    <h2>No blog available.</h2>
+                    <h2 style="margin-left: 50px; margin-top: 80px">No blog available.</h2>
                     <%
                         }
                     %>
@@ -115,16 +117,16 @@
             </div>
         </div>
         <div class="footer">
-            <div style="float:right">
-                <img src="image\facebook.png"
+            <div style="float:right; transform: translateX(-20px)">
+                <img src="image/logo/facebook.png"
                      alt="Facebook" />
-                <img src="image\twitter.png"
+                <img src="image/logo/twitter.png"
                      alt="twitter" />
-                <img src="image\linkedin.png"
+                <img src="image/logo/linkedin.png"
                      alt="linkedin" />
-                <img src="image\instagram (1).png"
+                <img src="image/logo/instagram (1).png"
                      alt="Instagram" />
-                <img src="image\youtube (5).png"
+                <img src="image/logo/youtube (5).png"
                      alt="youtube" />
             </div>
             <div style=" float:right">

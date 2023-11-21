@@ -24,12 +24,12 @@
             <a href="information0.jsp"><img
                     src="image\user (1).png"
                     alt="profile">Profile</a>
-            <a href="#"><img
+<!--            <a href="#"><img
                     src="image\heart.png"
                     alt="Orders">Orders</a>
             <a href="#"><img
                     src="image\shopping-cart.png"
-                    alt="shopping-cart">My cart</a>
+                    alt="shopping-cart">My cart</a>-->
             <a href="#"><img
                     src="image\blog (2).png"
                     alt="shopping-cart">News</a>

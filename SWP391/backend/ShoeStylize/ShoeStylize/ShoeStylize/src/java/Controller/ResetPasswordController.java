@@ -53,7 +53,7 @@ public class ResetPasswordController extends HttpServlet {
                 RegistrationDAO dao = new RegistrationDAO();
                 boolean result = dao.updatePassword(userID, password);
                 if (result) {
-                    url = "FPP.jsp";
+                    url = LOGINPAGE;
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
