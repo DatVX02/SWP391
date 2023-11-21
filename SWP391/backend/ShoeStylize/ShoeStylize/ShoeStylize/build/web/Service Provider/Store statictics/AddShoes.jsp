@@ -51,7 +51,7 @@
         </div>
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add New Shoes</h2>
-            <form action="*" method="post">
+            <form action="MainController" method="post">
                 <p>Shoes Name <input type="text" name="txtShoeName" style="margin-left: 70px;" /></p>
                 <p>Brand Name<input type="text" name="txtBrandName" /></p>
                 <p>Size: <input type="text" name="txtSize"
@@ -59,7 +59,7 @@
                 <p>Price: <input type="number" name="txtPrice" min="0" style="margin-left:122px;" /></p>
                 <p>Quantity: <input type="number" name="txtQuant" min="0" style="margin-left: 98px;"/></p>
                 <p>Description: <textarea type="text" name="txtDes" style="width: 70%; margin-left: 78px;"></textarea></p>
-                <input type="button" value="Post" class="button" style="float: right; margin-right: 40px;">
+                <input type="submit" name="btAction" value="Add Shoe" class="button" style="float: right; margin-right: 40px;">
             </form>
         </div>
     </div>

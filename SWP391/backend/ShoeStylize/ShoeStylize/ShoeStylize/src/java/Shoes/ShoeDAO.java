@@ -223,4 +223,27 @@ public class ShoeDAO implements Serializable {
             }
         }
     }
+    
+    public boolean addShoe() throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "INSERT INTO [dbo].[Shoes]([BrandID],[ShoesName],[Category],[Description],[Image],[Quantity],[Price])" +
+                " VALUES(?, ?, ?, ?, ?, ?, ?) ";
+                stm = con.prepareStatement(sql);
+                
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return false;
+    }
 }
