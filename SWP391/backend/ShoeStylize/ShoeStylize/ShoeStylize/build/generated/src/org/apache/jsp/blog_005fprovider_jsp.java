@@ -80,12 +80,12 @@ public final class blog_005fprovider_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                <a href=\"information0.jsp\"><img\r\n");
       out.write("                        src=\"image\\user (1).png\"\r\n");
       out.write("                        alt=\"profile\">Profile</a>\r\n");
-      out.write("                <a href=\"#\"><img\r\n");
+      out.write("<!--                <a href=\"#\"><img\r\n");
       out.write("                        src=\"image\\heart.png\"\r\n");
       out.write("                        alt=\"Orders\">Orders</a>\r\n");
       out.write("                <a href=\"../../../../Cart/MyCart.html\"><img\r\n");
       out.write("                        src=\"image\\shopping-cart.png\"\r\n");
-      out.write("                        alt=\"shopping-cart\">My cart</a>\r\n");
+      out.write("                        alt=\"shopping-cart\">My cart</a>-->\r\n");
       out.write("                <a href=\"#\"><img\r\n");
       out.write("                        src=\"image\\blog (2).png\"\r\n");
       out.write("                        alt=\"shopping-cart\">News</a>\r\n");

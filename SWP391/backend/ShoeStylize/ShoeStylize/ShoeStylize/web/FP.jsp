@@ -1,4 +1,4 @@
-<%@page import="Error.LoginInsertError"%>
+    <%@page import="Error.LoginInsertError"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
 
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
+            <img src="image/logo/logo.png"
                  alt="Shoes stylize">
         </div> 
 

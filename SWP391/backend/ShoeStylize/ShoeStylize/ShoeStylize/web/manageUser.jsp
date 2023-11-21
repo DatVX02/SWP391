@@ -15,8 +15,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>User Management</title>
         <link rel="icon"
-              href="image\shoelogo.png">
-        <link rel="stylesheet" href="CSS\manageUser.css">
+              href="image/logo/shoelogo.png">
+        <link href="Admin/ManageUser.css" rel="stylesheet" type="text/css"/>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,12 +26,13 @@
     </head>
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="shoes">
+            <a href="#"> <img src="image/logo/logo.png"
+                 alt="shoes"></a>
             <button style="background: #FF0000; color: #fff;">Manage Account</button>
         </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
+                <a href="">Home</a>
                 <a href="manageUser.jsp">Account Management</a>
                 <a href="manageBlog.jsp">Blog Management</a>
                 <a href="login.jsp">Logout</a>
@@ -76,41 +77,42 @@
                         <form action="MainController">
                             <tr>
                                 <td>
-                                    <input type="text" name="id" value="<%= dto.getUserID()%>" />
+                                    <input type="text" name="id" value="<%= dto.getUserID()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtEmail" value="<%= dto.getEmail()%>" />
+                                    <input type="text" name="txtEmail" value="<%= dto.getEmail()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="password" name="txtPassword" value="<%= dto.getPassword()%>" />
+                                    <input type="password" name="txtPassword" value="<%= dto.getPassword()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtFullname" value="<%= dto.getFullname()%>" />
+                                    <input type="text" name="txtFullname" value="<%= dto.getFullname()%>" readonly=""/>
                                 </td>
 
                                 <td>
-                                    <input type="text" name="txtPhone" value="<%= dto.getPhone()%>" />
+                                    <input type="text" name="txtPhone" value="<%= dto.getPhone()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="birthDate" value="<%= dto.getBirthDate()%>" />
+                                    <input type="text" name="birthDate" value="<%= dto.getBirthDate()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="text" name="roleID" value="<%= dto.getRoleID()%>" />
+                                    <input type="text" name="roleID" value="<%= dto.getRoleID()%>" readonly="" />
                                 </td>
 
                                 <td>
-                                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(dto.getGender())) { %> checked <% } %>>Male<br>
-                                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(dto.getGender())) { %> checked <% } %>>Female<br>
-                                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(dto.getGender())) { %> checked <% }%>>Other<br>
+                                    <input type="radio" class="from1" id="male" name="gen" value="Male" <% if ("Male".equals(dto.getGender())) { %> checked <% } %> readonly="">Male<br>
+                                    <input type="radio" class="from1" id="female" name="gen" value="Female" <% if ("Female".equals(dto.getGender())) { %> checked <% } %> readonly="">Female<br>
+                                    <input type="radio" class="from1" id="other" name="gen" value="Other" <% if ("Other".equals(dto.getGender())) { %> checked <% }%> readonly="">Other<br>
                                 </td>
 
                                 <td>
                                     <input type="submit" value="Delete" name="btAction" />
+                                    <input type="button" value="Update" name=""/>
                                 </td>
 
                             </tr>
@@ -132,17 +134,19 @@
                 </div>
             </div>
         </div>
+
+
         <div class="footer">
-            <div style="float:right">
-                <img src="image\facebook.png"
+            <div style="float:right; transform: translateX(-20px)">
+                <img src="image/logo/facebook.png"
                      alt="Facebook" />
-                <img src="image\twitter.png"
+                <img src="image/logo/twitter.png"
                      alt="twitter" />
-                <img src="image\linkedin.png"
+                <img src="image/logo/linkedin.png"
                      alt="linkedin" />
-                <img src="image\instagram (1).png"
+                <img src="image/logo/instagram (1).png"
                      alt="Instagram" />
-                <img src="image\youtube (5).png"
+                <img src="image/logo/youtube (5).png"
                      alt="youtube" />
             </div>
             <div style=" float:right">

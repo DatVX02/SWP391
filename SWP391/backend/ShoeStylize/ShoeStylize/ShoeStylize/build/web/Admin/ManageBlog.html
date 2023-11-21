@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManageBlog</title>
+    <link rel="icon"
+        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+    <link rel="stylesheet" href="../Admin/ManageBlog.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <img src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+            alt="shoes">
+        <button style="background: #FF0000; color: #fff;">Manage Blog</button>
+    </div>
+    <div class="manage">
+        <div style="width: 20%; float:left" class="managefunction">
+            <a href="ManagerUser.html">Account Management</a>
+            <a href="ManageBlog.html">Blog Management</a>
+            <a href="../Login/Login.html">Logout</a>
+        </div>
+        <div style="width: 79%; float:right" class="bloglist">
+            <div style="float: right;">
+                <form action="*" method="post">
+                    <span>
+                        <input type="search" placeholder="search blog" style="text-align: center;">
+                        <input type="button" value="Search Blog">
+                    </span>
+                    <a href="AddBlog.html"><input type="button" value="Add Blog" class="button"></a>
+                </form>
+            </div>
+            <div style="clear: both;">
+                <table>
+                    <tr class="tablehead">
+                        <td>PostID</td>
+                        <td>Title</td>
+                        <td>Author</td>
+                        <td>Content</td>
+                        <td>PostDay</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -26,7 +26,7 @@
 
     <body>
         <div class="header">
-            <img src="image\shoelogo.png"
+            <img src="image/logo/logo.png"
                  alt="Shoes stylize">
         </div>
         <div class="form">

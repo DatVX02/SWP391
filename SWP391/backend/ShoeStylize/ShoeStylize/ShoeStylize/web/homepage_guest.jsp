@@ -16,8 +16,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shoes Page</title>
-        <link rel="icon" href="image\shoelogo.png">
-        <link href="CSS/homepage_guest.css" rel="stylesheet" type="text/css"/>
+        <link href="HomePage/HomePage(no login)/HomePage.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="image\shoelogo.png"> 
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,18 +28,19 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     </head>
-
+    <style>
+       
+    </style>
     <body>
         <!-- header -->
         <div class="header">
-            <img src="image\shoelogo.png"
-                 alt="shoes">
+            <img src="image/logo/logo.png" alt="logo-shoes"/>
             <div class="header_info" style="color: white;">
                 <a href="login.jsp"><img
-                        src="image\login.png"
+                        src="image/logo/login.png"
                         alt="Login">Login</a>
                 <a href="Blog.jsp"><img
-                        src="image\blog (2).png "
+                        src="image/logo/blog (2).png "
                         alt="shopping-cart">News</a>
             </div>
         </div>
@@ -63,7 +64,7 @@
                                 <div class="card border-0 b-3">
                                     <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample1"
                                          aria-expanded="false">
-                                        <p class="m-0 h6">Brand</p>
+                                        <p class="m-0 h6"><b>Brand</b></p>
                                     </div>
                                     <div class="card-body p-0 collapse show" id="collapseExample1">
                                         <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
@@ -81,7 +82,7 @@
                                 <div class="card border-0 b-3">
                                     <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample4"
                                          aria-expanded="false">
-                                        <p class="m-0 h6">Price</p>
+                                        <p class="m-0 h6"><b>Price</b></p>
                                     </div>
                                     <div class="card-body p collapse show" id="collapseExample4">
                                         <div class="form-row">
@@ -97,9 +98,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="card-header p-2 bg-white" data-toggle="collapse"
-                                             data-target="#collapseExample1" aria-expanded="false">
-                                            <p class="m-0 h6">Rating</p>
+                                        <div class="card-header p-2 bg-white" data-toggle="collapse" data-target="#collapseExample4"
+                                             aria-expanded="false">
+                                            <p class="m-0 h6"><b>Rating</b></p>
                                         </div>
 
                                         <ul class="list-group list-group-flush" style="height:200px;overflow:auto;">
@@ -168,6 +169,7 @@
                                                     </label>
                                                 </div>
                                             </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -257,6 +259,55 @@
                     <div class="row"></div>
                     <div class="row"></div>
 
-                    </body>
+                </div>
+            </div>
 
-                    </html>
+            <div class="footer">
+                <div style="float:right; transform: translateX(-20px)" >
+                    <img src="image/logo/facebook.png"
+                         alt="Facebook" />
+                    <img src="image/logo/twitter.png"
+                         alt="twitter" />
+                    <img src="image/logo/linkedin.png"
+                         alt="linkedin" />
+                    <img src="image/logo/instagram (1).png"
+                         alt="Instagram" />
+                    <img src="image/logo/youtube (5).png"
+                         alt="youtube" />
+                </div>
+                <div style=" float:right">
+                    <table class="center">
+                        <tr class="tableHeader">
+                            <td>About Us</td>
+                            <td>For Users</td>
+                            <td>Information</td>
+                        </tr>
+                        <tr>
+                            <td>About Us</td>
+                            <td>Login</td>
+                            <td>Help Center</td>
+                        </tr>
+                        <tr>
+                            <td>Find Store</td>
+                            <td>Register</td>
+                            <td>Money Refund</td>
+                        </tr>
+                        <tr>
+                            <td>Categories</td>
+                            <td>Settings</td>
+                            <td>Shipping</td>
+                        </tr>
+                        <tr>
+                            <td>Blogs</td>
+                            <td>My Orders</td>
+                            <td>Contact us</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="clear: both" class="commerce">
+                    @2023 Ecommerce
+                </div>
+            </div>
+    </body>
+
+</html>
