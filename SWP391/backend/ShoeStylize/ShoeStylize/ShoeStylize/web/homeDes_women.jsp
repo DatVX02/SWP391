@@ -156,7 +156,7 @@
         </form>
         <!-- Footer -->
         <div class="footer">
-            div style="float:right">
+            <div style="float:right">
             <img src="image\facebook.png"
                  alt="Facebook" />
             <img src="image\twitter.png"
