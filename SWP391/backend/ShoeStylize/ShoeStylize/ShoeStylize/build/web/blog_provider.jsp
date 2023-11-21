@@ -16,8 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog statictics</title>
         <link rel="icon"
-              href="image\shoelogo.png">
-        <link rel="stylesheet" href="CSS\blog_provider.css">
+              href="image/logo/shoelogo.png">
+        <link href="Service Provider/Blog statictics/Blog.css" rel="stylesheet" type="text/css"/>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -32,20 +32,20 @@
     <body>
         <!-- header -->
         <div class="header">
-            <img src="image\shoelogo.png"
+            <img src="image/logo/logo.png"
                  alt="shoes">
             <div class="header_info">
                 <a href="information0.jsp"><img
-                        src="image\user (1).png"
+                        src="image/logo/user (1).png"
                         alt="profile">Profile</a>
-                <a href="#"><img
-                        src="image\heart.png"
+<!--                <a href="#"><img
+                        src="image/logo/heart.png"
                         alt="Orders">Orders</a>
                 <a href="../../../../Cart/MyCart.html"><img
-                        src="image\shopping-cart.png"
-                        alt="shopping-cart">My cart</a>
+                        src="image/logo/shopping-cart.png"
+                        alt="shopping-cart">My cart</a>-->
                 <a href="#"><img
-                        src="image\blog (2).png"
+                        src="image/logo/blog (2).png"
                         alt="shopping-cart">News</a>
             </div>
         </div>

@@ -29,33 +29,36 @@
 <body>
     <!-- header -->
     <div class="header">
-        <img src="image\shoelogo.png"
-            alt="shoes">
+        <a href="homepage.jsp"><img src="image/logo/logo.png"
+            alt="shoes"></a>
         <div class="header_info">
-            <a href="infomation0.jsp"><img
-                    src="image\user (1).png"
+            <a href="information0.jsp"><img
+                    src="image/logo/user (1).png"
                     alt="profile">Profile</a>
             <a href="orderDetail.jsp"><img
-                    src="image\heart.png"
+                    src="image/logo/heart.png"
                     alt="Orders">Orders</a>
-            <a href="myCart.html"><img
-                    src="image\shopping-cart.png"
+            <a href="myCart.jsp"><img
+                    src="image/logo/shopping-cart.png"
                     alt="shopping-cart">My cart</a>
             <a href="#"><img
-                    src="image\blog (2).png"
+                    src="image/logo/blog (2).png"
                     alt="shopping-cart">News</a>
+<!--            <a href="homepage_guest.jsp"><img
+                    src="image/logo/power (1).png"
+                    alt="shopping-cart">Logout</a>-->
         </div>
     </div>
     <!-- Cart -->
     <div>
-        <h1 style="margin-left: 150px; margin-top: 20px; margin-bottom: 20px;">Your Cart</h1>
+        <h1 style="margin-left: 150px; margin-top: 20px; margin-bottom: 20px;">My Cart</h1>
         <form action="*" method="post">
             <div class="product">
                 <div class="column left">
                     <img src="*" alt="Product">
                 </div>
                 <div class="column middle">
-                    <h2>Name product</h2>
+                    <h2><%= session.getAttribute("ShoeName")%></h2>
                     <p>Price:&nbsp&nbsp&nbsp<!-- Price --></p>
                     <p>Quantity:&nbsp&nbsp <input type="number" value="*" min="0" max="9999999999"></p>
                 </div>
@@ -76,16 +79,16 @@
 
     <!-- footer -->
     <div class="footer">
-        <div style="float:right">
-            <img src="image\facebook.png"
+        <div style="float:right; transform: translateX(-20px)">
+            <img src="image/logo/facebook.png"
                 alt="Facebook" />
-            <img src="image\twitter.png"
+            <img src="image/logo/twitter.png"
                 alt="twitter" />
-            <img src="image\linkedin.png"
+            <img src="image/logo/linkedin.png"
                 alt="linkedin" />
-            <img src="image\instagram (1).png"
+            <img src="image/logo/instagram (1).png"
                 alt="Instagram" />
-            <img src="image\youtube (5).png"
+            <img src="image/logo/youtube (5).png"
                 alt="youtube" />
         </div>
         <div style=" float:right">

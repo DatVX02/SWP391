@@ -52,15 +52,15 @@
     </div>
     <div class="footer">
         <div style="float:right">
-            <img src="image\facebook.png"
+            <img src="image/logo/facebook.png"
                 alt="Facebook" />
-            <img src="image\twitter.png"
+            <img src="image/logo/twitter.png"
                 alt="twitter" />
-            <img src="image\linkedin.png"
+            <img src="image/logo/linkedin.png"
                 alt="linkedin" />
-            <img src="image\instagram (1).png"
+            <img src="image/logo/instagram (1).png"
                 alt="Instagram" />
-            <img src="image\youtube (5).png"
+            <img src="image/logo/youtube (5).png"
                 alt="youtube" />
         </div>
         <div style=" float:right">

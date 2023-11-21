@@ -38,12 +38,12 @@
                 <a href="information0.jsp"><img
                         src="image/logo/user (1).png"
                         alt="profile">Profile</a>
-<!--                <a href="#"><img
-                        src="image/logo/heart.png"
-                        alt="Orders">Orders</a>
-                <a href="../../../../Cart/MyCart.html"><img
-                        src="image/logo/shopping-cart.png"
-                        alt="shopping-cart">My cart</a>-->
+                <!--                <a href="#"><img
+                                        src="image/logo/heart.png"
+                                        alt="Orders">Orders</a>
+                                <a href="../../../../Cart/MyCart.html"><img
+                                        src="image/logo/shopping-cart.png"
+                                        alt="shopping-cart">My cart</a>-->
                 <a href="#"><img
                         src="image/logo/blog (2).png"
                         alt="shopping-cart">News</a>
@@ -60,7 +60,12 @@
                 <a href="login.jsp">Logout</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
-                <div style="clear: both;" class="">
+                <div style="clear: both;" >
+                    <div style="float: right;" >
+                        <form action="*" method="post">
+                            <a href="Service Provider/Store statictics/AddShoes.jsp"><input type="button" value="Insert New Shoes" class="button"></a>
+                        </form>
+                    </div>
                     <table>
                         <thead>
                             <tr class="tablehead">

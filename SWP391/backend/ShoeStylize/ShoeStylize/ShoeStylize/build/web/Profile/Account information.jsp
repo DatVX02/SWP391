@@ -108,7 +108,7 @@
 
                 </div>
             </form>
-            <a href="../Profile/Update information.html"><button
+            <a href="../Profile/Update information.jsp"><button
                     style="border-radius: 20px; background-color: #EBAA5D; margin-top: 10px;">Update</button></a>
 
         </div>

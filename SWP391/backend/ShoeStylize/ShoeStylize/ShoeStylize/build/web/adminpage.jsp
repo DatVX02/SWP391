@@ -24,7 +24,7 @@
 
 <body>
     <div class="header">
-        <a href="homepage.jsp"><img src="image\shoelogo.png"
+        <a href="homepage.jsp"><img src="image/logo/logo.png"
             alt="shoes"></a>
     </div>
 
