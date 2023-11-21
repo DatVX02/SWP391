@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store Manage</title>
     <link rel="icon"
-        href="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png">
+        href="image\shoelogo.png">
     <link rel="stylesheet" href="../Store statictics/AddShoes.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,11 +23,11 @@
     <!-- header -->
     <div class="header">
         <a href="../../HomePage/Homepage (login)/HomePage.html"><img
-                src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shoe-logo-design-concept-shoes-logo-template-man-fashion-logo-design-template_9850-9282.png"
+                src="image\shoelogo.png"
                 alt="shoes"></a>
         <div class="header_info">
             <a href="../../Profile/Account information.html"><img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\user (1).png"
+                    src="image\user (1).png"
                     alt="profile">Profile</a>
             <!-- <a href="#"><img
                     src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\heart.png"
@@ -36,7 +36,7 @@
                     src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shopping-cart.png"
                     alt="shopping-cart">My cart</a> -->
             <a href="#"><img
-                    src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\blog (2).png"
+                    src="image\blog (2).png"
                     alt="shopping-cart">News</a>
         </div>
     </div>
@@ -52,13 +52,13 @@
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add New Shoes</h2>
             <form action="*" method="post">
-                <p>Shoes Name <input type="text" name="txtTieude" style="margin-left: 70px;" /></p>
-                <p>Brand Name<input type="text" name="txtAccount" readonly /></p>
-                <p>Size: <input type="text" name="txtTen"
+                <p>Shoes Name <input type="text" name="txtShoeName" style="margin-left: 70px;" /></p>
+                <p>Brand Name<input type="text" name="txtBrandName" /></p>
+                <p>Size: <input type="text" name="txtSize"
                         style="width: 50%; margin-left: 127px; padding-right: 120px ;">
                 <p>Price: <input type="number" name="txtPrice" min="0" style="margin-left:122px;" /></p>
                 <p>Quantity: <input type="number" name="txtQuant" min="0" style="margin-left: 98px;"/></p>
-                <p>Description: <textarea type="text" name="txtPrice" style="width: 70%; margin-left: 78px;"></textarea></p>
+                <p>Description: <textarea type="text" name="txtDes" style="width: 70%; margin-left: 78px;"></textarea></p>
                 <input type="button" value="Post" class="button" style="float: right; margin-right: 40px;">
             </form>
         </div>
