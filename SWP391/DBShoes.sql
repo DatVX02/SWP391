@@ -257,3 +257,62 @@ GO
 ALTER TABLE [dbo].[CustomizeShoes]  WITH CHECK ADD FOREIGN KEY([ServiceID])
 REFERENCES [dbo].[Service] ([ServiceID])
 GO
+
+INSERT INTO [dbo].[Brand]
+           ([BrandName])
+     VALUES
+           ('Nike'), ('Adidas'),('Air Force'),('Nizza'),('Circut')
+GO
+
+INSERT INTO [dbo].[Shoes]
+           ([BrandID]
+           ,[ShoesName]
+           ,[Category]
+           ,[Description]
+           ,[Image]
+           ,[Quantity]
+           ,[Price])
+     VALUES
+           (3,'Air Force 1 Shoes','Party','From the hardwood to the streets to the World Wide Web. These classic sneakers get an Internet-inspired refresh with holographic accents. Jewel-like hardware and a special JDI dubrae add the finishing touch.','https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e777c881-5b62-4250-92a6-362967f54cca/air-force-1-07-shoe-NMmm1B.png',21,3000000),
+		   (4, 'GIÀY PLATFORM NIZZA', 'Party', 'What do skinny jeans and flared skirts have in common? Both pair excellently with a pair of trendy platform shoes like these adidas Nizza shoes. Wear your shoes out and elevate every outfit. Even if you are just walking around.', 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e05ab433db5a48b4abe7abeb000f0a90_9366/Giay_Platform_Nizza_trang_FV5322_01_standard.jpg', 31, 14000000),
+		   (5, 'GIÀY PLATFORM NIZZA', 'Party', 'What do skinny jeans and flared skirts have in common? Both pair excellently with a pair of trendy platform shoes like these adidas Nizza shoes. Wear your shoes out and elevate every outfit. Even if you are just walking around.', 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e05ab433db5a48b4abe7abeb000f0a90_9366/Giay_Platform_Nizza_trang_FV5322_01_standard.jpg', 31, 14000000)
+GO
+INSERT INTO [dbo].[SizeList]
+           ([ShoeID]
+		   ,[Size])
+     VALUES
+           (1,'36'),(1,'37'),(1,'38'),(1,'39'),(1,'40'),(1,'41'),(1,'42'),(1,'43')
+GO
+INSERT INTO [dbo].[Users]
+           ([Email]
+           ,[Password]
+           ,[FullName]
+           ,[PhoneNumber]
+           ,[Birthdate]
+           ,[RoleID]
+           ,[Gender])
+     VALUES
+           ('ha@gmail.com'
+           ,'dava3577'
+           ,'Vu Duc Anh'
+           ,'0123456789'
+           ,'2003-1-1'
+           ,'ADMIN'
+           ,'Male'),
+
+		   ('he@gmail.com'
+           ,'dava3577'
+           ,'Vu Duc Anh'
+           ,'0123456789'
+           ,'2003-1-1'
+           ,'PROVIDER'
+           ,'Male'),
+
+		   ('ok@gmail.com'
+           ,'dava3577'
+           ,'Vu Duc Anh'
+           ,'0123456789'
+           ,'2003-1-1'
+           ,'CUSTOMER'
+           ,'Male')
+GO
