@@ -775,7 +775,7 @@
                                 Object total = session.getAttribute("");
                             %>
                             <h3>
-                                <!-- Tên giày --><input type="text" name="ShoeName" value="">
+                                <!-- Tên giày --><input type="text" name="ShoeName" value="<%= request.getParameter("name") %>">
                             </h3>
                             <!-- <a href='../SizeChart/SizeChart.html' target="_blank"><img
                                     style="max-width: 20px; margin-top: -70px; margin-left: 380px;"
@@ -818,6 +818,7 @@
                             <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">
                                 Total amount: <%= total%>
                             </h3>
+                            <input type="hidden" name="img" value="<%= request.getParameter("image")%>" >
                             <input type="hidden" name="total" value="<%= total%>" >
                         </div>
                     </div>

@@ -224,10 +224,13 @@
                                         </div>
                                         <div class="card-footer p-0" style="text-align: center;">
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-light">
-                                                    <!--<i class="fas fa-cart-plus"></i>-->
-                                                    <a href="homeDes_men.jsp" style="color: black; text-align: none">Custom Now</a>
+                                                <form action="homeDes_men.jsp" >
+                                                <input type="hidden" name="image" value="<%= shoe.getImage()%>" >
+                                                <input type="hidden" name="name" value="<%= shoe.getShoesName()%>" >
+                                                <button type="submit" class="btn btn-light" style="color: black; text-align: none">
+                                                    <!--<i class="fas fa-cart-plus"></i>-->Custom Now
                                                 </button>
+                                                </form>
 
                                             </div>
                                         </div>
