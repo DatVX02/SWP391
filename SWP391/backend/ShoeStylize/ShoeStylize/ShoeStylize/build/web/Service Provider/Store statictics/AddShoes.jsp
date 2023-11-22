@@ -55,10 +55,10 @@
                     <p>Shoes Name <input type="text" name="txtShoeName" style="margin-left: 70px;" /></p>
                     <p>Brand Name<input type="text" name="txtBrandName" /></p>
                     <p>Category: 
-                        <input type="radio" name="" value="Sport"> Sport
-                        <input type="radio" name="" value="Party"> Party
+                        <input type="radio" name="cate" value="Sport"> Sport
+                        <input type="radio" name="cate" value="Party"> Party
                     </p>
-                    <p>Image: <input type="url" name="txtSize"
+                    <p>Image: <input type="url" name="txtURL"
                                      style="width: 50%; margin-left: 127px; padding-right: 120px ;">
 
                     <p>Price: <input type="number" name="txtPrice" min="0" style="margin-left:122px;" /></p>

@@ -224,7 +224,7 @@ public class ShoeDAO implements Serializable {
         }
     }
     
-    public boolean addShoe() throws SQLException {
+    public boolean addShoe(int brandID, String shoeName, String category, String description, String image, int quantity, int price) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         
@@ -234,7 +234,17 @@ public class ShoeDAO implements Serializable {
                 String sql = "INSERT INTO [dbo].[Shoes]([BrandID],[ShoesName],[Category],[Description],[Image],[Quantity],[Price])" +
                 " VALUES(?, ?, ?, ?, ?, ?, ?) ";
                 stm = con.prepareStatement(sql);
-                
+                stm.setInt(1, brandID);
+                stm.setString(2, shoeName);
+                stm.setString(3, category);
+                stm.setString(4, description);
+                stm.setString(5, image);
+                stm.setInt(6, quantity);
+                stm.setInt(7, price);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
             }
         } finally {
             if (stm != null) {

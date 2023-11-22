@@ -5,6 +5,9 @@
  */
 package Controller;
 
+import Brand.brandDAO;
+import Registration.RegistrationDAO;
+import Shoes.ShoeDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -33,17 +36,32 @@ public class AddShoeController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-//        String url = 
-//        try {
-//            String shoeName = request.getParameter("txtShoeName");
-//            String brandName = request.getParameter("txtBrandName");
-//            String category = request.getParameter("userID");
-//            String postDate = request.getParameter("txtDate");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            response.sendRedirect(url);
-//        }
+        String url = ADDSHOEPAGE;
+        try {
+            String shoeName = request.getParameter("txtShoeName");
+            String brandName = request.getParameter("txtBrandName");
+            String category = request.getParameter("cate");
+            String image = request.getParameter("txtURL");
+            int price = Integer.valueOf("txtPrice");
+            int quantity = Integer.valueOf("txtQuantity");
+            String description = request.getParameter("txtDes");
+            
+            brandDAO dao = new brandDAO();
+            
+            int brandID = dao.getBrandID(brandName);
+            
+            if (brandID != -1){
+                ShoeDAO dao1 = new ShoeDAO();
+                boolean result = dao1.addShoe(brandID, shoeName, category, description, image, quantity, price);
+                if (result) {
+                    url = STOREPAGE;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            response.sendRedirect(url);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
