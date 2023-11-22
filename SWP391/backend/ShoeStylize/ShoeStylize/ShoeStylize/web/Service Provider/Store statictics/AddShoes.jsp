@@ -51,7 +51,7 @@
         </div>
         <div style="width: 79%; float:right" class="addBLog">
             <h2>Add New Shoes</h2>
-            <form action="MainController" method="post">
+            <form action="../../MainController" method="post">
                 <p>Shoes Name <input type="text" name="txtShoeName" style="margin-left: 70px;" /></p>
                 <p>Brand Name<input type="text" name="txtBrandName" /></p>
                 <p>Size: <input type="text" name="txtSize"
