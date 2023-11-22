@@ -94,15 +94,15 @@ public final class AddShoes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("        <div style=\"width: 79%; float:right\" class=\"addBLog\">\r\n");
       out.write("            <h2>Add New Shoes</h2>\r\n");
-      out.write("            <form action=\"*\" method=\"post\">\r\n");
+      out.write("            <form action=\"../../MainController\" method=\"post\">\r\n");
       out.write("                <p>Shoes Name <input type=\"text\" name=\"txtShoeName\" style=\"margin-left: 70px;\" /></p>\r\n");
       out.write("                <p>Brand Name<input type=\"text\" name=\"txtBrandName\" /></p>\r\n");
-      out.write("                <p>Size: <input type=\"text\" name=\"txtSize\"\r\n");
+      out.write("                <p>Image: <input type=\"text\" name=\"txtSize\"\r\n");
       out.write("                        style=\"width: 50%; margin-left: 127px; padding-right: 120px ;\">\r\n");
       out.write("                <p>Price: <input type=\"number\" name=\"txtPrice\" min=\"0\" style=\"margin-left:122px;\" /></p>\r\n");
       out.write("                <p>Quantity: <input type=\"number\" name=\"txtQuant\" min=\"0\" style=\"margin-left: 98px;\"/></p>\r\n");
       out.write("                <p>Description: <textarea type=\"text\" name=\"txtDes\" style=\"width: 70%; margin-left: 78px;\"></textarea></p>\r\n");
-      out.write("                <input type=\"button\" value=\"Add Shoe\" class=\"button\" style=\"float: right; margin-right: 40px;\">\r\n");
+      out.write("                <input type=\"submit\" name=\"btAction\" value=\"Add Shoe\" class=\"button\" style=\"float: right; margin-right: 40px;\">\r\n");
       out.write("            </form>\r\n");
       out.write("        </div>\r\n");
       out.write("    </div>\r\n");

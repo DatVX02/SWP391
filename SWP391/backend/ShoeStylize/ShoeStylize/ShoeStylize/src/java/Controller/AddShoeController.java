@@ -7,6 +7,7 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AddShoeController extends HttpServlet {
 
+    private final String STOREPAGE = "store.jsp";
+    private final String ADDSHOEPAGE = "Service Provider/Store statictics/AddShoes.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -30,18 +33,17 @@ public class AddShoeController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AddShoeController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AddShoeController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+//        String url = 
+//        try {
+//            String shoeName = request.getParameter("txtShoeName");
+//            String brandName = request.getParameter("txtBrandName");
+//            String category = request.getParameter("userID");
+//            String postDate = request.getParameter("txtDate");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        } finally {
+//            response.sendRedirect(url);
+//        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
