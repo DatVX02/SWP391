@@ -42,8 +42,8 @@ public class AddShoeController extends HttpServlet {
             String brandName = request.getParameter("txtBrandName");
             String category = request.getParameter("cate");
             String image = request.getParameter("txtURL");
-            int price = Integer.valueOf("txtPrice");
-            int quantity = Integer.valueOf("txtQuantity");
+            int price = Integer.valueOf(request.getParameter("txtPrice"));
+            int quantity = Integer.valueOf(request.getParameter("txtQuant"));
             String description = request.getParameter("txtDes");
             
             brandDAO dao = new brandDAO();

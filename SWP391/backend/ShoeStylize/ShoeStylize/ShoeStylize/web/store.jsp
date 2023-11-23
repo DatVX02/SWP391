@@ -72,7 +72,7 @@
                                 <td>ShoeID </td>
                                 <td>Shoe Name</td>
                                 <td>Brand Name</td>
-                                <td>Size</td>
+                                <td>Category</td>
                                 <td>Price</td>
                                 <td>Quantity</td>
                                 <td>Description</td>
@@ -100,7 +100,7 @@
                                 </td>
 
                                 <td>
-                                    <%= dto.getSize()%>
+                                    <%= dto.getCategory()%>
                                 </td>
 
                                 <td>
