@@ -72,6 +72,7 @@
                                 <td>ShoeID </td>
                                 <td>Shoe Name</td>
                                 <td>Brand Name</td>
+                                <td>Image</td>
                                 <td>Category</td>
                                 <td>Price</td>
                                 <td>Quantity</td>
@@ -100,9 +101,13 @@
                                 </td>
 
                                 <td>
-                                    <%= dto.getCategory()%>
+                                    <%= dto.getImage()%>
                                 </td>
 
+                                <td>
+                                    <%= dto.getCategory()%>
+                                </td>
+                                
                                 <td>
                                     <%= dto.getPrice()%>
                                 </td>
