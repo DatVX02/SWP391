@@ -39,9 +39,10 @@ public class ShoeDAO implements Serializable {
                     String ShoesName = rs.getString("ShoesName");
                     String Description = rs.getString("Description");
                     String Image = rs.getString("Image");
+                    String Category = rs.getString("Category");
                     int Quantity = rs.getInt("Quantity");
                     double Price = rs.getDouble("Price");
-                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Image, Description, Image, Quantity, Price);
+                    ShoeDTO shoes = new ShoeDTO(ShoeID, Brand, ShoesName, Category, Description, Image, Quantity, Price);
                     list.add(shoes);
                 }
             }

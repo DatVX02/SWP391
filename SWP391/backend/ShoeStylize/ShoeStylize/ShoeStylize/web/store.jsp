@@ -66,66 +66,66 @@
                             <a href="Service Provider/Store statictics/AddShoes.jsp"><input type="button" value="Insert New Shoes" class="button"></a>
                         </form>
                     </div>
-                    <table>
-                        <thead>
-                            <tr class="tablehead">
-                                <td>ShoeID </td>
-                                <td>Shoe Name</td>
-                                <td>Brand Name</td>
-                                <td>Image</td>
-                                <td>Category</td>
-                                <td>Price</td>
-                                <td>Quantity</td>
-                                <td>Description</td>
-                                <td>Status</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <%
-                                ShoeDAO dao = new ShoeDAO();
-                                List<ShoeDTO> result = dao.AlllistShoe();
-                                for (ShoeDTO dto : result) {
-                            %>
-                        <form action="MainController">
-                            <tr>
-                                <td>
-                                    <%= dto.getShoeID()%>
-                                </td>
+                    <form action="MainController">
+                        <table>
+                            <thead>
+                                <tr class="tablehead">
+                                    <td>ShoeID </td>
+                                    <td>Shoe Name</td>
+                                    <td>Brand Name</td>
+                                    <td>Image</td>
+                                    <td>Category</td>
+                                    <td>Price</td>
+                                    <td>Quantity</td>
+                                    <td>Description</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+                                    ShoeDAO dao = new ShoeDAO();
+                                    List<ShoeDTO> result = dao.AlllistShoe();
+                                    for (ShoeDTO dto : result) {
+                                %>
+                                <tr>
+                                    <td>
+                                        <%= dto.getShoeID()%>
+                                    </td>
 
-                                <td>
-                                    <%= dto.getShoesName()%>
-                                </td>
+                                    <td>
+                                        <%= dto.getShoesName()%>
+                                    </td>
 
-                                <td>
-                                    <%= dto.getBrand()%>
-                                </td>
+                                    <td>
+                                        <%= dto.getBrand()%>
+                                    </td>
 
-                                <td>
-                                    <%= dto.getImage()%>
-                                </td>
+                                    <td>
+                                        <img src="<%= dto.getImage()%>" >
+                                    </td>
 
-                                <td>
-                                    <%= dto.getCategory()%>
-                                </td>
-                                
-                                <td>
-                                    <%= dto.getPrice()%>
-                                </td>
+                                    <td>
+                                        <%= dto.getCategory()%>
+                                    </td>
 
-                                <td>
-                                    <%= dto.getQuantity()%>
-                                </td>
+                                    <td>
+                                        <%= dto.getPrice()%>
+                                    </td>
 
-                                <td>
-                                    <%= dto.getDescription()%>
-                                </td>
-                            </tr>
-                        </form>
-                        <%
-                            }
-                        %>
-                        </tbody>
-                    </table>
+                                    <td>
+                                        <%= dto.getQuantity()%>
+                                    </td>
+
+                                    <td>
+                                        <%= dto.getDescription()%>
+                                    </td>
+                                </tr>
+                                <%
+                                    }
+                                %>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>
