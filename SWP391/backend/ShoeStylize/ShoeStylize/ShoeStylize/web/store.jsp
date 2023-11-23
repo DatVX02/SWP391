@@ -122,7 +122,7 @@
 
                                     <td>
                                         <input type="button" name="" id="" value="Delete" style="margin-bottom: 15px">
-                                        <a href="" style="">
+                                        <a href="Update/Update shoes/Update.jsp" style="">
                                             <input type="button" name="" id="" value="Update">
                                         </a>
                                     </td>

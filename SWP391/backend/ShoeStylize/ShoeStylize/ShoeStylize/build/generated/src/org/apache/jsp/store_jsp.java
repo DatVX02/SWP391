@@ -75,7 +75,7 @@ public final class store_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- header -->\r\n");
       out.write("        <div class=\"header\">\r\n");
       out.write("            <a href=\"Profile-provi-admin/Provider/homepage1.jsp\"><img src=\"image/logo/logo.png\"\r\n");
-      out.write("                    alt=\"shoes\"></a>\r\n");
+      out.write("                                                                      alt=\"shoes\"></a>\r\n");
       out.write("            <div class=\"header_info\">\r\n");
       out.write("                <a href=\"Profile-provi-admin/Provider/information0_1.jsp\"><img\r\n");
       out.write("                        src=\"image/logo/user (1).png\"\r\n");
@@ -179,10 +179,12 @@ public final class store_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print( dto.getDescription());
       out.write("\r\n");
       out.write("                                    </td>\r\n");
-      out.write("                                    \r\n");
+      out.write("\r\n");
       out.write("                                    <td>\r\n");
       out.write("                                        <input type=\"button\" name=\"\" id=\"\" value=\"Delete\" style=\"margin-bottom: 15px\">\r\n");
-      out.write("                                        <a href=\"\"><input type=\"button\" name=\"\" id=\"\" value=\"Update\"></a>\r\n");
+      out.write("                                        <a href=\"Update/Update shoes/Update.jsp\" style=\"\">\r\n");
+      out.write("                                            <input type=\"button\" name=\"\" id=\"\" value=\"Update\">\r\n");
+      out.write("                                        </a>\r\n");
       out.write("                                    </td>\r\n");
       out.write("                                </tr>\r\n");
       out.write("                                ");
