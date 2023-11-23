@@ -32,11 +32,11 @@
 
     <body>
         <div class="header">
-            <a href="homepage.jsp"><img src="image/logo/logo.png"
+            <a href="homepage1.jsp"><img src="../../image/logo/logo.png"
                                         alt="shoes"></img></a>
             <div class="header_info">
-                <a href="#"><img
-                        src="image/logo/user (1).png"
+                <a href="homepage1.jsp"><img
+                        src="../../image/logo/user (1).png"
                         alt="profile">Profile</a>
 <!--                <a href="orderDetail.jsp"><img
                         src="image/logo/heart.png"
@@ -45,7 +45,7 @@
                         src="image/logo/shopping-cart.png"
                         alt="shopping-cart">My cart</a>-->
                 <a href="blog.jsp"><img
-                        src="image/logo/blog (2).png "
+                        src="../../image/logo/blog (2).png "
                         alt="shopping-cart">News</a>
 <!--                <a href="homepage_guest.jsp"><img
                         src="image/logo/power (1).png "
@@ -56,13 +56,13 @@
         <div class="information_left">
             <div>
                 <ul class="information_left_1">
-                    <img src="image/logo/user.png" style="width: 15px; transform: translateY(02px);">
+                    <img src="../../image/logo/user.png" style="width: 15px; transform: translateY(02px);">
                     <a href="#">Account information </a>
                 </ul>
 
                 <ul class="information_left_1">
-                    <img src="image/logo/padlock.png" style="width: 15px; transform: translateY(02px);">
-                    <a href="#">Change password</a>
+                    <img src="../../image/logo/padlock.png" style="width: 15px; transform: translateY(02px);">
+                    <a href="ChangePassword1.jsp">Change password</a>
                 </ul>
 
 <!--                <ul class="information_left_2">
@@ -85,7 +85,7 @@
                 </ul>-->
 
                 <ul class="information_left_5">
-                    <img src="image/logo/logout.png" style="width: 15px;" />
+                    <img src="../../image/logo/logout.png" style="width: 15px;" />
                     <a href="homepage_guest.jsp">Log out </a>
                 </ul>
             </div>
@@ -134,15 +134,15 @@
 
         <div class="footer">
             <div style="float:right; transform: translateX(-20px)" >
-                <img src="image/logo/facebook.png"
+                <img src="../../image/logo/facebook.png"
                      alt="Facebook" />
-                <img src="image/logo/twitter.png"
+                <img src="../../image/logo/twitter.png"
                      alt="twitter" />
-                <img src="image/logo/linkedin.png"
+                <img src="../../image/logo/linkedin.png"
                      alt="linkedin" />
-                <img src="image/logo/instagram (1).png"
+                <img src="../../image/logo/instagram (1).png"
                      alt="Instagram" />
-                <img src="image/logo/youtube (5).png"
+                <img src="../../image/logo/youtube (5).png"
                      alt="youtube" />
             </div>
             <div style=" float:right">

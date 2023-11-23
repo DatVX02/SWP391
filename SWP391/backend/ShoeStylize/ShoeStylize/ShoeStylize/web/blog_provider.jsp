@@ -32,10 +32,10 @@
     <body>
         <!-- header -->
         <div class="header">
-            <img src="image/logo/logo.png"
-                 alt="shoes">
+            <a href="Profile-provi-admin/Provider/homepage1.jsp"><img src="image/logo/logo.png"
+                    alt="shoes"></a>
             <div class="header_info">
-                <a href="information0.jsp"><img
+                <a href="Profile-provi-admin/Provider/information0_1.jsp"><img
                         src="image/logo/user (1).png"
                         alt="profile">Profile</a>
 <!--                <a href="#"><img
@@ -57,7 +57,7 @@
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>
                 <a href="store.jsp">Store manage</a>
-                <a href="login.jsp">Logout</a>
+                <a href="login.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="float: right;">

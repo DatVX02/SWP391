@@ -56,7 +56,7 @@ input {
 
 .form_2 a:nth-child(2){
     float: left;  
-    transform: translate(390px, -29px);
+    transform: translate(472px, -29px);
     font-size: 17px;
 }
 
@@ -75,7 +75,7 @@ input {
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-    transform: translateX(60px) translateY(-23px);
+    transform: translateX(170px) translateY(-23px);
 }
 
 /*@media only screen and (max-width: 600px) {

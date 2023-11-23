@@ -32,10 +32,10 @@
     <body>
         <!-- header -->
         <div class="header">
-            <img src="image/logo/logo.png"
-                 alt="shoes">
+            <a href="Profile-provi-admin/Provider/homepage1.jsp"><img src="image/logo/logo.png"
+                                                                      alt="shoes"></a>
             <div class="header_info">
-                <a href="information0.jsp"><img
+                <a href="Profile-provi-admin/Provider/information0_1.jsp"><img
                         src="image/logo/user (1).png"
                         alt="profile">Profile</a>
                 <!--                <a href="#"><img
@@ -52,16 +52,16 @@
 
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
-                <a href="#">Home</a>
+                <a href="Profile-provi-admin/Provider/homepage1.jsp">Home</a>
                 <a href="order_provider.jsp">Order statictics</a>
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>
                 <a href="store.jsp">Store manage</a>
-                <a href="login.jsp">Logout</a>
+                <a href="login.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" >
-                    <div style="float: right;" >
+                    <div style="float: right; " >
                         <form action="*" method="post">
                             <a href="Service Provider/Store statictics/AddShoes.jsp"><input type="button" value="Insert New Shoes" class="button"></a>
                         </form>
@@ -101,7 +101,7 @@
                                     </td>
 
                                     <td>
-                                        <img src="<%= dto.getImage()%>" >
+                                        <img src="<%= dto.getImage()%>" style="width: 200px" >
                                     </td>
 
                                     <td>
@@ -118,6 +118,13 @@
 
                                     <td>
                                         <%= dto.getDescription()%>
+                                    </td>
+
+                                    <td>
+                                        <input type="button" name="" id="" value="Delete" style="margin-bottom: 15px">
+                                        <a href="" style="">
+                                            <input type="button" name="" id="" value="Update">
+                                        </a>
                                     </td>
                                 </tr>
                                 <%

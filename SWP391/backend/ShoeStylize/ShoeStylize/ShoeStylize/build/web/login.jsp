@@ -30,7 +30,7 @@
                  alt="Shoes stylize">
         </div>
         <div class="form">
-            <h1>Login Page</h1>
+            <h1>Login</h1>
             <form action="MainController">
                 <%
                     LoginInsertError error = (LoginInsertError) request.getAttribute("INSERTERROR");
@@ -55,7 +55,7 @@
                         </a>
                     </h4>
                     <a href="register.jsp">
-                        <h4 class="form_2_1"> Create new account</h4>
+                        <h4 class="form_2_1">Sign up</h4>
                     </a>
                 </div>
                 <br>

@@ -23,11 +23,11 @@
         <!-- header -->
         <div class="header">
             <a href="../../HomePage/Homepage (login)/HomePage.html"><img
-                    src="image\shoelogo.png"
+                    src="../../image/logo/logo.png"
                     alt="shoes"></a>
             <div class="header_info">
                 <a href="../../Profile/Account information.html"><img
-                        src="image\user (1).png"
+                        src="../../image/logo/user (1).png"
                         alt="profile">Profile</a>
                 <!-- <a href="#"><img
                         src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\heart.png"
@@ -36,18 +36,19 @@
                         src="C:\Users\ADMIN\Desktop\SWP391\SWP391\New file Shoes stylize (html)\Shoes stylize (by html)\image\logo\shopping-cart.png"
                         alt="shopping-cart">My cart</a> -->
                 <a href="#"><img
-                        src="image\blog (2).png"
+                        src="../../image/logo/blog (2).png"
                         alt="shopping-cart">News</a>
             </div>
         </div>
 
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
-                <a href="../Order statictics/Order.html">Order statictics</a>
-                <a href="../Cost statictics/Cost.html">Cost statictics</a>
-                <a href="../Blog statictics/Blog.html">Blog statictics</a>
-                <a href="../Store statictics/Store.html">Store manage</a>
-                <a href="../../Login/Login.html">Logout</a>
+                <a href="Profile-provi-admin/Provider/homepage1.jsp">Home</a>
+                <a href="order_provider.jsp">Order statictics</a>
+                <a href="cost.jsp">Cost statictics</a>
+                <a href="blog_provider.jsp">Blog statictics</a>
+                <a href="store.jsp">Store manage</a>
+                <a href="login.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="addBLog">
                 <h2>Add New Shoes</h2>
