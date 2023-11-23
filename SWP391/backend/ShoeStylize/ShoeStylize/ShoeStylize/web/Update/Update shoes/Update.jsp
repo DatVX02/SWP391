@@ -49,7 +49,7 @@
                 <b>ImageURL:</b> <input type="url" name="url" id="url" placeholder="https://example.com"
                                         pattern="https://.*" size="30" required /><br>
                 <b>Price:</b><input type="number" min="0" name="" id=""> <br>
-                <b>Quantity:</b><input type="number" name="" id=""><br>
+                <b>Quantity:</b><input type="number" name="" id="" min="0"><br>
                 <b>CategoryID Old:</b>
                 <input type="radio" name="Par" id="" value="Party" >Party
                 <input type="radio" name="Par" id="" value="Sport">Sport<br>
