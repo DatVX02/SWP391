@@ -727,12 +727,30 @@
                     " name="btAction" value="Custom">
                 Done</button>
 
+              <%
+            double leftoutside = 10000;
+            double rightoutside = 40000;
+            double leftInside = 30000;
+            double rightInside = 20000;
+            %>
+            <% if( leftoutside == 0 ){ %>
             <div class="information_left">
                 <div class="information_left_1">
                     <p>Left Outside</p>
                     <div class="information_left_1_1">
                         <input id="file" name="file1" type="text" accept="image/jpg image/png" />
+                        <a href ="">Upload</a>
+                        Please update Left Outside you want to design 
                     </div>
+            <% } else { %>
+                 <div class="information_left_1">
+                    <p>Left Outside</p>
+                    <div class="information_left_1_1">
+                        <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
+                        <br>
+                        Price : <%= leftoutside %>
+                    </div>
+               <%}%>
 
                     <div class="information_left_2">
                         <p>Right Outside</p>
