@@ -65,7 +65,9 @@
             text-decoration: none;
             padding: 10px;
         }
-
+        .information_left_1_1 img {
+            width: 200px;
+        }
         /* Left Outside  */
         .information_left_1 {
             background-color: #D9D9D9;
@@ -83,7 +85,7 @@
         }
 
         .information_left_1_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -162,7 +164,7 @@
             height: 350px;
             text-align: center;
             margin-left: 400px;
-            margin-top: -70px;
+            margin-top: -263px;
         }
 
         .information_left_2 p {
