@@ -137,6 +137,36 @@ public class RegistrationDAO implements Serializable {
         return null;
     }
 
+    public String checkRoleID_UserID(int userID) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "Select RoleID From Users"
+                        + " Where UserID = ?";
+                stm = con.prepareStatement(sql);
+                stm.setInt(1, userID);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    return rs.getString("RoleID");
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return null;
+    }
+    
     public int checkUserID(String Email, String Password) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;

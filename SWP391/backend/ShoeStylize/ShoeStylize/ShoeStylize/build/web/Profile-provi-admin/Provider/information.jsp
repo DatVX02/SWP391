@@ -98,7 +98,7 @@
 
         <div class="information_right">
             <h2>Account information</h2>
-            <form action="MainController">
+            <form action="../../MainController">
                 <div>
                     <h3>Full Name</h3>
                     <input type="text" name="txtFullName" value="<%= session.getAttribute("FullName")%>" style="width: 200px;" required>

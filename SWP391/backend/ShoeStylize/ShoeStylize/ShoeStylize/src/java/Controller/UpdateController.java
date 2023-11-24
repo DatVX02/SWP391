@@ -24,6 +24,7 @@ public class UpdateController extends HttpServlet {
     private final String UPDATEPAGE = "information0.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
     private final String DONEPAGE = "complete.jsp";
+    private final String PROVIDERPAGE = "Profile-provi-admin/Provider/information0_1.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -52,7 +53,16 @@ public class UpdateController extends HttpServlet {
                 RegistrationDAO dao = new RegistrationDAO();
                 boolean result = dao.updateRecord(userID, email, fullName, phone, birthDate, gender);
                 if (result){
-                    url = UPDATEPAGE;
+                    String roleID = dao.checkRoleID_UserID(userID);
+                    switch(roleID) {
+                        case "CUSTOMER":
+                            url = UPDATEPAGE;
+                            break;
+                        case "PROVIDER":
+                            url = PROVIDERPAGE;
+                            break;
+                    }
+                    
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
