@@ -57,7 +57,7 @@
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>
                 <a href="store.jsp">Store manage</a>
-                <a href="login.jsp">Log out</a>
+                <a href="homepage_guest.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="clear: both;" >
@@ -121,8 +121,8 @@
                                     </td>
 
                                     <td>
-                                        <input type="button" name="" id="" value="Delete" style="margin-bottom: 15px">
-                                        <a href="Update/Update shoes/Update.jsp" style="">
+                                        <input type="button" name="" id="" value="Delete" style="margin-bottom: 15px; transform: translateX(20px)">
+                                        <a href="Update/Update shoes/Update.jsp" style="margin-left: 40px; transform: translateX(-20px); font-size: 15px">
                                             <input type="button" name="" id="" value="Update">
                                         </a>
                                     </td>
