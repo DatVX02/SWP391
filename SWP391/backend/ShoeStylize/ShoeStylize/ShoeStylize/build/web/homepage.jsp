@@ -51,7 +51,7 @@
                         alt="shopping-cart">News</a>
                 <a href="homepage_guest.jsp"><img
                         src="image/logo/power (1).png"
-                        alt="shopping-cart">Logout</a>
+                        alt="shopping-cart">Log out</a>
             </div>
         </div>
 

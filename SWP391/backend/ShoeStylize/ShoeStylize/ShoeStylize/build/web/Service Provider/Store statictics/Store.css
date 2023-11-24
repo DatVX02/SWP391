@@ -89,7 +89,7 @@ table tr {
 }
 
 table tr td {
-    padding: 0 51px;
+    padding: 0 9px;
 }
 
 .button {
@@ -98,12 +98,13 @@ table tr td {
 }
 
 .tablehead {
+    text-align: center;
     font-weight: bold;
 }
 
 .button {
     background-color: aqua;
-    transform: translate(-60px, -10px);
+    transform: translate(-10px, -10px);
     /* width: 50%; */
     height: 27px;
     font-size: 15px;
@@ -111,4 +112,7 @@ table tr td {
     color: #FF0101;
     border-radius: 50px;
     border: 0.5px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the end (right) of the container */
+    margin: 10px;
 }
