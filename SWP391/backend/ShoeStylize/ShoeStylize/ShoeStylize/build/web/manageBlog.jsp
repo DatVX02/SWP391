@@ -26,16 +26,16 @@
     </head>
     <body>
         <div class="header">
-            <a href="#"> <img src="image/logo/logo.png"
+            <a href="Profile-provi-admin/Admin/homepage2(admin).jsp"> <img src="image/logo/logo.png"
                  alt="shoes"></a>
             <button style="background: #FF0000; color: #fff;">Manage Blog</button>
         </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
-                <a href="#">Home</a>
+                <a href="Profile-provi-admin/Admin/homepage2(admin).jsp">Home</a>
                 <a href="manageUser.jsp">Account Management</a>
                 <a href="manageBlog.jsp">Blog Management</a>
-                <a href="login.jsp">Logout</a>
+                <a href="homepage_guest.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="bloglist">
                 <div style="float: right;">
