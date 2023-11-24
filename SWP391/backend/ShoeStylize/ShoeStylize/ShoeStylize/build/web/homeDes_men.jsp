@@ -68,6 +68,26 @@
         .information_left_1_1 img {
             width: 200px;
         }
+        
+        .information_left_2_1 img {
+            width: 200px;
+        }
+        
+        .information_left_3_1 img {
+            width: 200px;
+        }
+        
+        .information_left_4_1 img {
+            width: 200px;
+        }
+        
+        .information_left_5_1 img {
+            width: 200px;
+        }
+        
+        .information_left_6_1 img {
+            width: 200px;
+        }
         /* Left Outside  */
         .information_left_1 {
             background-color: #D9D9D9;
@@ -174,7 +194,7 @@
         }
 
         .information_left_2_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -263,7 +283,7 @@
         }
 
         .information_left_3_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -352,7 +372,7 @@
         }
 
         .information_left_4_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -441,7 +461,7 @@
         }
 
         .information_left_5_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -530,7 +550,7 @@
         }
 
         .information_left_6_1 {
-            transform: translateY(100px);
+            transform: translateY(34px);
         }
 
         input[type="file"] {
@@ -757,7 +777,8 @@
                     <div class="information_left_2">
                         <p>Right Outside</p>
                         <div class="information_left_2_1">
-                            <input id="file" name="file2" type="text" accept="image/jpg image/png" />
+                            <!--<input id="file" name="file2" type="text //" accept="image/jpg image/png" />-->
+                            <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
                         </div>
                     </div>
 
