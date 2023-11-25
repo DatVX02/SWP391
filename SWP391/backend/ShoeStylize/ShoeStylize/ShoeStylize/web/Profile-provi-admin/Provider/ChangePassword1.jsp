@@ -91,7 +91,7 @@
             %>
             <div class="information_right">
                 <h2>Change Password</h2>
-                <form action="MainController">
+                <form action="../../MainController">
 
                     <input type="hidden" name="txtOldPasswordConfirm" value="<%= session.getAttribute("Password")%>" >
                     <input type="hidden" name="txtUserID" value="<%= session.getAttribute("id")%>" >

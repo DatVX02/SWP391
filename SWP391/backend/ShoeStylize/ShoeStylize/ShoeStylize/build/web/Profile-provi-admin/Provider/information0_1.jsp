@@ -86,7 +86,7 @@
 
                 <ul class="information_left_5">
                     <img src="../../image/logo/logout.png" style="width: 15px;" />
-                    <a href="homepage_guest.jsp">Log out </a>
+                    <a href="../../homepage_guest.jsp">Log out </a>
                 </ul>
             </div>
         </div>

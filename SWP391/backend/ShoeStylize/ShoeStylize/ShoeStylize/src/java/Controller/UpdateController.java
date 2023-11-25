@@ -67,6 +67,8 @@ public class UpdateController extends HttpServlet {
                         case "ADMIN":
                             url = ADMINPAGE;
                             break;
+                        default:
+                            break;
                     }
 
                 }

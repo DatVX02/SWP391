@@ -22,6 +22,8 @@ import javax.servlet.http.HttpServletResponse;
 public class UpdatePasswordController extends HttpServlet {
 
     private final String UPDATEPAGE = "changePassword.jsp";
+    private final String PROVIDERPAGE = "Profile-provi-admin/Provider/information0_1.jsp";
+    private final String ADMINPAGE = "Profile-provi-admin/Admin/information0_2.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
 
     /**
@@ -59,7 +61,20 @@ public class UpdatePasswordController extends HttpServlet {
                 RegistrationDAO dao = new RegistrationDAO();
                 boolean result = dao.updatePassword(userID, password);
                 if (result) {
-                    url = UPDATEPAGE;
+                    String roleID = dao.checkRoleID_UserID(userID);
+                    switch (roleID) {
+                        case "CUSTOMER":
+                            url = UPDATEPAGE;
+                            break;
+                        case "PROVIDER":
+                            url = PROVIDERPAGE;
+                            break;
+                        case "ADMIN":
+                            url = ADMINPAGE;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
