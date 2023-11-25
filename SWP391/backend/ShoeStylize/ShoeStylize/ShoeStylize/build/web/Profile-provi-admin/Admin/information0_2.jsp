@@ -62,7 +62,7 @@
 
                 <ul class="information_left_1">
                     <img src="../../image/logo/padlock.png" style="width: 15px; transform: translateY(02px);">
-                    <a href="ChangePassword1.jsp">Change password</a>
+                    <a href="../Provider/ChangePassword1.jsp">Change password</a>
                 </ul>
 
 <!--                <ul class="information_left_2">
