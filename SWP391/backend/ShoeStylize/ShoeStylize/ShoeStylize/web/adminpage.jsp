@@ -24,7 +24,7 @@
 
 <body>
     <div class="header">
-        <a href="homepage.jsp"><img src="image/logo/logo.png"
+        <a href="Profile-provi-admin/Admin/homepage2(admin).jsp"><img src="image/logo/logo.png"
             alt="shoes"></a>
     </div>
 

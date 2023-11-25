@@ -7,7 +7,7 @@
         <title>Store Manage</title>
         <link rel="icon"
               href="image\shoelogo.png">
-        <link rel="stylesheet" href="../Store statictics/AddShoes.css">
+        <link href="../Blog statictics/AddBlog.css" rel="stylesheet" type="text/css"/>
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,11 +22,11 @@
     <body>
         <!-- header -->
         <div class="header">
-            <a href="../../HomePage/Homepage (login)/HomePage.html"><img
+            <a href="../../Profile-provi-admin/Provider/homepage1.jsp"><img
                     src="../../image/logo/logo.png"
                     alt="shoes"></a>
             <div class="header_info">
-                <a href="../../Profile/Account information.html"><img
+                <a href="../../Profile-provi-admin/Provider/information0_1.jsp"><img
                         src="../../image/logo/user (1).png"
                         alt="profile">Profile</a>
                 <!-- <a href="#"><img
@@ -43,28 +43,25 @@
 
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
-                <a href="Profile-provi-admin/Provider/homepage1.jsp">Home</a>
-                <a href="order_provider.jsp">Order statictics</a>
-                <a href="cost.jsp">Cost statictics</a>
-                <a href="blog_provider.jsp">Blog statictics</a>
-                <a href="store.jsp">Store manage</a>
-                <a href="login.jsp">Log out</a>
+                <a href="../../Profile-provi-admin/Provider/homepage1.jsp">Home</a>
+                <a href="../../order_provider.jsp">Order statictics</a>
+                <a href="../../cost.jsp">Cost statictics</a>
+                <a href="../../blog_provider.jsp">Blog statictics</a>
+                <a href="../../store.jsp">Store manage</a>
+                <a href="../../homepage_guest.jsp">Log out</a>
             </div>
             <div style="width: 79%; float:right" class="addBLog">
                 <h2>Add New Shoes</h2>
                 <form action="../../MainController" method="post">
                     <p>Shoes Name <input type="text" name="txtShoeName" style="margin-left: 70px;" /></p>
                     <p>Brand Name<input type="text" name="txtBrandName" /></p>
-                    <p>Category: 
-                        <input type="radio" name="cate" value="Sport"> Sport
-                        <input type="radio" name="cate" value="Party"> Party
-                    </p>
+                    
                     <p>Image: <input type="url" name="txtURL"
-                                     style="width: 50%; margin-left: 127px; padding-right: 120px ;">
+                                     style="width: 80%;  padding-right: 120px ;">
 
                     <p>Price: <input type="number" name="txtPrice" min="0" style="margin-left:122px;" /></p>
                     <p>Quantity: <input type="number" name="txtQuant" min="0" style="margin-left: 98px;"/></p>
-                    <p>Description: <textarea type="text" name="txtDes" style="width: 70%; margin-left: 78px;"></textarea></p>
+                    <p>Description: <textarea type="text" name="txtDes" style="width: 80%; margin-left: 78px;"></textarea></p>
                     <input type="submit" name="btAction" value="Add Shoe" class="button" style="float: right; margin-right: 40px;">
                 </form>
             </div>

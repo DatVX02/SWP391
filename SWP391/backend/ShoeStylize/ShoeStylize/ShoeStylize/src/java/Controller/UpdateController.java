@@ -21,10 +21,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "UpdateController", urlPatterns = {"/UpdateController"})
 public class UpdateController extends HttpServlet {
+
     private final String UPDATEPAGE = "information0.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
     private final String DONEPAGE = "complete.jsp";
     private final String PROVIDERPAGE = "Profile-provi-admin/Provider/information0_1.jsp";
+    private final String ADMINPAGE = "Profile-provi-admin/Admin/information0_2.jsp";
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,9 +39,9 @@ public class UpdateController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         response.setContentType("text/html;charset=UTF-8");
-        
+
         try (PrintWriter out = response.getWriter()) {
             String url = INVALIDPAGE;
             String txtUserID = request.getParameter("txtUserID");
@@ -48,25 +51,28 @@ public class UpdateController extends HttpServlet {
             String phone = request.getParameter("txtPhone");
             String birthDate = request.getParameter("birthDate");
             String gender = request.getParameter("gen");
-            
-            try{
+
+            try {
                 RegistrationDAO dao = new RegistrationDAO();
                 boolean result = dao.updateRecord(userID, email, fullName, phone, birthDate, gender);
-                if (result){
+                if (result) {
                     String roleID = dao.checkRoleID_UserID(userID);
-                    switch(roleID) {
+                    switch (roleID) {
                         case "CUSTOMER":
                             url = UPDATEPAGE;
                             break;
                         case "PROVIDER":
                             url = PROVIDERPAGE;
                             break;
+                        case "ADMIN":
+                            url = ADMINPAGE;
+                            break;
                     }
-                    
+
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            } finally{
+            } finally {
                 response.sendRedirect(url);
             }
         }

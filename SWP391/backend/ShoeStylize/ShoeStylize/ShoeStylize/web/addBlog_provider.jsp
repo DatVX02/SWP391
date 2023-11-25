@@ -25,12 +25,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     </head>
+    
     <body>
         <div class="header">
-            <img src="image/logo/logo.png"
-                 alt="shoes">
+            <a href="Profile-provi-admin/Provider/homepage1.jsp"><img src="image/logo/logo.png"
+                    alt="shoes"></a>
             <div class="header_info">
-                <a href="information0.jsp"><img
+                <a href="Profile-provi-admin/Provider/information0_1.jsp"><img
                         src="image/logo/user (1).png"
                         alt="profile">Profile</a>
                 <!--            <a href="#"><img
@@ -46,18 +47,18 @@
         </div>
         <div class="manage">
             <div style="width: 20%; float:left" class="managefunction">
-                <a href="homepage.jsp">Home</a>
+                <a href="Profile-provi-admin/Provider/homepage1.jsp">Home</a>
                 <a href="order_provider.jsp">Order statictics</a>
                 <a href="cost.jsp">Cost statictics</a>
                 <a href="blog_provider.jsp">Blog statictics</a>
                 <a href="store.jsp">Store manage</a>
-                <a href="login.jsp">Logout</a>
+                <a href="homepage_guest.jsp">Logout</a>
             </div>
             <div style="width: 79%; float:right" class="addBLog">
                 <h2>Add Blog</h2>
                 <form action="MainController" method="post">
                     <p>Title: <input type="text" name="txtTitle" /></p>
-                    <p>Content: <textarea type="text" name="txtContent" style="width: 70%; margin-left: 95px; padding-right: 120px ;"></textarea>
+                    <p>Content: <textarea type="text" name="txtContent" style="width: 80%; margin-left: 100px; padding-right: 120px ;"></textarea>
                     <p>Poster: <input type="text" name="txtAccount" value="<%= session.getAttribute("id")%>"  readonly /></p>
                     <p>Date submitted: <input type="date" name="txtDate" /></p>
                     <input type="hidden" name="userID" value="<%= session.getAttribute("id")%>">
