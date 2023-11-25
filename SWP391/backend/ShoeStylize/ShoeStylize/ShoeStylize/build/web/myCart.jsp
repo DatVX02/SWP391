@@ -64,7 +64,10 @@
                 </div>
                 <div class="column right">
                     <!-- <a href="../Order/OrderDetail.html"><input type="button" value="Update"/></a></br> -->
-                    <input type="button" value="Detail" />
+                    <a href="homeDes_preview.jsp">
+                        <input type="button" value="Detail" />
+                    </a>
+                    
                 </div>
             </div>
 

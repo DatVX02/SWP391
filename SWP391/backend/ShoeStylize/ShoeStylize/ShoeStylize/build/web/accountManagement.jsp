@@ -84,12 +84,12 @@
 
             <div class="information_right">
                 <h2>Order Management</h2>
-                <ul style="list-style-type: none; ">
+<!--                <ul style="list-style-type: none; ">
                     <li>All</li>
                     <li>Awaiting approval</li>
                     <li>Complete</li>
                     <li>Cancel</li>
-                </ul>
+                </ul>-->
             </div>
             <div class="footer">
                 <div style="float:right; transform: translateX(-20px)">
