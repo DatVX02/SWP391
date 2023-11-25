@@ -159,6 +159,7 @@ CREATE TABLE [dbo].[Orders](
 	[OrderID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NULL,
 	[OrderDate] [date] NULL,
+	[OrderTime] [date] NULL,
 	[TotalAmount] [int] NULL,
 	[Status] [nvarchar](20) NULL,
 	[Quantity] [int] NULL,

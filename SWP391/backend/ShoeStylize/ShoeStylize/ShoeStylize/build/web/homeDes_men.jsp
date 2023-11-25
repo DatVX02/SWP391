@@ -813,7 +813,7 @@
                     <div class="information_right">
                         <div>
                             <%
-                                Object total = session.getAttribute("");
+                                Object total = 50000;
                             %>
                             <h3>
                                 <!-- Tên giày --><input type="text" name="ShoeName" value="<%= request.getParameter("name") %>">

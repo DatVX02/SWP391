@@ -59,7 +59,7 @@
                 </div>
                 <div class="column middle">
                     <h2><%= session.getAttribute("ShoeName")%></h2>
-                    <p>Price:&nbsp&nbsp&nbsp<!-- Price --></p>
+                    <p>Price:&nbsp&nbsp&nbsp<!-- Price --><%= session.getAttribute("Total")%></p>
                     <p>Quantity:&nbsp&nbsp <input type="number" value="*" min="0" max="9999999999"></p>
                 </div>
                 <div class="column right">
