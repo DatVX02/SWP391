@@ -24,7 +24,6 @@ import javax.servlet.http.HttpSession;
  */
 public class AddOrderController extends HttpServlet {
 
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -40,25 +39,38 @@ public class AddOrderController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             HttpSession session = request.getSession();
             String size = (String) session.getAttribute("Size");
-            String gender = (String)session.getAttribute("Gender");
-            String name = (String)session.getAttribute("ShoeName");
-            String img = (String)session.getAttribute("Image");
-            String total = (String)session.getAttribute("Total");
+            String gender = (String) session.getAttribute("Gender");
+            String name = (String) session.getAttribute("ShoeName");
+            String img = (String) session.getAttribute("Image");
+            String total = (String) session.getAttribute("Total");
             int intTotal = Integer.parseInt(total);
             String[] services = request.getParameterValues("Services");
             String[] files = request.getParameterValues("Files");
+            String[] service = null;
+            String[] file = null;
+            for (int i = 0; i < 6; i++) {
+                service[i] = services[i];
+                file[i] = files[i];
+                if(services[i] != null){
+                    service[i] = "1";
+                } else{
+                    service[i] = "0";
+                }
+            }
             int userID = Integer.parseInt(request.getParameter("id"));
             String date = String.valueOf(java.time.LocalDate.now());
             String time = String.valueOf(java.time.LocalTime.now());
             String status = "On going";
             int quantity = Integer.parseInt(request.getParameter("quantity"));
-            
+
             OrderDAO dao = new OrderDAO();
             boolean result = dao.insertNewOrder(userID, date, time, intTotal, status, quantity);
-            if (result){
+            if (result) {
                 int orderID = dao.findOrderID(date, time);
                 CusShoeDAO dao1 = new CusShoeDAO();
-                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name, img, img, img, img, img, img, result, result, result, result, result, result, gender, size, intTotal);
+                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name, file[0], file[1], file[2], file[3], file[4], file[5], 
+                        Boolean.valueOf(service[0]), Boolean.valueOf(service[1]), Boolean.valueOf(service[2]), Boolean.valueOf(service[3]), Boolean.valueOf(service[4]), Boolean.valueOf(service[5]), 
+                        gender, size, intTotal);
             }
         }
     }
