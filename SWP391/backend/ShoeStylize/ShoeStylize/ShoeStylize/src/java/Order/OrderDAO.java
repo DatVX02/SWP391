@@ -95,4 +95,16 @@ public class OrderDAO implements Serializable {
         return list;
     }
 
+    public boolean insertNewOrder(int userID, String orderDate, String orderTime, int total, String status, int quantity) {
+        Connection con = null;
+        PreparedStatement stm = null;
+        
+        try{
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = ""
+            }
+        }
+        return false;
+    }
 }

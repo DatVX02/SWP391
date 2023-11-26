@@ -60,7 +60,7 @@
                 <div class="column middle">
                     <h2><%= session.getAttribute("ShoeName")%></h2>
                     <p>Price:&nbsp&nbsp&nbsp<!-- Price --><%= session.getAttribute("Total")%></p>
-                    <p>Quantity:&nbsp&nbsp <input type="number" value="*" min="0" max="9999999999"></p>
+                    <p>Quantity:&nbsp&nbsp <input type="number" name="quantity" value="*" min="0" max="9999999999"></p>
                 </div>
                 <div class="column right">
                     <!-- <a href="../Order/OrderDetail.html"><input type="button" value="Update"/></a></br> -->
