@@ -41,6 +41,7 @@ public class AddOrderController extends HttpServlet {
             String[] services = request.getParameterValues("Services");
             String[] files = request.getParameterValues("Files");
             String userID = request.getParameter("id");
+            String date = String.valueOf(java.time.LocalDate.now());
             
         }
     }
