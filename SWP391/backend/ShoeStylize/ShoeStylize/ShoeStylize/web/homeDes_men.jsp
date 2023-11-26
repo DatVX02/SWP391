@@ -770,6 +770,7 @@
                     <div class="information_left_1_1">
                         <img name="file1" src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
                         <br>
+                        <input type="hidden" name="file1" value="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg" >
                         Price : <%= leftoutside %>
                     </div>
                <%}%>
@@ -779,6 +780,7 @@
                         <div class="information_left_2_1">
                             <!--<input id="file" name="file2" type="text //" accept="image/jpg image/png" />-->
                             <img name="file2" src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
+                            <input type="hidden" name="file2" value="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg" >
                         </div>
                     </div>
 
@@ -859,6 +861,7 @@
                             <h3 style="font-size: 20px; margin-left: 180px; margin-top: 20px; color: red;">
                                 Total amount: <%= total%>
                             </h3>
+                            <input type="hidden" name="gen" value="Men" >
                             <input type="hidden" name="img" value="<%= request.getParameter("image")%>" >
                             <input type="hidden" name="total" value="<%= total%>" >
                         </div>
