@@ -18,8 +18,8 @@ public class CusShoeDAO {
     
     public boolean addCustomizedShoe(int orderID, int shoeID, int userID, int serviceID, String shoesName,
                                   String imageLink1,String imageLink2,String imageLink3,String imageLink4,String imageLink5,String imageLink6, 
-                                  boolean outLeft, boolean outRight, boolean inLeft, boolean inRight,
-                                  boolean back, boolean overlook, String gender, String size, int totalAmount) throws SQLException {
+                                  int outLeft, int outRight, int inLeft, int inRight,
+                                  int back, int overlook, String gender, String size, int totalAmount) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         
@@ -41,12 +41,12 @@ public class CusShoeDAO {
                 stm.setString(9, imageLink4);
                 stm.setString(10, imageLink5);
                 stm.setString(11, imageLink6);
-                stm.setBoolean(12, outLeft);
-                stm.setBoolean(13, outRight);
-                stm.setBoolean(14, inLeft);
-                stm.setBoolean(15, inRight);
-                stm.setBoolean(16, back);
-                stm.setBoolean(17, overlook);
+                stm.setInt(12, outLeft);
+                stm.setInt(13, outRight);
+                stm.setInt(14, inLeft);
+                stm.setInt(15, inRight);
+                stm.setInt(16, back);
+                stm.setInt(17, overlook);
                 stm.setString(18, gender);
                 stm.setString(19, size);
                 stm.setInt(20, totalAmount);

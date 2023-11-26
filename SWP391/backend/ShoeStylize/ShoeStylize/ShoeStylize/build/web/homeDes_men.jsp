@@ -768,7 +768,7 @@
                  <div class="information_left_1">
                     <p>Left Outside</p>
                     <div class="information_left_1_1">
-                        <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
+                        <img name="file1" src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
                         <br>
                         Price : <%= leftoutside %>
                     </div>
@@ -778,7 +778,7 @@
                         <p>Right Outside</p>
                         <div class="information_left_2_1">
                             <!--<input id="file" name="file2" type="text //" accept="image/jpg image/png" />-->
-                            <img src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
+                            <img name="file2" src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
                         </div>
                     </div>
 

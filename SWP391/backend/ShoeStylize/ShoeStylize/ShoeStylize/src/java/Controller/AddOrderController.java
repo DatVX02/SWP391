@@ -8,10 +8,7 @@ package Controller;
 import CusShoe.CusShoeDAO;
 import Order.OrderDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +23,7 @@ public class AddOrderController extends HttpServlet {
 
     private final String ORDERDETAILPAGE = "orderDetail.jsp";
     private final String INVALIDPAGE = "invalid.jsp";
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,12 +32,13 @@ public class AddOrderController extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws java.sql.SQLException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         String url = INVALIDPAGE;
-        try (PrintWriter out = response.getWriter()) {
+        try {
             HttpSession session = request.getSession();
             String size = (String) session.getAttribute("Size");
             String gender = (String) session.getAttribute("Gender");
@@ -47,18 +46,14 @@ public class AddOrderController extends HttpServlet {
             String img = (String) session.getAttribute("Image");
             String total = (String) session.getAttribute("Total");
             int intTotal = Integer.parseInt(total);
-            String[] services = request.getParameterValues("Services");
-            String[] files = request.getParameterValues("Files");
-            String[] service = null;
-            String[] file = null;
+            String[] services = (String[]) session.getAttribute("Services");
+            String[] files = (String[]) session.getAttribute("Files");
+            String[] serviceFlags = new String[6];
+            String[] fileNames = new String[6];
+
             for (int i = 0; i < 6; i++) {
-                service[i] = services[i];
-                file[i] = files[i];
-                if(services[i] != null){
-                    service[i] = "1";
-                } else{
-                    service[i] = "0";
-                }
+                fileNames[i] = files[i];
+                serviceFlags[i] = (services[i] != null) ? "1" : "0";
             }
             int userID = Integer.parseInt(request.getParameter("id"));
             String date = String.valueOf(java.time.LocalDate.now());
@@ -71,14 +66,17 @@ public class AddOrderController extends HttpServlet {
             if (result) {
                 int orderID = dao.findOrderID(date, time);
                 CusShoeDAO dao1 = new CusShoeDAO();
-                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name, file[0], file[1], file[2], file[3], file[4], file[5], 
-                        Boolean.valueOf(service[0]), Boolean.valueOf(service[1]), Boolean.valueOf(service[2]), Boolean.valueOf(service[3]), Boolean.valueOf(service[4]), Boolean.valueOf(service[5]), 
+                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name,  fileNames[0], fileNames[1], fileNames[2],
+                            fileNames[3], fileNames[4], fileNames[5],
+                            Integer.valueOf(serviceFlags[0]), Integer.valueOf(serviceFlags[1]),
+                            Integer.valueOf(serviceFlags[2]), Integer.valueOf(serviceFlags[3]),
+                            Integer.valueOf(serviceFlags[4]), Integer.valueOf(serviceFlags[5]),
                         gender, size, intTotal);
-                if (result1){
+                if (result1) {
                     url = ORDERDETAILPAGE;
                 }
-            } 
-        } catch(SQLException ex) {
+            }
+        } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
             response.sendRedirect(url);
@@ -97,11 +95,6 @@ public class AddOrderController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(AddOrderController.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     /**
@@ -115,11 +108,6 @@ public class AddOrderController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(AddOrderController.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     /**
