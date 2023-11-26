@@ -95,14 +95,33 @@ public class OrderDAO implements Serializable {
         return list;
     }
 
-    public boolean insertNewOrder(int userID, String orderDate, String orderTime, int total, String status, int quantity) {
+    public boolean insertNewOrder(int userID, String orderDate, String orderTime, int total, String status, int quantity) throws SQLException {
         Connection con = null;
         PreparedStatement stm = null;
         
         try{
             con = DBUtils.makeConnection();
             if (con != null) {
-                String sql = ""
+                String sql = "INSERT INTO [dbo].[Orders]([UserID],[OrderDate],[OrderTime],[TotalAmount],[Status],[Quantity])"
+                        + "VALUES(?, ?, ?, ?, ?, ?)";
+                stm = con.prepareStatement(sql);
+                stm.setInt(1, userID);
+                stm.setString(2, orderDate);
+                stm.setString(3, orderTime);
+                stm.setInt(4, total);
+                stm.setString(5, status);
+                stm.setInt(6, quantity);
+                int row = stm.executeUpdate();
+                if (row > 0) {
+                    return true;
+                }
+            }
+        } finally {
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
             }
         }
         return false;
