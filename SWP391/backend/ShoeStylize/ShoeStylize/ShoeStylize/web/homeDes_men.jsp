@@ -816,7 +816,7 @@
                                 Object total = 50000;
                             %>
                             <h3>
-                                <!-- Tên giày --><input type="text" name="ShoeName" value="<%= request.getParameter("name") %>">
+                                <!-- Tên giày --><input type="text" name="ShoeName" value="<%= request.getParameter("name") %>" readonly>
                             </h3>
                             <!-- <a href='../SizeChart/SizeChart.html' target="_blank"><img
                                     style="max-width: 20px; margin-top: -70px; margin-left: 380px;"
