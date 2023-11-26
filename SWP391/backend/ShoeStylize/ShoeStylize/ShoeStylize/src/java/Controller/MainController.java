@@ -34,7 +34,7 @@ public class MainController extends HttpServlet {
     private static final String CategoryController = "CategoryController";
     private static final String HOMEDESCONTROLLER = "HomeDesController";
     private static final String ADDSHOECONTROLLER = "AddShoeController";
-    private static final String ADDORDERCONTROLLER = "AddOrderController";
+    private static final String ADDORDERCONTROLLER = "AddOrderController1";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

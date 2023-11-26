@@ -76,6 +76,10 @@
         <servlet-name>AddShoeController</servlet-name>
         <servlet-class>Controller.AddShoeController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddOrderController1</servlet-name>
+        <servlet-class>Controller.AddOrderController1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>AddShoeController</servlet-name>
         <url-pattern>/AddShoeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddOrderController1</servlet-name>
+        <url-pattern>/AddOrderController1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
