@@ -52,7 +52,7 @@
     <!-- Cart -->
     <div>
         <h1 style="margin-left: 150px; margin-top: 20px; margin-bottom: 20px;">My Cart</h1>
-        <form action="*" method="post">
+        <form action="MainController" method="post">
             <div class="product">
                 <div class="column left">
                     <img src="*" alt="Product">

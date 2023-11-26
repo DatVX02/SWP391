@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,16 +32,16 @@ public class AddOrderController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AddOrderController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AddOrderController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            HttpSession session = request.getSession();
+            String size = (String) session.getAttribute("Size");
+            String gender = (String)session.getAttribute("Gender");
+            String name = (String)session.getAttribute("ShoeName");
+            String img = (String)session.getAttribute("Image");
+            String total = (String)session.getAttribute("Total");
+            String[] services = request.getParameterValues("Services");
+            String[] files = request.getParameterValues("Files");
+            String userID = request.getParameter("id");
+            
         }
     }
 
