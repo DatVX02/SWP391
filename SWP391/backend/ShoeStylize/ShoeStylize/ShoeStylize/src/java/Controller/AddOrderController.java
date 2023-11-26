@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import CusShoe.CusShoeDAO;
 import Order.OrderDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -55,7 +56,9 @@ public class AddOrderController extends HttpServlet {
             OrderDAO dao = new OrderDAO();
             boolean result = dao.insertNewOrder(userID, date, time, intTotal, status, quantity);
             if (result){
-                
+                int orderID = dao.findOrderID(date, time);
+                CusShoeDAO dao1 = new CusShoeDAO();
+                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name, img, img, img, img, img, img, result, result, result, result, result, result, gender, size, intTotal);
             }
         }
     }

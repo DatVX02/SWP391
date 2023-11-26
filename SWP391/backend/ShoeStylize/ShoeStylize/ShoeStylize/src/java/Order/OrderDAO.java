@@ -126,4 +126,37 @@ public class OrderDAO implements Serializable {
         }
         return false;
     }
+    
+    public int findOrderID(String date, String time) throws SQLException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            con = DBUtils.makeConnection();
+            if (con != null) {
+                String sql = "SELECT [OrderID] FROM [dbo].[Orders]"
+                        + " WHERE OrderDate = ? AND OrderTime = ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, date);
+                stm.setString(2, time);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt("OrderID");
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        
+        return -1;
+    }
 }
