@@ -75,7 +75,7 @@
             <!-- KẾT THÚC VÒNG LẶP -->
             <h3>Total amount:<!-- Tong Tien --></h3></br>
             <div class="order">
-                <a href="orderDetail.jsp"><input type="button" value="Order"></a>
+                <input type="submit" name="btAction" value="Order">
             </div>
         </form>
     </div>

@@ -24,6 +24,8 @@ import javax.servlet.http.HttpSession;
  */
 public class AddOrderController extends HttpServlet {
 
+    private final String ORDERDETAILPAGE = "orderDetail.jsp";
+    private final String INVALIDPAGE = "invalid.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,6 +38,7 @@ public class AddOrderController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
+        String url = INVALIDPAGE;
         try (PrintWriter out = response.getWriter()) {
             HttpSession session = request.getSession();
             String size = (String) session.getAttribute("Size");
@@ -71,7 +74,14 @@ public class AddOrderController extends HttpServlet {
                 boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name, file[0], file[1], file[2], file[3], file[4], file[5], 
                         Boolean.valueOf(service[0]), Boolean.valueOf(service[1]), Boolean.valueOf(service[2]), Boolean.valueOf(service[3]), Boolean.valueOf(service[4]), Boolean.valueOf(service[5]), 
                         gender, size, intTotal);
-            }
+                if (result1){
+                    url = ORDERDETAILPAGE;
+                }
+            } 
+        } catch(SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            response.sendRedirect(url);
         }
     }
 

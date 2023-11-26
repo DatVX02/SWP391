@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/java/CusShoe/CusShoeDTO.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>12</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/myCart.jsp</file>
-            <file>file:/C:/Users/Admin.DESKTOP-AHFC17N/Documents/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/AddOrderController.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/orderDetail.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Order/OrderDAO.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/AddOrderController.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/login.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/order_provider.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/myCart.jsp</file>
         </group>
     </open-files>
 </project-private>
