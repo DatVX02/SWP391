@@ -77,8 +77,13 @@
         <servlet-class>Controller.AddShoeController</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< Updated upstream
         <servlet-name>AddOrderController1</servlet-name>
         <servlet-class>Controller.AddOrderController1</servlet-class>
+=======
+        <servlet-name>HomeDesignController</servlet-name>
+        <servlet-class>Controller.HomeDesignController</servlet-class>
+>>>>>>> Stashed changes
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -157,8 +162,13 @@
         <url-pattern>/AddShoeController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< Updated upstream
         <servlet-name>AddOrderController1</servlet-name>
         <url-pattern>/AddOrderController1</url-pattern>
+=======
+        <servlet-name>HomeDesignController</servlet-name>
+        <url-pattern>/HomeDesignController</url-pattern>
+>>>>>>> Stashed changes
     </servlet-mapping>
     <session-config>
         <session-timeout>

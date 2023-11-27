@@ -1,3 +1,5 @@
+<%@page import="Service.ServiceDTO"%>
+<%@page import="Service.ServiceDAO"%>
 <%@page import="Shoes.ShoeDAO"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -738,7 +740,7 @@
         </div>
 
 
-        <form action="MainController" method="">
+<!--        <form action="MainController" method="">-->
             <button style="
                     border-radius: 20px;
                     padding: 5px 20px;
@@ -750,28 +752,47 @@
                 Done</button>
 
               <%
-            double leftoutside = 10000;
-            double rightoutside = 40000;
-            double leftInside = 30000;
-            double rightInside = 20000;
+            ServiceDAO dao = new ServiceDAO();
+                 ServiceDTO dto = dao.listService(1);
+                 String LI = (String) session.getAttribute("imgLI");
+                 String LO = (String) session.getAttribute("imgLI");
+                 String RO = (String) session.getAttribute("imgLI");
+                 String RI = (String) session.getAttribute("imgLI");
+                 int priceLO = 0;
+                 int priceLI = 0;
+                 int priceRO = 0;
+                 int priceRI = 0;
+                 int priceBA = 0;
+                 int priceOver = 0;
             %>
-            <% if( leftoutside == 0 ){ %>
+          
             <div class="information_left">
+            <% if( LO == null ){ %>
+            <form action="HomeDesignController">
                 <div class="information_left_1">
                     <p>Left Outside</p>
                     <div class="information_left_1_1">
-                        <input id="file" name="file1" type="text" accept="image/jpg image/png" />
+                          <input type="text" name="imgscrLI" value="" />
                         <a href ="">Upload</a>
                         Please update Left Outside you want to design 
+                        <input type="submit" value="Submit" name="btAction" />
                     </div>
+                    </form>
             <% } else { %>
                  <div class="information_left_1">
                     <p>Left Outside</p>
                     <div class="information_left_1_1">
+<<<<<<< Updated upstream
                         <img name="file1" src="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg"/>
                         <br>
                         <input type="hidden" name="file1" value="https://cdn.vuahanghieu.com/unsafe/0x500/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2023/10/giay-the-thao-tommy-hilfiger-andie-4-0-shoes-mau-trang-651b712cddb4a-03102023084100.jpg" >
                         Price : <%= leftoutside %>
+=======
+                        <img name="file1" src="<%= LO %>"/>
+                        <br>
+                        Price : <%= dto.getOutLeftCost() %>
+                        <%  priceLO = dto.getOutLeftCost();  %>
+>>>>>>> Stashed changes
                     </div>
                <%}%>
 
@@ -815,7 +836,7 @@
                     <div class="information_right">
                         <div>
                             <%
-                                Object total = 50000;
+                                Object total = priceLO  + priceLI + priceRO + priceRI + priceBA + priceOver;
                             %>
                             <h3>
                                 <!-- Tên giày --><input type="text" name="ShoeName" value="<%= request.getParameter("name") %>" readonly>

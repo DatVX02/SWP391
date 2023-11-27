@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author duong
  */
-public class ShoeDAO implements Serializable {
+public class ShoeDAO  {
 
     public ArrayList<ShoeDTO> AlllistShoe() throws SQLException {
         ArrayList<ShoeDTO> list = new ArrayList<>();
