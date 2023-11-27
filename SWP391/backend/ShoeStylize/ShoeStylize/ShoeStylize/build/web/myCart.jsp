@@ -52,7 +52,8 @@
     <!-- Cart -->
     <div>
         <h1 style="margin-left: 150px; margin-top: 20px; margin-bottom: 20px;">My Cart</h1>
-        <form action="MainController" method="post">
+        <form action="MainController">
+        
             <div class="product">
                 <div class="column left">
                     <img src="<%= session.getAttribute("Image")%>" alt="Product">
@@ -69,11 +70,16 @@
                     </a>
                     
                 </div>
+                    <div class="hidden">
+                            <input type="hidden" name="shoeName" value="<%= session.getAttribute("ShoeName")%>" />
+                            <input type="hidden" name="userID" value="<%= session.getAttribute("id")%>" />
+                            <input type="hidden" name="total" value="<%= session.getAttribute("Total")%>" />
+                    </div>
             </div>
-
-            
+                    
+          
             <!-- KẾT THÚC VÒNG LẶP -->
-            <h3>Total amount:<!-- Tong Tien --></h3></br>
+            <h3>Total amount:<!-- Tong Tien --><%= session.getAttribute("Total")%></h3></br>
             <div class="order">
                 <input type="submit" name="btAction" value="Order">
             </div>

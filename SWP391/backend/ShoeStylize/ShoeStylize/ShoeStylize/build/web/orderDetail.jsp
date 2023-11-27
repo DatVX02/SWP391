@@ -66,7 +66,7 @@
                 </div>
                 <div class="column right">
                     <input type="button" value="Detail"/>
-                    <a href="feedback.jsp"> 
+                    <a href="feedback.jsp">
                         <input type="button" value="Feedback"/>
                     </a>
                 </div>

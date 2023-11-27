@@ -12,12 +12,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/orderDetail.jsp</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/AddOrderController.java</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/HomeDesController.java</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/homeDes_men.jsp</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/OrderController.java</file>
             <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/web/myCart.jsp</file>
-            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/RegistrationController.java</file>
+            <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/CusShoe/CusShoeDAO.java</file>
             <file>file:/D:/GitHub/SWP391/SWP391/backend/ShoeStylize/ShoeStylize/ShoeStylize/src/java/Controller/MainController.java</file>
         </group>
     </open-files>

@@ -37,50 +37,50 @@ public class AddOrderController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = INVALIDPAGE;
-        try {
-            HttpSession session = request.getSession();
-            String size = (String) session.getAttribute("Size");
-            String gender = (String) session.getAttribute("Gender");
-            String name = (String) session.getAttribute("ShoeName");
-            String img = (String) session.getAttribute("Image");
-            String total = (String) session.getAttribute("Total");
-            int intTotal = Integer.parseInt(total);
-            String[] services = (String[]) session.getAttribute("Services");
-            String[] files = (String[]) session.getAttribute("Files");
-            String[] serviceFlags = new String[6];
-            String[] fileNames = new String[6];
-
-            for (int i = 0; i < 6; i++) {
-                fileNames[i] = files[i];
-                serviceFlags[i] = (services[i] != null) ? "1" : "0";
-            }
-            int userID = Integer.parseInt(request.getParameter("id"));
-            String date = String.valueOf(java.time.LocalDate.now());
-            String time = String.valueOf(java.time.LocalTime.now());
-            String status = "On going";
-            int quantity = Integer.parseInt(request.getParameter("quantity"));
-
-            OrderDAO dao = new OrderDAO();
-            boolean result = dao.insertNewOrder(userID, date, time, intTotal, status, quantity);
-            if (result) {
-                int orderID = dao.findOrderID(date, time);
-                CusShoeDAO dao1 = new CusShoeDAO();
-                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name,  fileNames[0], fileNames[1], fileNames[2],
-                            fileNames[3], fileNames[4], fileNames[5],
-                            Integer.valueOf(serviceFlags[0]), Integer.valueOf(serviceFlags[1]),
-                            Integer.valueOf(serviceFlags[2]), Integer.valueOf(serviceFlags[3]),
-                            Integer.valueOf(serviceFlags[4]), Integer.valueOf(serviceFlags[5]),
-                        gender, size, intTotal);
-                if (result1) {
-                    url = ORDERDETAILPAGE;
-                }
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } finally {
-            response.sendRedirect(url);
-        }
+        String url = "";
+//        try {
+//            HttpSession session = request.getSession();
+//            String size = (String) session.getAttribute("Size");
+//            String gender = (String) session.getAttribute("Gender");
+//            String name = (String) session.getAttribute("ShoeName");
+//            String img = (String) session.getAttribute("Image");
+//            String total = (String) session.getAttribute("Total");
+//            int intTotal = Integer.parseInt(total);
+//            String[] services = (String[]) session.getAttribute("Services");
+//            String[] files = (String[]) session.getAttribute("Files");
+//            String[] serviceFlags = new String[6];
+//            String[] fileNames = new String[6];
+//
+//            for (int i = 0; i < 6; i++) {
+//                fileNames[i] = files[i];
+//                serviceFlags[i] = (services[i] != null) ? "1" : "0";
+//            }
+//            int userID = Integer.parseInt(request.getParameter("id"));
+//            String date = String.valueOf(java.time.LocalDate.now());
+//            String time = String.valueOf(java.time.LocalTime.now());
+//            String status = "On going";
+//            int quantity = Integer.parseInt(request.getParameter("quantity"));
+//
+//            OrderDAO dao = new OrderDAO();
+//            boolean result = dao.insertNewOrder(userID, date, time, intTotal, status, quantity);
+//            if (result) {
+//                int orderID = dao.findOrderID(date, time);
+//                CusShoeDAO dao1 = new CusShoeDAO();
+//                boolean result1 = dao1.addCustomizedShoe(orderID, orderID, userID, userID, name,  fileNames[0], fileNames[1], fileNames[2],
+//                            fileNames[3], fileNames[4], fileNames[5],
+//                            Integer.valueOf(serviceFlags[0]), Integer.valueOf(serviceFlags[1]),
+//                            Integer.valueOf(serviceFlags[2]), Integer.valueOf(serviceFlags[3]),
+//                            Integer.valueOf(serviceFlags[4]), Integer.valueOf(serviceFlags[5]),
+//                        gender, size, intTotal);
+//                if (result1) {
+//                    url = ORDERDETAILPAGE;
+//                }
+//            }
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//        } finally {
+//            response.sendRedirect(url);
+//        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
